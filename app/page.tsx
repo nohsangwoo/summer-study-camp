@@ -1,6 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
-import { BookOpen, GraduationCap, Brain, Award, ArrowRight, Star, Users, Clock } from "lucide-react"
+import {
+  BookOpen,
+  GraduationCap,
+  Brain,
+  Award,
+  ArrowRight,
+  Star,
+  Users,
+  Clock,
+  MapPin,
+  TrendingUp,
+  CheckCircle2,
+  ChevronRight,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -15,18 +28,73 @@ export default function Home() {
 
         {/* 히어로 콘텐츠 */}
         <div className="container relative z-10 py-16 md:py-24">
+          {/* 캠프 타이틀 */}
+          <div className="text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              여름방학 전교1등 공부습관캠프 <span className="text-yellow-300">전일공</span>
+            </h1>
+          </div>
+
+          {/* 핵심 메시지 - 훅 */}
+          <div className="text-center mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/20 max-w-4xl mx-auto">
+              <div className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <div className="text-white">성적향상은</div>
+                <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">전교1등 공부습관이</div>
+                <div className="text-white">답이다</div>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 text-white mb-10 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                전교 1등 의대생 공부 방법
-                <br />
-                <span className="text-yellow-300">전1공 공부방법캠프</span>
-              </h1>
-              <p className="text-lg md:text-xl mb-8 text-blue-100">
-                꿈을 이루려 노력하며, 현실의 어려움도 즐거운 여정이 됩니다. 그 여정에 함께하며 여러분의 꿈을 이룰 수
-                있도록 도와드리겠습니다.
-              </p>
-              <div className="flex flex-wrap gap-4">
+            <div className="w-full md:w-1/2 text-white mb-10 md:mb-0 md:pr-8">
+              {/* 주요 포인트 */}
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20 mb-8">
+                <div className="text-center mb-4">
+                  <h2 className="text-2xl md:text-3xl font-bold text-white">
+                    <span className="text-yellow-300">전일공</span>의 약속
+                  </h2>
+                </div>
+                <div className="space-y-6 text-xl md:text-2xl font-medium">
+                  <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                    <span>전교1등 멘토의 1:1 공부습관캠프</span>
+                  </div>
+                  <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                    <span>여름방학 3주간 학원 끊고 공부습관 먼저 잡아 주세요</span>
+                  </div>
+                  <div className="flex items-center justify-center text-center p-3">
+                    <span>
+                      전환기 최고의 여름방학캠프 "<span className="text-yellow-300 font-bold">전일공</span>"
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 캠프 소개 - 개선된 레이아웃 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
+                <h3 className="text-xl font-semibold text-yellow-300 mb-4">캠프 소개</h3>
+                <div className="space-y-4 text-blue-50">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
+                    <p>
+                      <span className="font-semibold text-yellow-200">전교1등캠프 전일공</span>은 부산 최대
+                      회복기재활의료기관 의료법인{" "}
+                      <span className="underline decoration-yellow-300">영재의료재단 큰솔병원</span>이 후원하고 전국의
+                      전교1등 의대생 멘토들이 지역의 후배들을 위해 만든 공부습관 멘토링 캠프입니다.
+                    </p>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
+                    <p>
+                      방학기간 전환기에 성적향상을 필요로 하는 전국의 학생들과 명문대, 의대를 희망하는 학생들에게
+                      의대생멘토들이 공부습관을 잡아 주고 성적향상을 보장하는 캠프입니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <Link href="/application/form">
                   <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold">
                     지금 신청하기
@@ -44,6 +112,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
             <div className="w-full md:w-1/2 relative">
               <div className="relative rounded-lg overflow-hidden shadow-2xl transform rotate-1 transition-transform hover:rotate-0 duration-300">
                 <Image
@@ -78,6 +147,128 @@ export default function Home() {
               d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
             ></path>
           </svg>
+        </div>
+      </div>
+
+      {/* 새로운 프로모션 섹션 */}
+      <div className="py-16 bg-white">
+        <div className="container">
+          {/* 수도권 인기 캠프 안내 */}
+          <div className="mb-12 text-center">
+            <div className="bg-yellow-400 text-gray-900 py-6 px-4 rounded-lg inline-block mb-6 shadow-lg transform -rotate-1">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                수도권에서 맘들에게 입소문난 공부습관캠프
+                <br />
+                드디어 부산경남지역에 오픈
+                <br />
+                <span className="text-3xl md:text-4xl">전교1등공부습관캠프 전일공</span>
+              </h2>
+            </div>
+            <div className="flex justify-center items-center gap-2 text-gray-700 mb-8">
+              <MapPin className="h-5 w-5 text-blue-600" />
+              <span className="font-medium">부산경남지역 첫 오픈</span>
+              <span className="mx-2">|</span>
+              <TrendingUp className="h-5 w-5 text-rose-600" />
+              <span className="font-medium">수도권 학부모 만족도 98%</span>
+            </div>
+          </div>
+
+          {/* 프로모션 배너 */}
+          <div className="rounded-xl overflow-hidden shadow-xl border border-gray-200 mb-12 transform transition-all hover:shadow-2xl">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-30VSvC2LZ1mxgF5KgQ1icRsx6bBg9X.png"
+              alt="전교1등 멘토의 1:1 학습교정 캠프"
+              width={1200}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* 캠프 하이라이트 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-100 shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="bg-blue-600 rounded-full p-2 mr-3">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-800">전교1등 멘토의 1:1 학습교정</h3>
+              </div>
+              <p className="text-gray-700">
+                여름방학 20박 21일 동안 전교1등 출신 멘토들이 1:1로 학생들의 학습 방법을 교정하고 최적의 공부습관을
+                형성합니다.
+              </p>
+            </div>
+
+            <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-100 shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="bg-indigo-600 rounded-full p-2 mr-3">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-indigo-800">국내유일 1:4-5 담임멘토제</h3>
+              </div>
+              <p className="text-gray-700">
+                한 명의 담임멘토가 4-5명의 학생만을 전담하여 밀착 관리하는 국내 유일의 시스템으로 학생 개개인에게 맞춤형
+                학습 지도를 제공합니다.
+              </p>
+            </div>
+
+            <div className="bg-rose-50 rounded-xl p-6 border border-rose-100 shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="bg-rose-600 rounded-full p-2 mr-3">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-rose-800">2025 여름방학 3주 특별 프로그램</h3>
+              </div>
+              <p className="text-gray-700">
+                2025년 여름방학 3주 동안 진행되는 특별 프로그램으로, 담임멘토의 1:1 배움 공부법을 직접 전수받아 학습
+                효율을 극대화합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 멘토링 프로그램 섹션 추가 */}
+      <div className="bg-gray-50 py-16">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-center mb-8">최고의 멘토링 프로그램</h2>
+
+          <div className="max-w-4xl mx-auto mb-8">
+            <Image
+              src="/mentor-banners.png"
+              alt="서울대 멘토링 프로그램"
+              width={800}
+              height={400}
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold mb-4">우수한 멘토진</h3>
+            <p className="text-gray-700 mb-6">
+              서울대, 연세대, 고려대 출신의 우수한 멘토들이 학생들의 학습을 1:1로 지도합니다. 각 분야 전문가들의
+              체계적인 멘토링으로 학습 효율을 극대화합니다.
+            </p>
+
+            <div className="max-w-4xl mx-auto">
+              <Image
+                src="/mentor-profiles.png"
+                alt="멘토 프로필"
+                width={800}
+                height={200}
+                className="w-full h-auto rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link href="/metoda/lineup">
+              <Button variant="outline" className="bg-white hover:bg-gray-100">
+                멘토진 더 알아보기
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
 

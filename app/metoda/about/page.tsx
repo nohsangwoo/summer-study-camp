@@ -1,6 +1,6 @@
 import Image from "next/image"
 import type { Metadata } from "next"
-import MentorImage from "./MentorImage"
+import MentorImage from "./mentor-image"
 
 export const metadata: Metadata = {
   title: "위캔캠프 교육멘토단 | 위캔캠프",
@@ -160,6 +160,8 @@ const mentors: Mentor[] = [
   },
 ]
 
+// 클라이언트 컴포넌트 분리
+
 export default function MetodaAboutPage() {
   return (
     <div className="container mx-auto py-12 px-4">
@@ -174,9 +176,8 @@ export default function MetodaAboutPage() {
           <div key={mentor.id} className="flex flex-col items-center">
             <div className="relative w-32 h-32 mb-3 rounded-full overflow-hidden border-4 border-blue-100">
               <MentorImage
-                src={mentor.imageUrl}
+                src={mentor.imageUrl || "/placeholder.svg?height=128&width=128&query=person"}
                 alt={`${mentor.name} 멘토 프로필`}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <h3 className="text-lg font-bold text-gray-800">{mentor.name}</h3>

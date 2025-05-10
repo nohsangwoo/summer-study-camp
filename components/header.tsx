@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const mainMenuItems = [
   {
     title: "캠프안내",
-    href: "/camp-info/greeting", // 첫 번째 하위 메뉴 항목으로 변경
+    href: "/", // Changed from "/camp-info/greeting" to "/camp-info"
     subMenu: [
       { title: "메인페이지", href: "/" },
       { title: "대표인사말", href: "/camp-info/greeting" },
@@ -31,17 +31,17 @@ const mainMenuItems = [
       { title: "전략담임역할", href: "/metoda/strategy-teachers-role" },
     ],
   },
-  {
-    title: "프로그램",
-    href: "/program/med-school-consultation", // 첫 번째 하위 메뉴 항목으로 변경
-    subMenu: [
-      { title: "의대합격심층상담", href: "/program/med-school-consultation" },
-      { title: "종합전형대비주제탐구", href: "/program/comprehensive-exploration" },
-      { title: "의대생기부토탈케어", href: "/program/med-student-care" },
-      { title: "개인 교과 진도유지", href: "/program/individual-curriculum" },
-      { title: "상담문의", href: "/program/inquiry" },
-    ],
-  },
+  // {
+  //   title: "프로그램",
+  //   href: "/program/med-school-consultation", // 첫 번째 하위 메뉴 항목으로 변경
+  //   subMenu: [
+  //     { title: "의대합격심층상담", href: "/program/med-school-consultation" },
+  //     { title: "종합전형대비주제탐구", href: "/program/comprehensive-exploration" },
+  //     { title: "의대생기부토탈케어", href: "/program/med-student-care" },
+  //     { title: "개인 교과 진도유지", href: "/program/individual-curriculum" },
+  //     { title: "상담문의", href: "/program/inquiry" },
+  //   ],
+  // },
   {
     title: "입소상담",
     href: "/admission",
@@ -55,11 +55,11 @@ const mainMenuItems = [
       { title: "캠프신청", href: "/application/form" },
     ],
   },
-  {
-    title: "공지사항",
-    href: "/notice",
-    subMenu: [],
-  },
+  // {
+  //   title: "공지사항",
+  //   href: "/notice",
+  //   subMenu: [],
+  // },
 ]
 
 export default function Header() {

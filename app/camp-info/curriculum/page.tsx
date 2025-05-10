@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { BookOpen, CheckCircle, Clock, Calendar, Award, Users, GraduationCap } from "lucide-react"
+import DailySchedule from "./components/DailySchedule"
 
 export default function CurriculumPage() {
   return (
@@ -10,6 +11,9 @@ export default function CurriculumPage() {
           모든 학생들이 '스스로' 공부하는 자기주도적인 학습 기관, 아는공부캠프 학습 커리큘럼
         </p>
       </div>
+
+      {/* 일과 시간표 */}
+      <DailySchedule />
 
       {/* POINT 01 */}
       <div className="mb-16">
@@ -332,104 +336,6 @@ export default function CurriculumPage() {
               학생 스스로 학습 계획을 세우고 실천하는 자기주도적 학습 환경을 조성하여 장기적인 학습 능력을 향상시킵니다.
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* 일일 시간표 */}
-      <div className="bg-white p-6 rounded-lg border border-gray-200">
-        <h2 className="text-xl font-bold text-gray-800 mb-6">일일 학습 시간표</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200">
-            <thead>
-              <tr className="bg-indigo-50">
-                <th className="py-3 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-700">
-                  시간
-                </th>
-                <th className="py-3 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-700">
-                  활동
-                </th>
-                <th className="py-3 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-700">
-                  비고
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">06:30 - 07:30</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">기상 및 아침식사</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600"></td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">07:30 - 08:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">아침 자습</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">학습 계획 수립</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">08:00 - 10:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">1교시 (자기주도학습)</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">30분 단위 학습진도 체크</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">10:00 - 12:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">2교시 (자기주도학습)</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">30분 단위 학습진도 체크</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">12:00 - 13:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">점심식사</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600"></td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">13:00 - 15:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">3교시 (1:1 맞춤형 수업)</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">
-                  SKY 및 명치전략과 멘토 수업
-                </td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">15:00 - 15:30</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">간식 시간</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600"></td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">15:30 - 17:30</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">4교시 (자기주도학습)</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">30분 단위 학습진도 체크</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">17:30 - 18:30</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">저녁식사</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600"></td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">18:30 - 20:30</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">
-                  5교시 (특강 또는 자기주도학습)
-                </td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">요일별 특강 프로그램</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">20:30 - 21:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">간식 시간</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600"></td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">21:00 - 23:00</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">6교시 (자기주도학습)</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">30분 단위 학습진도 체크</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">23:00 - 23:30</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">일일 학습 정리 및 계획</td>
-                <td className="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">멘토와 1:1 상담</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="py-3 px-4 text-sm font-medium text-gray-700">23:30</td>
-                <td className="py-3 px-4 text-sm text-gray-600">취침</td>
-                <td className="py-3 px-4 text-sm text-gray-600"></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>

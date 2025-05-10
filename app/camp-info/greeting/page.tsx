@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Quote } from "lucide-react"
+import { Quote } from 'lucide-react'
 
 export default function GreetingPage() {
   return (
@@ -7,13 +7,13 @@ export default function GreetingPage() {
       <div className="flex flex-col lg:flex-row gap-8 mb-12">
         {/* 대표 사진 */}
         <div className="w-full lg:w-1/3 flex-shrink-0">
-          <div className="relative overflow-hidden rounded-lg shadow-md bg-gradient-to-b from-blue-100 to-white p-4">
+          <div className="relative overflow-hidden rounded-lg shadow-md bg-gray-200 p-4">
             <Image
-              src="/young-asian-doctor-portrait.png"
+              src="/kimtaehoon-portrait.png"
               alt="김태훈 대표"
-              width={300}
-              height={400}
-              className="mx-auto rounded-md"
+              width={400}
+              height={500}
+              className="mx-auto rounded-md w-full h-auto"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-600/80 text-white p-4 text-center">
               <h3 className="text-lg font-medium">충남대 의예과</h3>
