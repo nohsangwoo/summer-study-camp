@@ -13,6 +13,7 @@ import {
   TrendingUp,
   CheckCircle2,
   ChevronRight,
+  Sparkles,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -33,6 +34,12 @@ export default function Home() {
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               여름방학 전교1등 공부습관캠프 <span className="text-yellow-300">전일공</span>
             </h1>
+            {/* 새로운 슬로건 추가 */}
+            <p className="text-white text-lg mt-3 italic">
+              <span className="bg-blue-700/50 px-3 py-1 rounded-full">
+                "3주만에 바뀌는 학습습관, 1년 내내 지속되는 성적향상"
+              </span>
+            </p>
           </div>
 
           {/* 핵심 메시지 - 훅 */}
@@ -79,10 +86,15 @@ export default function Home() {
                     <p>
                       <span className="font-semibold text-yellow-200">전교1등캠프 전일공</span>은 부산 최대
                       회복기재활의료기관 의료법인{" "}
-                      <Link href="https://www.keunsol.co.kr/" target="_blank" rel="noopener noreferrer">
-                        <span className="underline decoration-yellow-300 hover:text-yellow-400 hover:bg-blue-900/20 hover:decoration-2 transition-all duration-200 rounded px-1">영재의료재단 큰솔병원</span>
-                      </Link>이 후원하고 전국의
-                      전교1등 의대생 멘토들이 지역의 후배들을 위해 만든 공부습관 멘토링 캠프입니다.
+                      <a
+                        href="https://www.keunsol.co.kr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors"
+                      >
+                        영재의료재단 큰솔병원
+                      </a>
+                      이 후원하고 전국의 전교1등 의대생 멘토들이 지역의 후배들을 위해 만든 공부습관 멘토링 캠프입니다.
                     </p>
                   </div>
 
@@ -152,6 +164,20 @@ export default function Home() {
         </div>
       </div>
 
+      {/* 새로운 슬로건 배너 추가 */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-4">
+        <div className="container">
+          <div className="flex items-center justify-center">
+            <Sparkles className="h-5 w-5 text-yellow-300 mr-2" />
+            <p className="text-white font-medium text-center">
+              "전교 1등의 비밀은 타고난 재능이 아닌 <span className="text-yellow-300 font-bold">올바른 공부습관</span>
+              입니다"
+            </p>
+            <Sparkles className="h-5 w-5 text-yellow-300 ml-2" />
+          </div>
+        </div>
+      </div>
+
       {/* 새로운 프로모션 섹션 */}
       <div className="py-16 bg-white">
         <div className="container">
@@ -184,6 +210,14 @@ export default function Home() {
               height={400}
               className="w-full h-auto"
             />
+          </div>
+
+          {/* 새로운 슬로건 추가 */}
+          <div className="text-center mb-10">
+            <p className="text-xl font-medium text-gray-700 italic border-l-4 border-r-4 border-blue-500 px-6 py-3 inline-block">
+              "전교1등 멘토들의 <span className="text-blue-600 font-bold">공부비법 전수</span>로 내 아이의 성적이
+              달라집니다"
+            </p>
           </div>
 
           {/* 캠프 하이라이트 */}
@@ -235,6 +269,14 @@ export default function Home() {
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-8">최고의 멘토링 프로그램</h2>
 
+          {/* 새로운 슬로건 추가 */}
+          <div className="max-w-3xl mx-auto mb-10 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-100">
+            <p className="text-center text-gray-700 font-medium">
+              "<span className="text-blue-600 font-bold">전교1등 멘토</span>가 알려주는 공부법으로{" "}
+              <span className="text-indigo-600 font-bold">내 아이도 전교1등</span>이 될 수 있습니다"
+            </p>
+          </div>
+
           <div className="max-w-4xl mx-auto mb-8">
             <Image
               src="/mentor-banners.png"
@@ -285,6 +327,16 @@ export default function Home() {
             </p>
           </div>
 
+          {/* 새로운 슬로건 추가 */}
+          <div className="text-center mb-10">
+            <div className="inline-block bg-yellow-100 px-6 py-3 rounded-lg border-b-4 border-yellow-400 shadow-md">
+              <p className="text-gray-800 font-medium">
+                "전교1등 공부습관캠프에서 <span className="text-yellow-600 font-bold">3주 투자</span>로{" "}
+                <span className="text-yellow-600 font-bold">1년 성적 상승</span>의 효과를 경험하세요"
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
@@ -327,6 +379,15 @@ export default function Home() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               의대 합격을 위한 체계적인 프로그램으로 여러분의 꿈을 현실로 만들어 드립니다.
             </p>
+          </div>
+
+          {/* 새로운 슬로건 추가 */}
+          <div className="text-center mb-10">
+            <div className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-lg">
+              <p className="font-medium">
+                "전교1등 공부습관캠프는 <span className="font-bold">공부방법부터 달라집니다</span>"
+              </p>
+            </div>
           </div>
 
           {/* 프로그램 버튼 */}
@@ -394,6 +455,15 @@ export default function Home() {
             </p>
           </div>
 
+          {/* 새로운 슬로건 추가 */}
+          <div className="text-center mb-10">
+            <div className="inline-block bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
+              <p className="text-white font-medium">
+                "전교1등 공부습관캠프, <span className="text-yellow-300 font-bold">결과로 증명</span>합니다"
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-4xl font-bold text-center text-yellow-300 mb-2">98%</h3>
@@ -425,6 +495,13 @@ export default function Home() {
             {/* 장식 요소 */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full opacity-10 transform translate-x-16 -translate-y-16"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 rounded-full opacity-10 transform -translate-x-12 translate-y-12"></div>
+
+            {/* 새로운 슬로건 추가 */}
+            <div className="text-center mb-8">
+              <p className="text-xl font-bold text-blue-800">
+                "전교1등 공부습관캠프와 함께 <span className="text-indigo-600">성적 향상의 기적</span>을 경험하세요"
+              </p>
+            </div>
 
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
               <div>

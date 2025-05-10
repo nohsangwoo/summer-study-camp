@@ -14,7 +14,7 @@ import { toast } from "@/components/ui/use-toast"
 import { Toaster } from "@/components/ui/toaster"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle2, Sparkles } from "lucide-react"
 
 const formSchema = z.object({
   // 01. 방학캠프 신청 과정
@@ -205,6 +205,17 @@ export default function ApplicationForm() {
         <p className="text-muted-foreground text-center">
           아래 양식을 작성하여 썸머 공부습관 캠프에 신청하세요. 모든 필수 항목(*)을 작성해주세요.
         </p>
+
+        {/* 새로운 슬로건 추가 */}
+        <div className="text-center mt-6">
+          <div className="inline-flex items-center bg-blue-50 px-6 py-3 rounded-lg border border-blue-200">
+            <Sparkles className="h-5 w-5 mr-2 text-blue-500" />
+            <p className="text-gray-700 font-medium">
+              "전교1등 공부습관캠프, <span className="text-blue-600 font-bold">3주의 변화</span>로{" "}
+              <span className="text-blue-600 font-bold">평생의 성공</span>을 준비하세요"
+            </p>
+          </div>
+        </div>
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -213,42 +224,42 @@ export default function ApplicationForm() {
             <span className="hidden md:inline">01. 방학캠프 신청 과정</span>
             <span className="md:hidden">01</span>
             {form.formState.dirtyFields.campPeriod && (
-              <CheckCircle className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
             )}
           </TabsTrigger>
           <TabsTrigger value="step2" className="relative">
             <span className="hidden md:inline">02. 기본정보 입력</span>
             <span className="md:hidden">02</span>
             {form.formState.dirtyFields.studentName && form.formState.dirtyFields.phone && (
-              <CheckCircle className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
             )}
           </TabsTrigger>
           <TabsTrigger value="step3" className="relative">
             <span className="hidden md:inline">03. 보호자 정보 입력</span>
             <span className="md:hidden">03</span>
             {form.formState.dirtyFields.emergencyContact && (
-              <CheckCircle className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
             )}
           </TabsTrigger>
           <TabsTrigger value="step4" className="relative">
             <span className="hidden md:inline">04. 참여 및 신청 정보</span>
             <span className="md:hidden">04</span>
             {form.formState.dirtyFields.mathLevel && form.formState.dirtyFields.applicationDate && (
-              <CheckCircle className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
             )}
           </TabsTrigger>
           <TabsTrigger value="step5" className="relative">
             <span className="hidden md:inline">05. 선택정보 입력</span>
             <span className="md:hidden">05</span>
             {form.formState.dirtyFields.campSelection && (
-              <CheckCircle className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
             )}
           </TabsTrigger>
           <TabsTrigger value="step6" className="relative">
             <span className="hidden md:inline">06. 개인정보 동의</span>
             <span className="md:hidden">06</span>
             {form.formState.dirtyFields.privacyConsent && (
-              <CheckCircle className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
             )}
           </TabsTrigger>
         </TabsList>
@@ -262,6 +273,14 @@ export default function ApplicationForm() {
                   <CardDescription>참가를 원하시는 캠프 기간을 선택해주세요.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                  {/* 새로운 슬로건 추가 */}
+                  <div className="mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <p className="text-gray-700 font-medium">
+                      "전교1등 공부습관캠프에서 <span className="text-yellow-600 font-bold">학습 혁신</span>을
+                      경험하세요"
+                    </p>
+                  </div>
+
                   <FormField
                     control={form.control}
                     name="campPeriod"
@@ -400,6 +419,13 @@ export default function ApplicationForm() {
                         </FormItem>
                       )}
                     />
+                  </div>
+
+                  {/* 새로운 슬로건 추가 */}
+                  <div className="my-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
+                    <p className="text-center text-gray-700 font-medium">
+                      "전교1등 공부습관캠프, <span className="text-blue-600 font-bold">미래의 인재</span>를 키웁니다"
+                    </p>
                   </div>
 
                   <FormField
@@ -554,6 +580,14 @@ export default function ApplicationForm() {
                     </div>
                   </div>
 
+                  {/* 새로운 슬로건 추가 */}
+                  <div className="my-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
+                    <p className="text-center text-gray-700 font-medium">
+                      "전교1등 공부습관캠프는 <span className="text-indigo-600 font-bold">학부모님의 걱정</span>을
+                      <span className="text-blue-600 font-bold"> 자녀의 성장</span>으로 바꿉니다"
+                    </p>
+                  </div>
+
                   <FormField
                     control={form.control}
                     name="emergencyContact"
@@ -648,6 +682,14 @@ export default function ApplicationForm() {
                       </FormItem>
                     )}
                   />
+
+                  {/* 새로운 슬로건 추가 */}
+                  <div className="my-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <p className="text-gray-700 font-medium">
+                      "전교1등 공부습관캠프에서 <span className="text-yellow-600 font-bold">공부의 즐거움</span>을
+                      발견하세요"
+                    </p>
+                  </div>
 
                   <FormField
                     control={form.control}
@@ -800,6 +842,13 @@ export default function ApplicationForm() {
                     )}
                   />
 
+                  {/* 새로운 슬로건 추가 */}
+                  <div className="my-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+                    <p className="text-center text-gray-700 font-medium">
+                      "전교1등 공부습관캠프, <span className="text-blue-600 font-bold">98%의 학부모</span>가 추천합니다"
+                    </p>
+                  </div>
+
                   <FormField
                     control={form.control}
                     name="campSelection"
@@ -924,6 +973,17 @@ export default function ApplicationForm() {
                         회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의
                         용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의
                         동의를 받는 등 필요한 조치를 이행할 예정입니다.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 새로운 슬로건 추가 */}
+                  <div className="my-6 text-center">
+                    <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-lg">
+                      <Sparkles className="h-5 w-5 mr-2 text-yellow-300" />
+                      <p className="font-medium">
+                        "전교1등 공부습관캠프, <span className="font-bold">3주의 경험</span>이{" "}
+                        <span className="font-bold">평생의 자산</span>이 됩니다"
                       </p>
                     </div>
                   </div>

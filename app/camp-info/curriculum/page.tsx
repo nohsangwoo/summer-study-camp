@@ -1,163 +1,107 @@
 import Image from "next/image"
-import { BookOpen, CheckCircle, Clock, Calendar, Award, Users, GraduationCap } from "lucide-react"
+import { Sparkles } from "lucide-react"
 import DailySchedule from "./components/DailySchedule"
 
 export default function CurriculumPage() {
   return (
-    <div>
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">커리큘럼</h1>
-        <p className="text-gray-600">
-          모든 학생들이 '스스로' 공부하는 자기주도적인 학습 기관, 아는공부캠프 학습 커리큘럼
+    <div className="container mx-auto px-4 py-8">
+      <div className="text-center mb-12">
+        <h1 className="text-3xl font-bold mb-4">전교1등 공부습관캠프 커리큘럼</h1>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          전교1등 공부습관캠프는 학생들의 학습 습관과 자기주도적 학습 능력을 향상시키기 위한 체계적인 프로그램을
+          제공합니다.
         </p>
-      </div>
 
-      {/* 일과 시간표 */}
-      <DailySchedule />
-
-      {/* POINT 01 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 01</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
-            <Image
-              src="/curriculum-point1.jpg"
-              alt="명치전략과 멘토 선생님과의 공부법 1:1 학습상담"
-              width={500}
-              height={350}
-              className="rounded-lg shadow-md"
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              입문 SKY및 명치전략과 멘토 선생님과의
-              <br />
-              <span className="text-indigo-600">공부법 1:1 학습상담</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              멘토 및 담임 선생님은 모든 학생들의 자신의 가치관 및 목표, 그리고 공부법을 통해 각 학생 담임 SKY 및
-              명치전략과 멘토 선생님과 함께 1:1로 주간 별 맞춤 학습진도관리를 진행하게 됩니다.
-            </p>
-            <p className="text-gray-600">
-              각 날마다 3교시마다 본 그룹의 세부적 그룹을 재편성으로 14:4(2) 학습의 특성을 무엇이 됩니다.
+        {/* 새로운 슬로건 추가 */}
+        <div className="mt-6">
+          <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-lg">
+            <Sparkles className="h-5 w-5 mr-2 text-yellow-300" />
+            <p className="font-medium">
+              "전교1등 공부습관캠프, <span className="font-bold">공부 방법부터 달라집니다</span>"
             </p>
           </div>
         </div>
       </div>
 
-      {/* POINT 02 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 02</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
-            <Image
-              src="/curriculum-point2.jpg"
-              alt="학부모님과 매일 소통 및 보고"
-              width={500}
-              height={350}
-              className="rounded-lg shadow-md"
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              철저하고 꼼꼼한 관리!
-              <br />
-              <span className="text-indigo-600">학부모님과 매일 소통 및 보고</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              각 조별 멘토 선생님들은 학생들의 1:1로 학습한 학습진도관리표를 토대로 한 주간리포트를 작성하며 매일 학생
-              상담과 함께 주간 학습 진행 상황을 30초영상으로 정리하여 학부모님께 보고합니다.
-            </p>
-            <p className="text-gray-600">
-              이를 통해 조금 더 긴 안목 속에서 학생의 학습을 보시고 학부모님들께 마음을 편하게합니다.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* POINT 03 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 03</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
-            <Image
-              src="/curriculum-point3.jpg"
-              alt="14시간동안 함시 상주하는 SKY 및 명치전략과 멘토 선생님"
-              width={500}
-              height={350}
-              className="rounded-lg shadow-md"
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              14시간동안 함시 상주하는
-              <br />
-              <span className="text-indigo-600">SKY 및 명치전략과 멘토 선생님!</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              하루 14시간 동안 공부하는 보다 많은 학생이 있지만 어떻게 공부고 조금 더 효과적으로 어떻게 문제의 난이도
-              만족하기 어렵습니다. 이런 학생을 언제든 자신의 소통 공간 옆에 상주하고 계시는 SKY 및 명치전략과 멘토
-              선생님과의 즉석 질의가 학생의 어려움 문제에 빠르게 1:1로 답변 해결해주십니다.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* POINT 04 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 04</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src="/curriculum-point4-1.jpg"
-                alt="30분 정리된 학습진도표와 누적된 자세히 시간표 공부 파악"
-                width={240}
-                height={320}
-                className="rounded-lg shadow-md"
-              />
-              <Image
-                src="/curriculum-point4-2.jpg"
-                alt="30분 정리된 학습진도표와 누적된 자세히 시간표 공부 파악"
-                width={240}
-                height={320}
-                className="rounded-lg shadow-md"
-              />
-            </div>
-          </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              30분 정리된 학습진도표와 누적된
-              <br />
-              <span className="text-indigo-600">자세히 시간표 공부 파악!</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              SKY 서울대 의대생들 학습을 통해서 자신의 학습의 학습진도관리표는 자신의 학습의 진도와 학습량을 한눈에
-              파악할 수 있게 해줍니다. 이는 학생들이 자신의 학습 상황을 객관적으로 파악하고 효율적인 학습 계획을 세울 수
-              있도록 도와줍니다.
-            </p>
-            <ul className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-4">커리큘럼 특징</h2>
+            <ul className="space-y-3">
               <li className="flex items-start">
-                <CheckCircle className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>30분마다 30초의 자신의 학습 확인을 통하여 자신만의 학습법!</span>
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>1:1 맞춤형 멘토링:</strong> 학생 개인별 학습 스타일과 성향에 맞는 맞춤형 학습 지도
+                </span>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="h-5 w-5 text-indigo-600 mr-2 mt-0.5 flex-shrink-0" />
+                <span className="text-blue-500 mr-2">•</span>
                 <span>
-                  매 시간마다 30분마다 시간 학습진도 확인을 하고 있으며, 자신의 시간의 활용도와 집중력을 스스로 체크하며
-                  자신만의 학습법을 만들어 나갑니다.
+                  <strong>체계적인 학습 계획:</strong> 학생의 현재 수준과 목표에 맞는 단계별 학습 계획 수립
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>자기주도학습 습관 형성:</strong> 스스로 학습 목표를 설정하고 실천하는 습관 형성
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>학습 동기 부여:</strong> 성취감을 통한 학습 동기 부여 및 자신감 향상
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>전인적 성장:</strong> 학습뿐만 아니라 인성, 리더십, 협동심 등 전인적 성장 도모
+                </span>
+              </li>
+            </ul>
+          </div>
+          <Image
+            src="/curriculum-point1.jpg"
+            alt="멘토와 함께하는 학습"
+            width={500}
+            height={350}
+            className="w-full h-auto"
+          />
+        </div>
+
+        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <Image src="/curriculum-point2.jpg" alt="학습 계획 수립" width={500} height={350} className="w-full h-auto" />
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-4">프로그램 구성</h2>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>학습 진단 및 목표 설정:</strong> 개인별 학습 수준 진단 및 목표 설정
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>학습 방법론 교육:</strong> 효율적인 학습 방법 및 시간 관리 전략 교육
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>과목별 심화 학습:</strong> 주요 과목별 심화 학습 및 취약점 보완
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>멘토링 세션:</strong> 의대생 멘토와의 1:1 및 그룹 멘토링 세션
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>
+                  <strong>학습 성과 평가:</strong> 정기적인 학습 성과 평가 및 피드백 제공
                 </span>
               </li>
             </ul>
@@ -165,177 +109,216 @@ export default function CurriculumPage() {
         </div>
       </div>
 
-      {/* POINT 05 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 05</h2>
+      {/* 새로운 슬로건 추가 */}
+      <div className="text-center mb-12">
+        <div className="inline-block bg-yellow-100 px-6 py-3 rounded-lg border-b-4 border-yellow-400 shadow-md">
+          <p className="text-gray-800 font-medium">
+            "전교1등 공부습관캠프에서 <span className="text-yellow-600 font-bold">3주 투자</span>로{" "}
+            <span className="text-yellow-600 font-bold">1년 성적 상승</span>의 효과를 경험하세요"
+          </p>
         </div>
+      </div>
 
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold mb-6 text-center">주요 커리큘럼 포인트</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3 text-blue-700">1. 학습 진단 및 분석</h3>
+              <p className="text-gray-700 mb-4">
+                개인별 학습 스타일, 강점, 약점을 진단하고 분석하여 맞춤형 학습 계획을 수립합니다. 학생의 현재 수준과
+                목표를 고려한 체계적인 접근을 통해 효율적인 학습 방향을 설정합니다.
+              </p>
+            </div>
+            <Image
+              src="/curriculum-point3.jpg"
+              alt="학습 진단 및 분석"
+              width={500}
+              height={350}
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3 text-blue-700">2. 학습 습관 형성</h3>
+              <p className="text-gray-700 mb-4">
+                규칙적인 학습 시간 관리, 효율적인 노트 정리법, 집중력 향상 기법 등 학습 효율을 높이는 습관을 형성합니다.
+                전교 1등 멘토들의 실제 학습 습관을 직접 체험하고 내재화합니다.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-2 px-6 pb-6">
+              <Image
+                src="/curriculum-point4-1.jpg"
+                alt="학습 계획표"
+                width={240}
+                height={320}
+                className="w-full h-auto rounded-lg"
+              />
+              <Image
+                src="/curriculum-point4-2.jpg"
+                alt="학습 시간표"
+                width={240}
+                height={320}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3 text-blue-700">3. 과목별 학습 전략</h3>
+              <p className="text-gray-700 mb-4">
+                수학, 영어, 국어 등 주요 과목별 효과적인 학습 전략을 제시하고, 각 과목의 특성에 맞는 학습 방법을
+                교육합니다. 과목별 취약점을 보완하고 강점을 더욱 강화하는 전략적 접근을 지도합니다.
+              </p>
+            </div>
             <Image
               src="/curriculum-point5.jpg"
-              alt="SKY 및 명치전략과 선생님들의 다양한 특강"
+              alt="과목별 학습 전략"
               width={500}
               height={350}
-              className="rounded-lg shadow-md"
+              className="w-full h-auto"
             />
           </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              실력이 확보 된 멘토
-              <br />
-              <span className="text-indigo-600">SKY 및 명치전략과 선생님들의 다양한 특강!</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              SKY 의대생들의 학습법과 자신 공부 시간, 자신 공부 방법 등 다양한 학습법을 공유하며 자신만의 학습법을
-              찾아가는 과정에서 도움을 주는 특강을 진행합니다. 이를 통해 학생들은 효율적인 학습 방법을 습득하고 자신의
-              학습 스타일에 맞는 전략을 개발할 수 있습니다.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* POINT 06 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 06</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3 text-blue-700">4. 자기주도학습 역량 강화</h3>
+              <p className="text-gray-700 mb-4">
+                스스로 학습 목표를 설정하고, 계획을 수립하며, 실천하는 자기주도학습 역량을 강화합니다. 학습 동기 부여 및
+                자기 관리 능력 향상을 통해 지속 가능한 학습 습관을 형성합니다.
+              </p>
+            </div>
             <Image
               src="/curriculum-point6.jpg"
-              alt="철저하게 1대 1대로 수업되는 수학화상 일대일반 1대 수학실 / 영어교육 특성"
+              alt="자기주도학습 역량 강화"
               width={500}
               height={350}
-              className="rounded-lg shadow-md"
+              className="w-full h-auto"
             />
           </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              철저하게 1대 1대로 수업되는 수학화상
-              <br />
-              <span className="text-indigo-600">일대일반 1대 수학실 / 영어교육 특성</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              SKY 의대생들의 철저하게 개인 맞춤 수업과 1:1 화상으로 진행되는 수학 수업은 학생 개개인의 수준과 학습
-              속도에 맞춰 진행됩니다. 이를 통해 학생들은 자신의 약점을 보완하고 강점을 더욱 강화할 수 있으며, 효율적인
-              학습이 가능합니다. 또한 영어교육도 학생의 수준에 맞게 맞춤형으로 진행되어 최대한의 학습 효과를 얻을 수
-              있습니다.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* POINT 07 */}
-      <div className="mb-16">
-        <div className="border-b border-gray-200 mb-6">
-          <h2 className="inline-block text-lg font-bold text-indigo-600 border-b-2 border-indigo-600 pb-2">POINT 07</h2>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3 text-blue-700">5. 멘토링 및 코칭</h3>
+              <p className="text-gray-700 mb-4">
+                의대생 멘토들의 1:1 및 그룹 멘토링을 통해 학습 방법, 시간 관리, 진로 상담 등 다양한 영역에서 실질적인
+                도움을 제공합니다. 멘토의 경험과 노하우를 직접 전수받는 기회를 제공합니다.
+              </p>
+            </div>
             <Image
               src="/curriculum-point7.jpg"
-              alt="SKY 및 명치전략과 선생님들의 1:1 집중 수업"
+              alt="멘토링 및 코칭"
               width={500}
               height={350}
-              className="rounded-lg shadow-md"
+              className="w-full h-auto"
             />
           </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              SKY 및 명치전략과 선생님들의 1:1 집중 수업!
-              <br />
-              <span className="text-indigo-600">1회 60분, 최대 2~3명 진행되는 1:1 수업!</span>
-            </h3>
-            <p className="text-gray-600 mb-4">
-              1:1 집중수업 시간에는 학생, 선생님 학습법을 공유하는 SKY 및 명치전략과 멘토 선생님과 함께, 단순한 문제
-              풀이가 아닌 학습 방법과 전략에 대한 깊이 있는 논의가 이루어집니다. 1회 60분 동안 최대 2~3명의 소규모
-              그룹으로 진행되어 각 학생에게 충분한 관심과 지도가 가능합니다. 이를 통해 학생들은 자신의 학습 스타일을
-              발견하고 효율적인 학습 방법을 습득할 수 있습니다.
-            </p>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-3 text-blue-700">6. 학습 성과 관리</h3>
+              <p className="text-gray-700 mb-4">
+                정기적인 학습 성과 평가 및 피드백을 통해 지속적인 개선을 도모합니다. 학습 과정에서의 어려움을 즉시
+                해결하고, 성취감을 통해 학습 동기를 유지할 수 있도록 지원합니다.
+              </p>
+
+              {/* 새로운 슬로건 추가 */}
+              <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
+                <p className="text-center text-gray-700 font-medium">
+                  "전교1등 공부습관캠프, <span className="text-blue-600 font-bold">성적 향상의 시작</span>입니다"
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 커리큘럼 특징 */}
-      <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
-        <h2 className="text-xl font-bold text-gray-800 mb-6">아는공부캠프 커리큘럼 특징</h2>
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold mb-6 text-center">일일 학습 일정</h2>
+        <DailySchedule />
+      </div>
+
+      <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 mb-16">
+        <h2 className="text-2xl font-bold mb-6 text-center">캠프 기간 중 학습 성과</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <Clock className="h-6 w-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg font-semibold">14시간 집중 학습</h3>
-            </div>
-            <p className="text-gray-600">
-              하루 14시간 동안 체계적인 학습 일정으로 학습 효율성을 극대화하고, 자기주도적 학습 습관을 형성합니다.
-            </p>
+          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
+            <h3 className="text-xl font-bold mb-3 text-blue-700 text-center">1주차</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>학습 진단 및 개인별 학습 계획 수립</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>효율적인 학습 방법론 습득</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>시간 관리 전략 수립 및 실천</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>과목별 학습 전략 이해</span>
+              </li>
+            </ul>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <Users className="h-6 w-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg font-semibold">1:1 맞춤형 지도</h3>
-            </div>
-            <p className="text-gray-600">
-              SKY 및 명치전략과 멘토 선생님들의 1:1 맞춤형 지도로 학생 개개인의 학습 수준과 속도에 맞는 교육을
-              제공합니다.
-            </p>
+          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
+            <h3 className="text-xl font-bold mb-3 text-blue-700 text-center">2주차</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>학습 습관 형성 및 강화</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>과목별 심화 학습 진행</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>취약점 보완 및 강점 강화</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>중간 학습 성과 평가 및 피드백</span>
+              </li>
+            </ul>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <Calendar className="h-6 w-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg font-semibold">체계적인 학습 관리</h3>
-            </div>
-            <p className="text-gray-600">
-              30분 단위로 정리된 학습진도표와 주간 리포트를 통해 학습 상황을 체계적으로 관리하고 학부모님과 공유합니다.
-            </p>
+          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-100">
+            <h3 className="text-xl font-bold mb-3 text-blue-700 text-center">3주차</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>자기주도학습 역량 완성</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>학습 성과 종합 평가</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>캠프 이후 학습 계획 수립</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span>지속 가능한 학습 전략 확립</span>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
 
-          <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <BookOpen className="h-6 w-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg font-semibold">다양한 특강 프로그램</h3>
-            </div>
-            <p className="text-gray-600">
-              SKY 및 명치전략과 선생님들의 다양한 특강을 통해 효율적인 학습 방법과 전략을 습득할 수 있습니다.
-            </p>
-          </div>
-
-          <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <Award className="h-6 w-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg font-semibold">검증된 멘토진</h3>
-            </div>
-            <p className="text-gray-600">
-              SKY 및 명치전략과 출신의 검증된 멘토진이 학생들의 학습을 지도하여 높은 교육 품질을 보장합니다.
-            </p>
-          </div>
-
-          <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center mb-4">
-              <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <GraduationCap className="h-6 w-6 text-indigo-600" />
-              </div>
-              <h3 className="text-lg font-semibold">자기주도적 학습</h3>
-            </div>
-            <p className="text-gray-600">
-              학생 스스로 학습 계획을 세우고 실천하는 자기주도적 학습 환경을 조성하여 장기적인 학습 능력을 향상시킵니다.
-            </p>
-          </div>
+      {/* 새로운 슬로건 추가 */}
+      <div className="text-center mb-16">
+        <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg shadow-lg">
+          <Sparkles className="h-6 w-6 mr-3 text-yellow-300" />
+          <p className="text-xl font-medium">
+            "전교1등 공부습관캠프, <span className="font-bold">성적 향상을 넘어 미래를 준비</span>합니다"
+          </p>
+          <Sparkles className="h-6 w-6 ml-3 text-yellow-300" />
         </div>
       </div>
     </div>
