@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ChevronRight } from "lucide-react"
+import { ArrowRight, ChevronRight, Star, Award, BookOpen } from "lucide-react"
 
 interface MentorProfile {
   id: string
@@ -115,6 +115,13 @@ export default function MentorsPage() {
         </p>
       </div>
 
+      {/* 대형 슬로건 배너 */}
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl mb-12 shadow-lg">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          "전교1등 공부습관캠프, <span className="text-yellow-300">의대생 멘토</span>와 함께하는 성공 경험"
+        </h2>
+      </div>
+
       {/* 멘토 상세 프로필 */}
       <div className="space-y-12">
         {mentors.map((mentor, index) => (
@@ -160,6 +167,17 @@ export default function MentorsPage() {
         ))}
       </div>
 
+      {/* 중간 슬로건 */}
+      <div className="my-12 bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
+        <div className="flex items-center justify-center">
+          <Star className="h-8 w-8 text-yellow-500 mr-3" />
+          <p className="text-2xl font-bold text-blue-800">
+            "전교1등 공부습관캠프, <span className="text-purple-700">최상위권 의대생</span>이 직접 가르칩니다"
+          </p>
+          <Star className="h-8 w-8 text-yellow-500 ml-3" />
+        </div>
+      </div>
+
       {/* 멘토 팀 소개 */}
       <div className="mt-16">
         <div className="flex items-center mb-8">
@@ -189,6 +207,17 @@ export default function MentorsPage() {
         </div>
       </div>
 
+      {/* 슬로건 배너 */}
+      <div className="mt-12 bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+        <div className="flex items-center justify-center">
+          <Award className="h-10 w-10 text-yellow-400 mr-4" />
+          <p className="text-2xl font-bold">
+            "전교1등 공부습관캠프, <span className="text-yellow-400">3주 투자</span>로{" "}
+            <span className="text-yellow-400">1년 성적 향상</span>의 효과"
+          </p>
+        </div>
+      </div>
+
       {/* 멘토링 신청 섹션 */}
       <div className="mt-16 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl p-8 shadow-md">
         <div className="text-center mb-8">
@@ -207,6 +236,16 @@ export default function MentorsPage() {
             멘토링 신청하기
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+        </div>
+      </div>
+
+      {/* 하단 슬로건 */}
+      <div className="mt-12 text-center">
+        <div className="inline-flex items-center bg-white border-2 border-purple-500 px-8 py-4 rounded-full shadow-md">
+          <BookOpen className="h-6 w-6 mr-3 text-purple-600" />
+          <p className="text-xl font-bold text-purple-800">
+            "전교1등 공부습관캠프, <span className="text-purple-600">공부 방법</span>부터 달라집니다"
+          </p>
         </div>
       </div>
 

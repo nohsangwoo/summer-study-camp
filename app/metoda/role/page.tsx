@@ -1,5 +1,6 @@
 import Image from "next/image"
 import type { Metadata } from "next"
+import { BookOpen, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "연구소 역할 | 의대생공부습관연구소",
@@ -17,22 +18,61 @@ export default function ResearchRolePage() {
         </p>
       </section>
 
+      {/* 대형 슬로건 배너 */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl mb-12 shadow-lg">
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          "전교1등 공부습관캠프, <span className="text-yellow-300">공부하는 방법</span>부터 달라집니다"
+        </h2>
+      </div>
+
       <section className="space-y-12">
         {/* 수업 연구 섹션 */}
         <div className="relative overflow-hidden rounded-xl shadow-lg">
           <Image src="/research-study.png" alt="수업 연구" width={1200} height={600} className="w-full" />
+
+          {/* 슬로건 오버레이 */}
+          <div className="absolute bottom-0 left-0 right-0 bg-blue-600/80 text-white p-4">
+            <p className="text-lg font-medium text-center">
+              "전교1등 공부습관캠프는 <span className="font-bold">과학적 연구</span>를 바탕으로 합니다"
+            </p>
+          </div>
         </div>
 
         {/* 콘텐츠 개발 섹션 */}
         <div className="relative overflow-hidden rounded-xl shadow-lg">
           <Image src="/research-content.png" alt="콘텐츠 개발" width={1200} height={600} className="w-full" />
+
+          {/* 슬로건 오버레이 */}
+          <div className="absolute bottom-0 left-0 right-0 bg-purple-600/80 text-white p-4">
+            <p className="text-lg font-medium text-center">
+              "전교1등 공부습관캠프만의 <span className="font-bold">차별화된 콘텐츠</span>로 학습 효율을 극대화합니다"
+            </p>
+          </div>
         </div>
 
         {/* 커리큘럼 연구 섹션 */}
         <div className="relative overflow-hidden rounded-xl shadow-lg">
           <Image src="/research-curriculum.png" alt="커리큘럼 연구" width={1200} height={600} className="w-full" />
+
+          {/* 슬로건 오버레이 */}
+          <div className="absolute bottom-0 left-0 right-0 bg-indigo-600/80 text-white p-4">
+            <p className="text-lg font-medium text-center">
+              "전���1등 공부습관캠프의 <span className="font-bold">맞춤형 커리큘럼</span>으로 성적 향상을 경험하세요"
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* 중간 슬로건 */}
+      <div className="my-12 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+        <div className="flex items-center">
+          <BookOpen className="h-8 w-8 text-blue-500 mr-3" />
+          <p className="text-xl font-semibold text-blue-700">
+            "전교1등 공부습관캠프, 3주의 투자로 <span className="text-blue-900 font-bold">평생의 학습 습관</span>을
+            만듭니다"
+          </p>
+        </div>
+      </div>
 
       <section className="mt-12 bg-gray-50 p-6 rounded-lg">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">연구소 역할의 중요성</h2>
@@ -60,6 +100,16 @@ export default function ResearchRolePage() {
           <li>학습 습관 개선을 통한 학업 성취도 향상 사례 연구</li>
         </ul>
       </section>
+
+      {/* 하단 슬로건 */}
+      <div className="mt-12 text-center">
+        <div className="inline-flex items-center bg-gray-800 text-white px-8 py-4 rounded-lg shadow-lg">
+          <TrendingUp className="h-6 w-6 mr-3 text-yellow-400" />
+          <p className="text-2xl font-bold">
+            "전교1등 공부습관캠프, <span className="text-yellow-400">결과로 증명</span>합니다"
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
