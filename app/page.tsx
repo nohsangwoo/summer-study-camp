@@ -79,7 +79,9 @@ export default function Home() {
                     <p>
                       <span className="font-semibold text-yellow-200">전교1등캠프 전일공</span>은 부산 최대
                       회복기재활의료기관 의료법인{" "}
-                      <span className="underline decoration-yellow-300">영재의료재단 큰솔병원</span>이 후원하고 전국의
+                      <Link href="https://www.keunsol.co.kr/" target="_blank" rel="noopener noreferrer">
+                        <span className="underline decoration-yellow-300 hover:text-yellow-400 hover:bg-blue-900/20 hover:decoration-2 transition-all duration-200 rounded px-1">영재의료재단 큰솔병원</span>
+                      </Link>이 후원하고 전국의
                       전교1등 의대생 멘토들이 지역의 후배들을 위해 만든 공부습관 멘토링 캠프입니다.
                     </p>
                   </div>
