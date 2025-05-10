@@ -273,14 +273,6 @@ export default function ApplicationForm() {
                   <CardDescription>참가를 원하시는 캠프 기간을 선택해주세요.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {/* 새로운 슬로건 추가 */}
-                  <div className="mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-                    <p className="text-gray-700 font-medium">
-                      "전교1등 공부습관캠프에서 <span className="text-yellow-600 font-bold">학습 혁신</span>을
-                      경험하세요"
-                    </p>
-                  </div>
-
                   <FormField
                     control={form.control}
                     name="campPeriod"
@@ -419,13 +411,6 @@ export default function ApplicationForm() {
                         </FormItem>
                       )}
                     />
-                  </div>
-
-                  {/* 새로운 슬로건 추가 */}
-                  <div className="my-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
-                    <p className="text-center text-gray-700 font-medium">
-                      "전교1등 공부습관캠프, <span className="text-blue-600 font-bold">미래의 인재</span>를 키웁니다"
-                    </p>
                   </div>
 
                   <FormField
@@ -580,14 +565,6 @@ export default function ApplicationForm() {
                     </div>
                   </div>
 
-                  {/* 새로운 슬로건 추가 */}
-                  <div className="my-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
-                    <p className="text-center text-gray-700 font-medium">
-                      "전교1등 공부습관캠프는 <span className="text-indigo-600 font-bold">학부모님의 걱정</span>을
-                      <span className="text-blue-600 font-bold"> 자녀의 성장</span>으로 바꿉니다"
-                    </p>
-                  </div>
-
                   <FormField
                     control={form.control}
                     name="emergencyContact"
@@ -682,14 +659,6 @@ export default function ApplicationForm() {
                       </FormItem>
                     )}
                   />
-
-                  {/* 새로운 슬로건 추가 */}
-                  <div className="my-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
-                    <p className="text-gray-700 font-medium">
-                      "전교1등 공부습관캠프에서 <span className="text-yellow-600 font-bold">공부의 즐거움</span>을
-                      발견하세요"
-                    </p>
-                  </div>
 
                   <FormField
                     control={form.control}
@@ -842,13 +811,6 @@ export default function ApplicationForm() {
                     )}
                   />
 
-                  {/* 새로운 슬로건 추가 */}
-                  <div className="my-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
-                    <p className="text-center text-gray-700 font-medium">
-                      "전교1등 공부습관캠프, <span className="text-blue-600 font-bold">98%의 학부모</span>가 추천합니다"
-                    </p>
-                  </div>
-
                   <FormField
                     control={form.control}
                     name="campSelection"
@@ -973,17 +935,6 @@ export default function ApplicationForm() {
                         회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의
                         용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의
                         동의를 받는 등 필요한 조치를 이행할 예정입니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* 새로운 슬로건 추가 */}
-                  <div className="my-6 text-center">
-                    <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-lg">
-                      <Sparkles className="h-5 w-5 mr-2 text-yellow-300" />
-                      <p className="font-medium">
-                        "전교1등 공부습관캠프, <span className="font-bold">3주의 경험</span>이{" "}
-                        <span className="font-bold">평생의 자산</span>이 됩니다"
                       </p>
                     </div>
                   </div>
