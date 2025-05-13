@@ -103,7 +103,7 @@ export default function ApplicationForm() {
   }
 
   return (
-    <div className="container py-10 max-w-4xl">
+    <div className="container py-10 max-w-5xl">
       <div className="mb-8 space-y-4">
         <h1 className="text-3xl font-bold text-center">썸머 공부습관 캠프 신청서</h1>
         <p className="text-muted-foreground text-center">
