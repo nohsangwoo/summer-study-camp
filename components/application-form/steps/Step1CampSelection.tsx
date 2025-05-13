@@ -47,17 +47,17 @@ export function Step1CampSelection({ form, setActiveTab, activeTab }: Step1Props
                       <RadioGroupItem value="period1" />
                     </FormControl>
                     <FormLabel className="font-normal">
-                      [캠프/1주 수학특강] 07월 20일 (토) ~ 08월 15일 (목) 🔥
+                      [캠프/1주 수학특강] 07월 20일 (토) ~ 08월 9일 (금) 🔥
                     </FormLabel>
                   </FormItem>
-                  <FormItem className="flex items-center space-x-3 space-y-0">
+                  {/* <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
                       <RadioGroupItem value="period2" />
                     </FormControl>
                     <FormLabel className="font-normal">
                       [캠프/2주 수학특강] 07월 27일 (토) ~ 08월 16일 (금)
                     </FormLabel>
-                  </FormItem>
+                  </FormItem> */}
                 </RadioGroup>
               </FormControl>
               <FormMessage />
