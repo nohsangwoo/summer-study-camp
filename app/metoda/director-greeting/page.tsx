@@ -79,7 +79,7 @@ export default function DirectorGreetingPage() {
               학력
             </h4>
             <ul className="space-y-2 list-disc list-inside text-gray-700">
-              <li>부산대학교 의과대학 의예과</li>
+              <li>부산대학교 의과대학 의학과</li>
               <li>부산과학고등학교 졸업</li>
               <li>전국 수학 올림피아드 수상</li>
               <li>의학교육 혁신 포럼 발표자</li>

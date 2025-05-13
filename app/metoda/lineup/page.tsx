@@ -33,7 +33,7 @@ export default function LineupPage() {
     {
       id: "kimdongheon",
       name: "김동헌",
-      university: "부산대 의예과",
+      university: "부산대 의학과",
       role: "학습연구팀장",
       image: "/mentors/kimdongheon.jpg",
       description: "효율적인 학습 방법론 연구와 학생 맞춤형 학습 전략 개발을 담당하고 있습니다.",
