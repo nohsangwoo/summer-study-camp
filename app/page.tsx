@@ -7,6 +7,7 @@ import {
   ProgramSection,
   StatsSection,
   CTASection,
+  SpecialLectureSection,
   SocialLinksSection
 } from "@/components/home"
 
@@ -36,6 +37,9 @@ export default function Home() {
       
       {/* CTA 섹션 */}
       <CTASection />
+      
+      {/* 특별 집중 특강 섹션 */}
+      <SpecialLectureSection />
       
       {/* 카카오톡 및 인스타그램 링크 */}
       <SocialLinksSection />
