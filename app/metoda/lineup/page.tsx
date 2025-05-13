@@ -17,7 +17,7 @@ export default function LineupPage() {
     {
       id: "kimdongheon",
       name: "김동헌",
-      university: "부산대 의예과",
+      university: "부산대 의학과",
       role: "대표 겸 연구소장",
       image: "/mentors/kimdongheon.jpg",
       description: "의대생 멘토링 캠프를 제안하고 다양한 프로그램 기획에 주도적인 역할을 담당하고 있습니다.",
@@ -251,7 +251,7 @@ export default function LineupPage() {
           <div className="flex flex-col items-center mb-10">
             <div className="bg-red-600 text-white rounded-lg p-4 text-center w-64 shadow-md">
               <h3 className="font-bold">김동헌 대표 겸 연구소장</h3>
-              <p className="text-sm text-red-100">부산대 의예과</p>
+              <p className="text-sm text-red-100">부산대 의학과</p>
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
           </div>
