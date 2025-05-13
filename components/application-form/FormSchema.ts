@@ -52,19 +52,29 @@ export const formSchema = z.object({
   }),
 
   // 04. 참여 및 신청 정보 입력
-  mathLevel: z.string({
-    required_error: "수학 관련 선택을 해주세요.",
+  // 성적 서술 필드
+  koreanGradeDescription: z.string().optional(),
+  mathGradeDescription: z.string().optional(),
+  englishGradeDescription: z.string().optional(),
+  otherSubjectsDescription: z.string().optional(),
+  
+  // 진로 관련 필드
+  careerPath: z.string({
+    required_error: "희망 진로 분야를 선택해주세요.",
   }),
+  careerDetail: z.string().optional(),
+  
+  // 과외 신청 필드
+  requestTutoring: z.string().optional(),
+  tutoringSubject: z.string().optional(),
+  tutoringReason: z.string().optional(),
+  
+  // 기존 필드 (사용하지 않는 필드는 유지)
+  mathLevel: z.string().optional(),
   mathCourses: z.array(z.string()).optional(),
-  englishLevel: z.string({
-    required_error: "영어 관련 선택을 해주세요.",
-  }),
-  koreanLevel: z.string({
-    required_error: "국어 관련 선택을 해주세요.",
-  }),
-  applicationDate: z.string({
-    required_error: "참가신청일을 선택해주세요.",
-  }),
+  englishLevel: z.string().optional(),
+  koreanLevel: z.string().optional(),
+  applicationDate: z.string().optional(),
   applicationReason: z.array(z.string()).optional(),
 
   // 05. 선택정보 입력
@@ -154,4 +164,24 @@ export const highSchoolLectureOptions = [
   { id: "h_lecture5", label: "고교 화학 심화" },
   { id: "h_lecture6", label: "고교 생명과학 심화" },
   { id: "h_lecture7", label: "고교 논술 특강" },
+]
+
+// 진로 선택 옵션
+export const careerOptions = [
+  { id: "medical", label: "의학계열 (의사, 한의사, 약사 등)" },
+  { id: "engineering", label: "공학계열" },
+  { id: "science", label: "자연과학계열" },
+  { id: "humanities", label: "인문사회계열" },
+  { id: "arts", label: "예체능계열" },
+  { id: "education", label: "교육계열" },
+  { id: "undecided", label: "아직 미정" },
+]
+
+// 과외 과목 옵션
+export const tutoringSubjects = [
+  { id: "math", label: "수학" },
+  { id: "english", label: "영어" },
+  { id: "korean", label: "국어" },
+  { id: "science", label: "과학" },
+  { id: "social", label: "사회" },
 ] 
