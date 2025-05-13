@@ -77,6 +77,25 @@ export const formSchema = z.object({
   }),
   referralChannels: z.array(z.string()).optional(),
 
+  // 06. 특강 신청 (수요조사)
+  studentGrade: z.string({
+    required_error: "학생 구분을 선택해주세요.",
+  }),
+  middleSchoolLectures: z.array(z.string())
+    .refine((lectures) => {
+      // 중학생 선택 시, 2개 이상 선택 필수
+      return lectures.length >= 0; // 학생 구분이 중학생인 경우만 검증하도록 page.tsx에서 처리
+    }, {
+      message: "중학생은 최소 2개 이상의 특강을 선택해야 합니다.",
+    }),
+  highSchoolLectures: z.array(z.string())
+    .refine((lectures) => {
+      // 고등학생 선택 시, 2개 이상 선택 필수
+      return lectures.length >= 0; // 학생 구분이 고등학생인 경우만 검증하도록 page.tsx에서 처리
+    }, {
+      message: "고등학생은 최소 2개 이상의 특강을 선택해야 합니다.",
+    }),
+
   // 개인정보 수집 및 이용 동의
   privacyConsent: z.boolean().refine((val) => val === true, {
     message: "개인정보 수집 및 이용에 동의해주세요.",
@@ -110,4 +129,29 @@ export const referralChannelOptions = [
   { id: "channel6", label: "학원소개" },
   { id: "channel7", label: "기존참가" },
   { id: "channel8", label: "선생님추천" },
+]
+
+// 학생 구분 옵션
+export const studentGradeOptions = [
+  { id: "middle", label: "중학생" },
+  { id: "high", label: "고등학생" },
+]
+
+// 중학생 특강 옵션
+export const middleSchoolLectureOptions = [
+  { id: "m_lecture1", label: "중학 수학 기초" },
+  { id: "m_lecture2", label: "중학 영어 문법" },
+  { id: "m_lecture3", label: "중학 과학 심화" },
+  { id: "m_lecture4", label: "중학 논술 특강" },
+]
+
+// 고등학생 특강 옵션
+export const highSchoolLectureOptions = [
+  { id: "h_lecture1", label: "고교 수학 기초" },
+  { id: "h_lecture2", label: "고교 영어 독해" },
+  { id: "h_lecture3", label: "고교 국어 문학" },
+  { id: "h_lecture4", label: "고교 물리 심화" },
+  { id: "h_lecture5", label: "고교 화학 심화" },
+  { id: "h_lecture6", label: "고교 생명과학 심화" },
+  { id: "h_lecture7", label: "고교 논술 특강" },
 ] 

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { UseFormReturn } from "react-hook-form"
 import { FormValues } from "../FormSchema"
-import { StepType, nextStep, prevStep } from "../FormUtils"
+import { StepType, nextStep, prevStep, getStepNumber, STEP_LABELS } from "../FormUtils"
 
 interface Step2Props {
   form: UseFormReturn<FormValues>
@@ -35,8 +35,8 @@ export function Step2BasicInfo({ form, setActiveTab, activeTab }: Step2Props) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>02. 기본정보 입력</CardTitle>
-        <CardDescription>학생의 기본 정보를 입력해주세요.</CardDescription>
+        <CardTitle>{getStepNumber(activeTab)}. {STEP_LABELS[activeTab].title}</CardTitle>
+        <CardDescription>{STEP_LABELS[activeTab].description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <FormField

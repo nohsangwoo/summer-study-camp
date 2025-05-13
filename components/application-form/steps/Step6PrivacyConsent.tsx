@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { UseFormReturn } from "react-hook-form"
 import { FormValues } from "../FormSchema"
-import { StepType, prevStep } from "../FormUtils"
+import { StepType, prevStep, getStepNumber, STEP_LABELS } from "../FormUtils"
 import { useState } from "react"
 
 interface Step6Props {
@@ -29,8 +29,8 @@ export function Step6PrivacyConsent({ form, setActiveTab, activeTab, onSubmit, i
   return (
     <Card>
       <CardHeader>
-        <CardTitle>06. 개인정보 수집 및 이용 동의</CardTitle>
-        <CardDescription>개인정보 수집 및 이용에 대한 동의를 확인해주세요.</CardDescription>
+        <CardTitle>{getStepNumber(activeTab)}. {STEP_LABELS[activeTab].title}</CardTitle>
+        <CardDescription>{STEP_LABELS[activeTab].description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="bg-gray-50 p-4 rounded-md border border-gray-200 mb-4">

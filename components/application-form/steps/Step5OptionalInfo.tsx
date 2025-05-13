@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { UseFormReturn } from "react-hook-form"
 import { FormValues, referralChannelOptions } from "../FormSchema"
-import { StepType, nextStep, prevStep } from "../FormUtils"
+import { StepType, nextStep, prevStep, getStepNumber, STEP_LABELS } from "../FormUtils"
 
 interface Step5Props {
   form: UseFormReturn<FormValues>
@@ -36,8 +36,8 @@ export function Step5OptionalInfo({ form, setActiveTab, activeTab }: Step5Props)
   return (
     <Card>
       <CardHeader>
-        <CardTitle>05. 선택정보 입력</CardTitle>
-        <CardDescription>추가 정보를 입력해주세요.</CardDescription>
+        <CardTitle>{getStepNumber(activeTab)}. {STEP_LABELS[activeTab].title}</CardTitle>
+        <CardDescription>{STEP_LABELS[activeTab].description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <FormField

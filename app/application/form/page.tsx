@@ -8,12 +8,13 @@ import { Toaster } from "@/components/ui/toaster"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle2, Sparkles } from "lucide-react"
 import { FormValues, formSchema } from "@/components/application-form/FormSchema"
-import { StepType } from "@/components/application-form/FormUtils"
+import { StepType, STEPS, getStepNumber, STEP_LABELS } from "@/components/application-form/FormUtils"
 import { Step1CampSelection } from "@/components/application-form/steps/Step1CampSelection"
 import { Step2BasicInfo } from "@/components/application-form/steps/Step2BasicInfo"
 import { Step3GuardianInfo } from "@/components/application-form/steps/Step3GuardianInfo"
 import { Step4ParticipationInfo } from "@/components/application-form/steps/Step4ParticipationInfo"
 import { Step5OptionalInfo } from "@/components/application-form/steps/Step5OptionalInfo"
+import { StepSpecialLecture } from "@/components/application-form/steps/StepSpecialLecture"
 import { Step6PrivacyConsent } from "@/components/application-form/steps/Step6PrivacyConsent"
 import { Form } from "@/components/ui/form"
 
@@ -50,6 +51,9 @@ export default function ApplicationForm() {
       campSelection: "",
       covidConsent: "",
       referralChannels: [],
+      studentGrade: "",
+      middleSchoolLectures: [],
+      highSchoolLectures: [],
       privacyConsent: false,
     },
   })
@@ -76,6 +80,28 @@ export default function ApplicationForm() {
     form.handleSubmit(onSubmit)()
   }
 
+  // 각 단계별 완료 상태 확인 함수
+  const isStepCompleted = (step: StepType) => {
+    switch (step) {
+      case "step1":
+        return !!form.formState.dirtyFields.campPeriod
+      case "step2":
+        return !!form.formState.dirtyFields.studentName && !!form.formState.dirtyFields.phone
+      case "step3":
+        return !!form.formState.dirtyFields.emergencyContact
+      case "step4":
+        return !!form.formState.dirtyFields.mathLevel && !!form.formState.dirtyFields.applicationDate
+      case "step5":
+        return !!form.formState.dirtyFields.campSelection
+      case "step6":
+        return !!form.formState.dirtyFields.studentGrade
+      case "step7":
+        return !!form.formState.dirtyFields.privacyConsent
+      default:
+        return false
+    }
+  }
+
   return (
     <div className="container py-10 max-w-4xl">
       <div className="mb-8 space-y-4">
@@ -97,78 +123,49 @@ export default function ApplicationForm() {
       </div>
 
       <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as StepType)} className="w-full">
-        <TabsList className="grid grid-cols-6 mb-8">
-          <TabsTrigger value="step1" className="relative">
-            <span className="hidden md:inline">01. 방학캠프 신청 과정</span>
-            <span className="md:hidden">01</span>
-            {form.formState.dirtyFields.campPeriod && (
-              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
-            )}
-          </TabsTrigger>
-          <TabsTrigger value="step2" className="relative">
-            <span className="hidden md:inline">02. 기본정보 입력</span>
-            <span className="md:hidden">02</span>
-            {form.formState.dirtyFields.studentName && form.formState.dirtyFields.phone && (
-              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
-            )}
-          </TabsTrigger>
-          <TabsTrigger value="step3" className="relative">
-            <span className="hidden md:inline">03. 보호자 정보 입력</span>
-            <span className="md:hidden">03</span>
-            {form.formState.dirtyFields.emergencyContact && (
-              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
-            )}
-          </TabsTrigger>
-          <TabsTrigger value="step4" className="relative">
-            <span className="hidden md:inline">04. 참여 및 신청 정보</span>
-            <span className="md:hidden">04</span>
-            {form.formState.dirtyFields.mathLevel && form.formState.dirtyFields.applicationDate && (
-              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
-            )}
-          </TabsTrigger>
-          <TabsTrigger value="step5" className="relative">
-            <span className="hidden md:inline">05. 선택정보 입력</span>
-            <span className="md:hidden">05</span>
-            {form.formState.dirtyFields.campSelection && (
-              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
-            )}
-          </TabsTrigger>
-          <TabsTrigger value="step6" className="relative">
-            <span className="hidden md:inline">06. 개인정보 동의</span>
-            <span className="md:hidden">06</span>
-            {form.formState.dirtyFields.privacyConsent && (
-              <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
-            )}
-          </TabsTrigger>
+        <TabsList className="grid grid-cols-7 mb-8">
+          {STEPS.map((step) => (
+            <TabsTrigger key={step} value={step} className="relative">
+              <span className="hidden md:inline">{getStepNumber(step)}. {STEP_LABELS[step].title}</span>
+              <span className="md:hidden">{getStepNumber(step)}</span>
+              {isStepCompleted(step) && (
+                <CheckCircle2 className="h-4 w-4 text-green-500 absolute -top-1 -right-1" />
+              )}
+            </TabsTrigger>
+          ))}
         </TabsList>
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <TabsContent value="step1">
-              <Step1CampSelection form={form} setActiveTab={setActiveTab} activeTab={activeTab} />
+              <Step1CampSelection form={form} setActiveTab={setActiveTab} activeTab="step1" />
             </TabsContent>
 
             <TabsContent value="step2">
-              <Step2BasicInfo form={form} setActiveTab={setActiveTab} activeTab={activeTab} />
+              <Step2BasicInfo form={form} setActiveTab={setActiveTab} activeTab="step2" />
             </TabsContent>
 
             <TabsContent value="step3">
-              <Step3GuardianInfo form={form} setActiveTab={setActiveTab} activeTab={activeTab} />
+              <Step3GuardianInfo form={form} setActiveTab={setActiveTab} activeTab="step3" />
             </TabsContent>
 
             <TabsContent value="step4">
-              <Step4ParticipationInfo form={form} setActiveTab={setActiveTab} activeTab={activeTab} />
+              <Step4ParticipationInfo form={form} setActiveTab={setActiveTab} activeTab="step4" />
             </TabsContent>
 
             <TabsContent value="step5">
-              <Step5OptionalInfo form={form} setActiveTab={setActiveTab} activeTab={activeTab} />
+              <Step5OptionalInfo form={form} setActiveTab={setActiveTab} activeTab="step5" />
             </TabsContent>
 
             <TabsContent value="step6">
+              <StepSpecialLecture form={form} setActiveTab={setActiveTab} activeTab="step6" />
+            </TabsContent>
+
+            <TabsContent value="step7">
               <Step6PrivacyConsent 
                 form={form} 
                 setActiveTab={setActiveTab} 
-                activeTab={activeTab} 
+                activeTab="step7" 
                 onSubmit={handleSubmit}
                 isSubmitting={isSubmitting}
               />

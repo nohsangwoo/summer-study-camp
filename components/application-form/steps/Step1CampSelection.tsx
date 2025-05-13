@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { UseFormReturn } from "react-hook-form"
 import { FormValues } from "../FormSchema"
-import { StepType, nextStep } from "../FormUtils"
+import { StepType, nextStep, getStepNumber, STEP_LABELS } from "../FormUtils"
 
 interface Step1Props {
   form: UseFormReturn<FormValues>
@@ -26,8 +26,8 @@ export function Step1CampSelection({ form, setActiveTab, activeTab }: Step1Props
   return (
     <Card>
       <CardHeader>
-        <CardTitle>01. 방학캠프 신청 과정</CardTitle>
-        <CardDescription>참가를 원하시는 캠프 기간을 선택해주세요.</CardDescription>
+        <CardTitle>{getStepNumber(activeTab)}. {STEP_LABELS[activeTab].title}</CardTitle>
+        <CardDescription>{STEP_LABELS[activeTab].description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <FormField
