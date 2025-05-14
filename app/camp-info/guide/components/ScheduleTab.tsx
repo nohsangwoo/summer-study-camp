@@ -35,7 +35,7 @@ export default function ScheduleTab() {
             </TableRow>
             <TableRow>
               <TableCell className="font-medium bg-gray-100">모집대상</TableCell>
-              <TableCell>중학생 전학년<br />고등학교 1,2학년</TableCell>
+              <TableCell>중학생 전학년<br />고등학생 1학년</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium bg-gray-100">접수안내</TableCell>
