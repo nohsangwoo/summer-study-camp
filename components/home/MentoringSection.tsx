@@ -197,22 +197,94 @@ export const MentoringSection = () => {
           </div>
         </div>
 
-        <div className="text-center mb-8">
-          <h3 className="text-xl font-semibold mb-4">우수한 멘토진</h3>
+        <div className="text-center mb-8 my-24">
+          <h3 className="text-xl font-semibold mb-4">
+            전교1등공부습관캠프 1:1 멘토진
+          </h3>
           <p className="text-gray-700 mb-6">
-            서울대, 연세대, 고려대 출신의 우수한 멘토들이 학생들의 학습을 1:1로
-            지도합니다. 각 분야 전문가들의 체계적인 멘토링으로 학습 효율을
-            극대화합니다.
+            위 대표멘토들이 함께 활동하던 지역의 의대생들만 20여명을 엄선하여
+            100% 인성+실력을 겸비한 정예멘토들로 구성 하여 1:5 전담 멘토제로
+            운영됩니다
           </p>
 
           <div className="max-w-4xl mx-auto">
-            <Image
-              src="/mentor-profiles.png"
-              alt="멘토 프로필"
-              width={800}
-              height={200}
-              className="w-full h-auto rounded-lg shadow-md"
-            />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {/* 첫 번째 멘토 */}
+              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <div className="relative w-full aspect-square">
+                  <Image
+                    src="/placeholder.svg"
+                    alt="김동현 멘토"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <p className="text-gray-700 font-medium">
+                    부산대의대
+                    <br />
+                    김동현
+                  </p>
+                </div>
+              </div>
+
+              {/* 두 번째 멘토 */}
+              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <div className="relative w-full aspect-square">
+                  <Image
+                    src="/placeholder.svg"
+                    alt="장서원 멘토"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <p className="text-gray-700 font-medium">
+                    부산대의대
+                    <br />
+                    장서원
+                  </p>
+                </div>
+              </div>
+
+              {/* 세 번째 멘토 */}
+              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <div className="relative w-full aspect-square">
+                  <Image
+                    src="/placeholder.svg"
+                    alt="윤태현 멘토"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <p className="text-gray-700 font-medium">
+                    부산대의대
+                    <br />
+                    윤태현
+                  </p>
+                </div>
+              </div>
+
+              {/* 네 번째 멘토 */}
+              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+                <div className="relative w-full aspect-square">
+                  <Image
+                    src="/placeholder.svg"
+                    alt="윤태현 멘토"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <p className="text-gray-700 font-medium">
+                    부산대의대
+                    <br />
+                    윤태현
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
