@@ -9,15 +9,15 @@ export default function GreetingPage() {
         <div className="w-full lg:w-1/3 flex-shrink-0">
           <div className="relative overflow-hidden rounded-lg shadow-md bg-gray-200 p-4">
             <Image
-              src="/kimtaehoon-portrait.png"
-              alt="김태훈 대표"
+              src="/placeholder.svg"
+              alt="김동헌 대표"
               width={400}
               height={500}
               className="mx-auto rounded-md w-full h-auto"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-600/80 text-white p-4 text-center">
-              <h3 className="text-lg font-medium">충남대 의예과</h3>
-              <h2 className="text-xl font-bold">김태훈</h2>
+              <h3 className="text-lg font-medium">부산대 의대</h3>
+              <h2 className="text-xl font-bold">김동헌</h2>
             </div>
           </div>
         </div>
