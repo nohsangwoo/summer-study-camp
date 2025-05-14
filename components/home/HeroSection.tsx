@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, GraduationCap, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight, GraduationCap, Star } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export const HeroSection = () => {
   return (
@@ -16,23 +16,31 @@ export const HeroSection = () => {
         {/* 캠프 타이틀 */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            여름방학 전교1등 공부습관캠프 <span className="text-yellow-300">전일공</span>
+            여름방학 전교1등 공부습관캠프{' '}
+            <span className="text-yellow-300">전일공</span>
           </h1>
           {/* 새로운 슬로건 추가 */}
           <p className="text-white text-lg mt-3 italic">
             <span className="bg-blue-700/50 px-3 py-1 rounded-full">
-              "3주만에 바뀌는 학습습관, 1년 내내 지속되는 성적향상"
+              "관리학원,개인과외,인강 장점만 담았습니다"
+            </span>
+          </p>
+          <p className="text-white text-lg mt-2 italic">
+            <span className="bg-blue-700/50 px-3 py-1 rounded-full">
+              "3주만 투자하세요, 자기주도학습태도로 1년 내내 지속되는 성적"
             </span>
           </p>
         </div>
 
         {/* 핵심 메시지 - 훅 */}
         <div className="text-center mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/20 max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/20 max-w-5xl mx-auto">
             <div className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <div className="text-white">성적향상은</div>
-              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">전교1등 공부습관이</div>
-              <div className="text-white">답이다</div>
+              <div className="text-white">습관부터 성적까지</div>
+              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">
+                전교1등공부습관캠프 전일공이
+              </div>
+              <div className="text-white">답입니다</div>
             </div>
           </div>
         </div>
@@ -48,45 +56,77 @@ export const HeroSection = () => {
               </div>
               <div className="space-y-6 text-xl md:text-2xl font-medium">
                 <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
-                  <span>전교1등 멘토의 1:1 공부습관캠프</span>
+                  <span>하루 14시간 3주 공부 습관 완성</span>
                 </div>
                 <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
-                  <span>여름방학 3주간 학원 끊고 공부습관 먼저 잡아 주세요</span>
+                  <span>과목별 집중 특강으로 학교공부 대비</span>
+                </div>
+                <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                  <span>수준별 관리로 국영수심화까지</span>
+                </div>
+                <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                  <span>수행평가 대비 주제탐구 및 독서보고서 작성 방법 익히기</span>
                 </div>
                 <div className="flex items-center justify-center text-center p-3">
-                  <span>
-                    전환기 최고의 여름방학캠프 "<span className="text-yellow-300 font-bold">전일공</span>"
-                  </span>
+                  <span>실제 병원에서의 1일 의사체험으로 동기부여까지</span>
                 </div>
               </div>
             </div>
 
             {/* 캠프 소개 - 개선된 레이아웃 */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
-              <h3 className="text-xl font-semibold text-yellow-300 mb-4">캠프 소개</h3>
+              <h3 className="text-xl font-semibold text-yellow-300 mb-4">
+                캠프 소개
+              </h3>
               <div className="space-y-4 text-blue-50">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
-                  <p>
-                    <span className="font-semibold text-yellow-200">전교1등캠프 전일공</span>은 부산 최대
-                    회복기재활의료기관 의료법인{" "}
-                    <a
-                      href="https://www.keunsol.co.kr/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors"
-                    >
-                      영재의료재단 큰솔병원
-                    </a>
-                    이 후원하고 전국의 전교1등 의대생 멘토들이 지역의 후배들을 위해 만든 공부습관 멘토링 캠프입니다.
+                  <p className="font-semibold text-yellow-200 text-xl">
+                    "전교 1등의 공부습관을, 내 아이의 습관으로"
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    방학기간 전환기에 성적향상을 필요로 하는 전국의 학생들과 명문대, 의대를 희망하는 학생들에게
-                    의대생멘토들이 공부습관을 잡아 주고 성적향상을 보장하는 캠프입니다.
+                    <span className="font-semibold text-yellow-200">전일공</span>은 
+                    부산대학교 의과대학 교육봉사 동아리 <span className="text-yellow-200">'메디쌤'</span> 리더,
+                    김동헌 멘토를 필두로 인성과 실력을 겸비한 의대생 멘토 20여명이 함께 하는
+                    공부습관 전문 집중 캠프입니다.
+                  </p>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
+                  <p>
+                    특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기 재활의료기관{' '}
+                    <a
+                      href="https://www.keunsol.co.kr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors"
+                    >
+                      큰솔병원(의료법인 영재의료재단)
+                    </a>
+                    {' '}박재흥 원장의 공식 후원으로 운영됩니다.
+                  </p>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
+                  <p>
+                    매 학기 전환점이 되는 방학 기간,<br />
+                    공부습관 리셋이 필요한 학생,<br />
+                    명문대, 의대를 목표로 도약을 준비 중인 학생들을 위해<br />
+                    실제 전교 1등을 경험한 멘토들이 직접 습관을 설계하고, 실전 루틴을 만들어줍니다.
+                  </p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
+                  <p className="font-semibold text-yellow-200">
+                    수도권 학부모 만족도 98%,<br />
+                    이제 부산·경남에서도 만날 수 있습니다.
                   </p>
                 </div>
               </div>
@@ -94,7 +134,10 @@ export const HeroSection = () => {
 
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <Link href="/application/form">
-                <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold">
+                <Button
+                  size="lg"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold"
+                >
                   지금 신청하기
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -112,6 +155,18 @@ export const HeroSection = () => {
           </div>
 
           <div className="w-full md:w-1/2 relative">
+            {/* 상단에 배지 요소 추가 */}
+            <div className="mb-6 flex justify-between items-center">
+              <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
+                <GraduationCap className="h-6 w-6 text-yellow-300 mr-2" />
+                <span className="text-white font-medium text-sm">전교1등 멘토 직접 지도</span>
+              </div>
+              <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
+                <Star className="h-6 w-6 text-yellow-300 mr-2" />
+                <span className="text-white font-medium text-sm">부산 유일 의사체험 프로그램</span>
+              </div>
+            </div>
+            
             <div className="relative rounded-lg overflow-hidden shadow-2xl transform rotate-1 transition-transform hover:rotate-0 duration-300">
               <Image
                 src="/student-group-activity.png"
@@ -121,11 +176,33 @@ export const HeroSection = () => {
                 className="w-full h-auto"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-6">
-                <p className="text-white font-medium">의학계열, 명문대 진학을 희망하는 입시생을 위한 캠프</p>
+                <p className="text-white font-medium">
+                  의학계열, 명문대 진학을 희망하는 입시생을 위한 캠프
+                </p>
               </div>
             </div>
 
-            {/* 장식 요소들 */}
+            {/* 하단에 실적 지표 추가 */}
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-2xl font-bold">98%</p>
+                <p className="text-white text-sm">학부모 만족도</p>
+              </div>
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-2xl font-bold">3주</p>
+                <p className="text-white text-sm">공부습관 형성 기간</p>
+              </div>
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-2xl font-bold">20+</p>
+                <p className="text-white text-sm">의대생 멘토 인원</p>
+              </div>
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-2xl font-bold">14시간</p>
+                <p className="text-white text-sm">하루 집중학습</p>
+              </div>
+            </div>
+
+            {/* 장식 요소들 유지 */}
             <div className="absolute -top-4 -right-4 bg-yellow-400 rounded-full p-3 shadow-lg">
               <Star className="h-6 w-6 text-blue-900" />
             </div>
@@ -138,7 +215,11 @@ export const HeroSection = () => {
 
       {/* 물결 모양 구분선 */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full h-auto">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 120"
+          className="w-full h-auto"
+        >
           <path
             fill="#f9fafb"
             fillOpacity="1"
@@ -148,4 +229,4 @@ export const HeroSection = () => {
       </div>
     </div>
   )
-} 
+}
