@@ -1,4 +1,4 @@
-import { Users, Clock, Phone } from "lucide-react"
+import { Users, Clock, Phone } from 'lucide-react'
 
 export default function ContactInfo() {
   return (
@@ -14,7 +14,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <h4 className="font-bold text-blue-800">상담 문의</h4>
-            <p className="text-gray-700">010-1234-5678</p>
+            <p className="text-gray-700">1555-1157</p>
           </div>
         </div>
         <div className="bg-white p-4 rounded-lg border border-blue-100 flex items-start">

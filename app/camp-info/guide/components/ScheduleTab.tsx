@@ -27,19 +27,19 @@ export default function ScheduleTab() {
                 일정 안내
               </TableCell>
               <TableCell className="font-medium bg-gray-100">개강일</TableCell>
-              <TableCell>캠프 신청 홈페이지 참조</TableCell>
+              <TableCell>2025년 7월20일(일요일)</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium bg-gray-100">캠프기간</TableCell>
-              <TableCell>캠프 신청 홈페이지 참조</TableCell>
+              <TableCell>7/20(일)~8/9(토)</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium bg-gray-100">모집대상</TableCell>
-              <TableCell>중1 ~ 고3</TableCell>
+              <TableCell>중학생 전학년<br />고등학교 1,2학년</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium bg-gray-100">접수안내</TableCell>
-              <TableCell>캠프 신청 홈페이지 참조</TableCell>
+              <TableCell>캠프신청 홈페이지 참고</TableCell>
             </TableRow>
           </TableBody>
         </Table>
