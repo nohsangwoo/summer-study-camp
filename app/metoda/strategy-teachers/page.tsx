@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Star, Award, TrendingUp, Sparkles, Users } from "lucide-react"
+import { BookOpen, Star, Award, TrendingUp, Sparkles, Users, Quote, GraduationCap } from "lucide-react"
 
 export default function StrategyTeachersPage() {
   const teachers = [
@@ -9,7 +9,7 @@ export default function StrategyTeachersPage() {
       id: 1,
       name: "김민영 선생님",
       role: "수학 전략담임",
-      image: "/mentors/kimminyoung.jpg",
+      image: "/placeholder.svg?key=i86t1",
       university: "서울대학교 수학교육과",
       description:
         "10년 이상의 수학 교육 경력을 바탕으로 학생들의 수학적 사고력을 향상시키는 데 중점을 둡니다. 개념 이해부터 문제 해결까지 체계적인 지도를 제공합니다.",
@@ -44,6 +44,98 @@ export default function StrategyTeachersPage() {
 
   return (
     <div className="space-y-8">
+      {/* 전략담임부장 소개 섹션 */}
+      <div className="flex flex-col lg:flex-row gap-8 mb-12">
+        {/* 전략담임부장 사진 */}
+        <div className="w-full lg:w-1/3 flex-shrink-0">
+          <div className="relative overflow-hidden rounded-lg shadow-md bg-gradient-to-b from-blue-100 to-white p-4">
+            <Image
+              src="/asian-female-teacher-portrait.png" 
+              alt="박미정 전략담임부장"
+              width={300}
+              height={400}
+              className="mx-auto rounded-md"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-600/80 text-white p-4 text-center">
+              <h3 className="text-lg font-medium">전략담임부장</h3>
+              <h2 className="text-xl font-bold">박미정</h2>
+            </div>
+          </div>
+        </div>
+
+        {/* 인사말 내용 */}
+        <div className="w-full lg:w-2/3">
+          <div className="flex items-start mb-6">
+            <Quote className="h-8 w-8 text-blue-500 mr-2 flex-shrink-0 mt-1" />
+            <h2 className="text-2xl font-bold text-gray-800">전략담임소개</h2>
+          </div>
+
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              35년간 입시 현장에서 수많은 학생들의 진로와 성장을 함께하며 제가 확신하게 된 한 가지는,
+              <span className="font-semibold text-blue-700">"입시의 본질은 점수가 아니라 '방향과 습관'"</span>이라는 사실입니다.
+            </p>
+
+            <p>
+              진정한 진학의 시작은 <span className="font-semibold">"왜 공부하는가"</span>에 대한 
+              <span className="font-semibold text-blue-700"> 스스로의 답</span>을 찾는 데서 시작됩니다.
+            </p>
+            
+            <p>
+              전교1등공부습관캠프 전일공 캠프는 이 질문에 답하게 해주는 살아있는 입시 교육의 장입니다.
+              전국의 의대생 멘토들이 학생들과 함께 생활하며 실전적인 공부 루틴과 동기,
+              그리고 진로에 대한 진솔한 통찰을 전해주는 이 프로그램은 단순한 학습 캠프가 아닙니다.
+            </p>
+
+            <p>
+              저는 전일공 캠프의 전략담임부장으로서,
+              김동헌 대표를 도와 학생들이 방향을 잃지 않고 지속 가능한 공부습관을 만들어갈 수 있도록
+              전체 프로그램을 구조화하고, 학생과 멘토, 학부모 모두를 연결하는 가교 역할을 하겠습니다.
+            </p>
+
+            <p>
+              이 캠프가 학생들의 진짜 성장을 위한 전환점이 되도록,
+              그리고 입시를 넘어 삶의 방향을 세우는 시간으로 남도록 전력을 다하겠습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 학력 및 경력 */}
+      <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 mb-12">
+        <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
+          <Award className="h-6 w-6 text-blue-500 mr-2" />
+          학력 및 경력
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h4 className="text-lg font-semibold text-blue-700 mb-4 flex items-center">
+              <BookOpen className="h-5 w-5 mr-2" />
+              학력
+            </h4>
+            <ul className="space-y-2 list-disc list-inside text-gray-700">
+              <li>부산대 사범대학 교육학과 졸업</li>
+              <li>부산대 교육대학원 교육학 석사(상담심리전공)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-blue-700 mb-4 flex items-center">
+              <GraduationCap className="h-5 w-5 mr-2" />
+              경력
+            </h4>
+            <ul className="space-y-2 list-disc list-inside text-gray-700">
+              <li>부산시 소재 중·고등학교 중등교사 35년간 근무</li>
+              <li>진로진학상담교사 14년간 근무</li>
+              <li>부산교육청 진로교육연구회 회장 역임</li>
+              <li>부산교육청 진학지원단 전문위원 역임</li>
+              <li>한국대학교육협의회 대입상담교사단 역임</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">전략담임 소개</h1>
         <p className="text-gray-600 max-w-3xl mx-auto">

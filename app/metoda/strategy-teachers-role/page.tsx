@@ -16,14 +16,15 @@ export default function StrategyTeachersRolePage() {
       {/* Role 1 */}
       <div className="border-b pb-8">
         <div className="flex flex-col items-center">
-          <Image
-            src="/strategy-role-1.png"
-            alt="개인별 학습 심층 분석"
-            width={700}
-            height={400}
-            className="rounded-lg shadow-md mb-6"
-          />
-          <div className="text-center max-w-3xl">
+          <div className="w-[700px] h-[400px] relative">
+            <Image
+              src="/placeholder.svg"
+              alt="개인별 학습 심층 분석"
+              fill
+              className="rounded-lg shadow-md object-cover"
+            />
+          </div>
+          <div className="text-center max-w-3xl mt-6">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               <span className="inline-flex items-center justify-center bg-red-600 text-white rounded-full w-6 h-6 mr-2 text-sm">
                 1
@@ -41,14 +42,15 @@ export default function StrategyTeachersRolePage() {
       {/* Role 2 */}
       <div className="border-b pb-8">
         <div className="flex flex-col items-center">
-          <Image
-            src="/strategy-role-2.png"
-            alt="개별 분석자료를 통한 수업과 학습 설계"
-            width={700}
-            height={400}
-            className="rounded-lg shadow-md mb-6"
-          />
-          <div className="text-center max-w-3xl">
+          <div className="w-[700px] h-[400px] relative">
+            <Image
+              src="/placeholder.svg"
+              alt="개별 분석자료를 통한 수업과 학습 설계"
+              fill
+              className="rounded-lg shadow-md object-cover"
+            />
+          </div>
+          <div className="text-center max-w-3xl mt-6">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               <span className="inline-flex items-center justify-center bg-red-600 text-white rounded-full w-6 h-6 mr-2 text-sm">
                 2
@@ -66,14 +68,15 @@ export default function StrategyTeachersRolePage() {
       {/* Role 3 */}
       <div className="border-b pb-8">
         <div className="flex flex-col items-center">
-          <Image
-            src="/strategy-role-3.png"
-            alt="학생 생활 관리"
-            width={700}
-            height={400}
-            className="rounded-lg shadow-md mb-6"
-          />
-          <div className="text-center max-w-3xl">
+          <div className="w-[700px] h-[400px] relative">
+            <Image
+              src="/placeholder.svg"
+              alt="학생 생활 관리"
+              fill
+              className="rounded-lg shadow-md object-cover"
+            />
+          </div>
+          <div className="text-center max-w-3xl mt-6">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               <span className="inline-flex items-center justify-center bg-red-600 text-white rounded-full w-6 h-6 mr-2 text-sm">
                 3
@@ -91,14 +94,15 @@ export default function StrategyTeachersRolePage() {
       {/* Role 4 */}
       <div className="pb-8">
         <div className="flex flex-col items-center">
-          <Image
-            src="/strategy-role-4.png"
-            alt="맞춤형 입시 전략"
-            width={700}
-            height={400}
-            className="rounded-lg shadow-md mb-6"
-          />
-          <div className="text-center max-w-3xl">
+          <div className="w-[700px] h-[400px] relative">
+            <Image
+              src="/placeholder.svg"
+              alt="맞춤형 입시 전략"
+              fill
+              className="rounded-lg shadow-md object-cover"
+            />
+          </div>
+          <div className="text-center max-w-3xl mt-6">
             <h2 className="text-xl font-bold text-gray-800 mb-4">
               <span className="inline-flex items-center justify-center bg-red-600 text-white rounded-full w-6 h-6 mr-2 text-sm">
                 4
