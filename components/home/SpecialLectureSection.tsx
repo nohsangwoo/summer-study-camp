@@ -52,6 +52,7 @@ export const SpecialLectureSection = ({ className }: { className?: string }) => 
     "매일 저녁 개별 상담 진행",
     "병원 직업탐방",
     "의대생 멘토 자체제작 자료 제공",
+    "상위권 학생을 위한 캠프로 더 효율적인 교육 운영이 가능",
   ]
 
   const activeLectures = activeTab === "high" ? highSchoolLectures : middleSchoolLectures
