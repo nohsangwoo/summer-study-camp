@@ -25,6 +25,9 @@ export const formSchema = z.object({
   phone: z.string().min(10, {
     message: "유효한 전화번호를 입력해주세요.",
   }),
+  zipCode: z.string().min(1, {
+    message: "우편번호를 입력해주세요.",
+  }),
   address: z.string().min(1, {
     message: "주소를 입력해주세요.",
   }),
