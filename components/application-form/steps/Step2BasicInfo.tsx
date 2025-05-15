@@ -84,7 +84,7 @@ export function Step2BasicInfo({ form, setActiveTab, activeTab }: Step2Props) {
           )}
         />
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 items-end">
           <FormField
             control={form.control}
             name="birthYear"
