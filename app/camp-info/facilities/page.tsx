@@ -1,6 +1,14 @@
-import Image from "next/image"
-import { MapPin, Home, Utensils, BookOpen, Bed, ShowerHeadIcon as Shower, Coffee } from "lucide-react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from 'next/image'
+import {
+  MapPin,
+  Home,
+  Utensils,
+  BookOpen,
+  Bed,
+  ShowerHeadIcon as Shower,
+  Coffee,
+} from 'lucide-react'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export default function FacilitiesPage() {
   return (
@@ -8,7 +16,8 @@ export default function FacilitiesPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">캠프시설</h1>
         <p className="text-gray-600">
-          편안함과 집중을 위한 최고의 학습 환경, 아는공부 학습장 및 기숙사 시설을 소개합니다.
+          편안함과 집중을 위한 최고의 학습 환경, 아는공부 학습장 및 기숙사
+          시설을 소개합니다.
         </p>
       </div>
 
@@ -38,35 +47,61 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/study-hall-1.jpg" alt="공용체 학습장" fill className="object-cover" />
+                  <Image
+                    src="/study-hall-1.jpg"
+                    alt="공용체 학습장"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">공용체 학습장</h3>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    공용체 학습장
+                  </h3>
                   <p className="text-gray-600">
-                    넓은 공간에 개인별 학습 공간이 마련되어 있어 집중력 있는 학습이 가능합니다.
+                    넓은 공간에 개인별 학습 공간이 마련되어 있어 집중력 있는
+                    학습이 가능합니다.
                   </p>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/study-hall-2.jpg" alt="공용체 학습장" fill className="object-cover" />
+                  <Image
+                    src="/study-hall-2.jpg"
+                    alt="공용체 학습장"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">공용체 학습장</h3>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    공용체 학습장
+                  </h3>
                   <p className="text-gray-600">
-                    밝은 조명과 쾌적한 환경에서 학생들이 효율적으로 학습할 수 있도록 설계되었습니다.
+                    밝은 조명과 쾌적한 환경에서 학생들이 효율적으로 학습할 수
+                    있도록 설계되었습니다.
                   </p>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/study-hall-3.jpg" alt="고급 학습장" fill className="object-cover" />
+                  <Image
+                    src="/study-hall-3.jpg"
+                    alt="고급 학습장"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">고급 학습장</h3>
-                  <p className="text-gray-600">현대적인 시설과 편안한 의자로 장시간 학습에도 피로감을 최소화합니다.</p>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    고급 학습장
+                  </h3>
+                  <p className="text-gray-600">
+                    현대적인 시설과 편안한 의자로 장시간 학습에도 피로감을
+                    최소화합니다.
+                  </p>
                 </div>
               </div>
             </div>
@@ -74,204 +109,449 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/study-hall-4.jpg" alt="1:1 학습강당" fill className="object-cover" />
+                  <Image
+                    src="/study-hall-4.jpg"
+                    alt="1:1 학습강당"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">1:1 학습강당</h3>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    1:1 학습강당
+                  </h3>
                   <p className="text-gray-600">
-                    개인 맞춤형 학습을 위한 공간으로, 멘토와의 1:1 학습에 최적화되어 있습니다.
+                    개인 맞춤형 학습을 위한 공간으로, 멘토와의 1:1 학습에
+                    최적화되어 있습니다.
                   </p>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/study-hall-5.jpg" alt="그룹 스터디룸" fill className="object-cover" />
+                  <Image
+                    src="/study-hall-5.jpg"
+                    alt="그룹 스터디룸"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">그룹 스터디룸</h3>
-                  <p className="text-gray-600">소규모 그룹 학습을 위한 공간으로, 토론과 협업 학습에 적합합니다.</p>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    그룹 스터디룸
+                  </h3>
+                  <p className="text-gray-600">
+                    소규모 그룹 학습을 위한 공간으로, 토론과 협업 학습에
+                    적합합니다.
+                  </p>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/study-hall-6.jpg" alt="멀티미디어 학습실" fill className="object-cover" />
+                  <Image
+                    src="/study-hall-6.jpg"
+                    alt="멀티미디어 학습실"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">멀티미디어 학습실</h3>
+                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                    멀티미디어 학습실
+                  </h3>
                   <p className="text-gray-600">
-                    최신 멀티미디어 장비를 갖춘 학습실로, 다양한 형태의 학습 자료를 활용할 수 있습니다.
+                    최신 멀티미디어 장비를 갖춘 학습실로, 다양한 형태의 학습
+                    자료를 활용할 수 있습니다.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mb-8 bg-blue-100 p-6 rounded-lg border border-blue-200">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <Utensils className="h-5 w-5 text-blue-600 mr-2" />
-                미리캠퍼스 주간 메뉴표
+            <div className="mb-8 bg-white p-6 rounded-lg border border-blue-300 shadow-md">
+              <h3 className="text-2xl font-bold text-blue-700 mb-6 flex items-center justify-center">
+                <Utensils className="h-6 w-6 text-blue-600 mr-2" />
+                미리캠퍼스 주간 식단표
               </h3>
+
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg mb-6">
+                <p className="text-center text-lg font-medium text-blue-800">
+                  <span className="text-red-600 font-bold">
+                    전교1등 공부습관캠프
+                  </span>
+                  는 균형 잡힌 영양식으로 학생들의 건강과 집중력을 지원합니다
+                </p>
+              </div>
+
               <div className="overflow-x-auto">
-                <div className="bg-blue-50 rounded-lg border border-blue-200 p-1">
-                  <table className="w-full border-collapse">
-                    <thead>
-                      <tr className="bg-blue-600 text-white">
-                        <th className="py-2 px-1 border border-blue-300 text-center">구분</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">월</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">화</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">수</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">목</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">금</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">토</th>
-                        <th className="py-2 px-1 border border-blue-300 text-center">일</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {/* 조식 */}
-                      <tr>
-                        <td className="py-2 px-1 border border-blue-300 bg-blue-500 text-white font-bold text-center">조식</td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">미역국</div>
-                          <div className="text-center text-sm">계란말이</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">된장찌개</div>
-                          <div className="text-center text-sm">잡채</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">콩나물국</div>
-                          <div className="text-center text-sm">소시지구이</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">유부국</div>
-                          <div className="text-center text-sm">생선구이</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">떡국</div>
-                          <div className="text-center text-sm">멸치볶음</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">시금치국</div>
-                          <div className="text-center text-sm">햄구이</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-blue-600">맑은국</div>
-                          <div className="text-center text-sm">두부조림</div>
-                          <div className="text-center text-sm text-red-500">김치</div>
-                        </td>
-                      </tr>
-                      
-                      {/* 중식 */}
-                      <tr>
-                        <td className="py-2 px-1 border border-blue-300 bg-blue-500 text-white font-bold text-center">중식</td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">부대찌개</div>
-                          <div className="text-center text-sm">오징어볶음</div>
-                          <div className="text-center text-sm">계란찜</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">김치찌개</div>
-                          <div className="text-center text-sm">탕수육</div>
-                          <div className="text-center text-sm">샐러드</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">육개장</div>
-                          <div className="text-center text-sm">불고기</div>
-                          <div className="text-center text-sm">무생채</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">된장찌개</div>
-                          <div className="text-center text-sm">닭갈비</div>
-                          <div className="text-center text-sm">시금치나물</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">순두부찌개</div>
-                          <div className="text-center text-sm">갈비찜</div>
-                          <div className="text-center text-sm">콩나물무침</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">미소국</div>
-                          <div className="text-center text-sm">돈까스</div>
-                          <div className="text-center text-sm">단무지</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-red-500">감자국</div>
-                          <div className="text-center text-sm">두루치기</div>
-                          <div className="text-center text-sm">호박볶음</div>
-                        </td>
-                      </tr>
-                      
-                      {/* 석식 */}
-                      <tr>
-                        <td className="py-2 px-1 border border-blue-300 bg-blue-500 text-white font-bold text-center">석식</td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">버섯국</div>
-                          <div className="text-center text-sm">제육볶음</div>
-                          <div className="text-center text-sm">깍두기</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">어묵국</div>
-                          <div className="text-center text-sm">닭볶음탕</div>
-                          <div className="text-center text-sm">무말랭이</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">쇠고기무국</div>
-                          <div className="text-center text-sm">낙지볶음</div>
-                          <div className="text-center text-sm">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">계란국</div>
-                          <div className="text-center text-sm">고등어구이</div>
-                          <div className="text-center text-sm">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">북어국</div>
-                          <div className="text-center text-sm">갈비찜</div>
-                          <div className="text-center text-sm">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">들깨탕</div>
-                          <div className="text-center text-sm">돈까스</div>
-                          <div className="text-center text-sm">김치</div>
-                        </td>
-                        <td className="py-1 px-2 border border-blue-300 bg-white">
-                          <div className="text-center font-semibold">쌀밥</div>
-                          <div className="text-center text-sm text-green-600">순두부찌개</div>
-                          <div className="text-center text-sm">불고기</div>
-                          <div className="text-center text-sm">김치</div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p className="text-xs text-gray-500 text-center mt-2 mb-1">※ 식단은 식자재 수급 상황에 따라 변경될 수 있습니다. 알러지 정보는 식당에 문의해주세요.</p>
-                </div>
+                <table className="w-full border-collapse bg-white rounded-lg overflow-hidden">
+                  <thead>
+                    <tr className="bg-blue-600">
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        구분
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        월
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        화
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        수
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        목
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        금
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        토
+                      </th>
+                      <th className="py-3 px-4 text-white font-bold text-center border-2 border-blue-300 text-lg">
+                        일
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* 조식 */}
+                    <tr>
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-500 text-white font-bold text-center text-lg">
+                        조식
+                      </td>
+                      {/* 월요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          미역국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          계란말이
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 화요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          된장찌개
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          잡채
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 수요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          콩나물국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          소시지구이
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 목요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          유부국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          생선구이
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 금요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          떡국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          멸치볶음
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 토요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          시금치국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          햄구이
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 일요일 조식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-blue-600 font-medium mb-1">
+                          맑은국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          두부조림
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                    </tr>
+
+                    {/* 중식 */}
+                    <tr>
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-500 text-white font-bold text-center text-lg">
+                        중식
+                      </td>
+                      {/* 월요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          부대찌개
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          오징어볶음
+                        </div>
+                        <div className="text-center text-gray-700">계란찜</div>
+                      </td>
+                      {/* 화요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          김치찌개
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          탕수육
+                        </div>
+                        <div className="text-center text-gray-700">샐러드</div>
+                      </td>
+                      {/* 수요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          육개장
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          불고기
+                        </div>
+                        <div className="text-center text-gray-700">무생채</div>
+                      </td>
+                      {/* 목요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          된장찌개
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          닭갈비
+                        </div>
+                        <div className="text-center text-gray-700">
+                          시금치나물
+                        </div>
+                      </td>
+                      {/* 금요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          순두부찌개
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          갈비찜
+                        </div>
+                        <div className="text-center text-gray-700">
+                          콩나물무침
+                        </div>
+                      </td>
+                      {/* 토요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          미소국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          돈까스
+                        </div>
+                        <div className="text-center text-gray-700">단무지</div>
+                      </td>
+                      {/* 일요일 중식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-50">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-red-500 font-medium mb-1">
+                          감자국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          두루치기
+                        </div>
+                        <div className="text-center text-gray-700">
+                          호박볶음
+                        </div>
+                      </td>
+                    </tr>
+
+                    {/* 석식 */}
+                    <tr>
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-blue-500 text-white font-bold text-center text-lg">
+                        석식
+                      </td>
+                      {/* 월요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          버섯국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          제육볶음
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          깍두기
+                        </div>
+                      </td>
+                      {/* 화요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          어묵국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          닭볶음탕
+                        </div>
+                        <div className="text-center text-gray-700">
+                          무말랭이
+                        </div>
+                      </td>
+                      {/* 수요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          쇠고기무국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          낙지볶음
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 목요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          계란국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          고등어구이
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 금요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          북어국
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          갈비찜
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 토요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          들깨탕
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          돈까스
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                      {/* 일요일 석식 */}
+                      <td className="py-3 px-4 border-2 border-blue-300 bg-white">
+                        <div className="text-center font-bold text-gray-800 mb-2">
+                          쌀밥
+                        </div>
+                        <div className="text-center text-green-600 font-medium mb-1">
+                          순두부찌개
+                        </div>
+                        <div className="text-center text-gray-700 mb-1">
+                          불고기
+                        </div>
+                        <div className="text-center text-red-500 font-medium">
+                          김치
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p className="text-center text-gray-700 font-medium">
+                  ※ 식단은 식자재 수급 상황에 따라 변경될 수 있습니다.
+                </p>
+                <p className="text-center text-gray-700">
+                  알러지 정보는 식당에 문의해주세요. (☎ 02-123-4567)
+                </p>
               </div>
             </div>
 
@@ -312,32 +592,58 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/dining-hall-1.jpg" alt="식당 내부모습" fill className="object-cover" />
+                  <Image
+                    src="/dining-hall-1.jpg"
+                    alt="식당 내부모습"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-green-600 mb-2">식당 내부모습</h3>
-                  <p className="text-gray-600">청결하고 쾌적한 환경에서 영양가 있는 식사를 제공합니다.</p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div className="relative h-64">
-                  <Image src="/dining-hall-2.jpg" alt="식당 내부모습" fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-green-600 mb-2">식당 내부모습</h3>
-                  <p className="text-gray-600">청결하고 쾌적한 환경에서 영양가 있는 식사를 제공합니다.</p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div className="relative h-64">
-                  <Image src="/dining-hall-3.jpg" alt="식당 내부모습" fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-green-600 mb-2">식당 내부모습</h3>
+                  <h3 className="text-lg font-semibold text-green-600 mb-2">
+                    식당 내부모습
+                  </h3>
                   <p className="text-gray-600">
-                    넓은 공간에서 여유롭게 식사를 즐길 수 있으며, 다양한 메뉴를 제공합니다.
+                    청결하고 쾌적한 환경에서 영양가 있는 식사를 제공합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div className="relative h-64">
+                  <Image
+                    src="/dining-hall-2.jpg"
+                    alt="식당 내부모습"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-green-600 mb-2">
+                    식당 내부모습
+                  </h3>
+                  <p className="text-gray-600">
+                    청결하고 쾌적한 환경에서 영양가 있는 식사를 제공합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div className="relative h-64">
+                  <Image
+                    src="/dining-hall-3.jpg"
+                    alt="식당 내부모습"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-green-600 mb-2">
+                    식당 내부모습
+                  </h3>
+                  <p className="text-gray-600">
+                    넓은 공간에서 여유롭게 식사를 즐길 수 있으며, 다양한 메뉴를
+                    제공합니다.
                   </p>
                 </div>
               </div>
@@ -346,31 +652,61 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/dining-hall-4.jpg" alt="조리실" fill className="object-cover" />
+                  <Image
+                    src="/dining-hall-4.jpg"
+                    alt="조리실"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-green-600 mb-2">조리실</h3>
-                  <p className="text-gray-600">위생적인 조리 환경에서 전문 영양사가 직접 식단을 구성하고 조리합니다.</p>
+                  <h3 className="text-lg font-semibold text-green-600 mb-2">
+                    조리실
+                  </h3>
+                  <p className="text-gray-600">
+                    위생적인 조리 환경에서 전문 영양사가 직접 식단을 구성하고
+                    조리합니다.
+                  </p>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/dining-hall-5.jpg" alt="식사 메뉴" fill className="object-cover" />
+                  <Image
+                    src="/dining-hall-5.jpg"
+                    alt="식사 메뉴"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-green-600 mb-2">식사 메뉴</h3>
-                  <p className="text-gray-600">영양 균형을 고려한 다양한 메뉴를 제공하여 학생들의 건강을 지원합니다.</p>
+                  <h3 className="text-lg font-semibold text-green-600 mb-2">
+                    식사 메뉴
+                  </h3>
+                  <p className="text-gray-600">
+                    영양 균형을 고려한 다양한 메뉴를 제공하여 학생들의 건강을
+                    지원합니다.
+                  </p>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/dining-hall-6.jpg" alt="카페테리아" fill className="object-cover" />
+                  <Image
+                    src="/dining-hall-6.jpg"
+                    alt="카페테리아"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-green-600 mb-2">카페테리아</h3>
-                  <p className="text-gray-600">간식과 음료를 제공하는 카페테리아에서 휴식 시간을 즐길 수 있습니다.</p>
+                  <h3 className="text-lg font-semibold text-green-600 mb-2">
+                    카페테리아
+                  </h3>
+                  <p className="text-gray-600">
+                    간식과 음료를 제공하는 카페테리아에서 휴식 시간을 즐길 수
+                    있습니다.
+                  </p>
                 </div>
               </div>
             </div>
@@ -412,32 +748,60 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/dormitory-1.jpg" alt="숙소 내부모습" fill className="object-cover" />
+                  <Image
+                    src="/dormitory-1.jpg"
+                    alt="숙소 내부모습"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-purple-600 mb-2">숙소 내부모습</h3>
-                  <p className="text-gray-600">편안한 휴식을 취할 수 있는 깨끗하고 아늑한 숙소 환경을 제공합니다.</p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div className="relative h-64">
-                  <Image src="/dormitory-2.jpg" alt="숙소 내부모습" fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-purple-600 mb-2">숙소 내부모습</h3>
-                  <p className="text-gray-600">개인 공간이 보장되는 침대와 수납공간으로 쾌적한 생활이 가능합니다.</p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div className="relative h-64">
-                  <Image src="/dormitory-3.jpg" alt="숙소 화장실" fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-purple-600 mb-2">숙소 화장실</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">
+                    숙소 내부모습
+                  </h3>
                   <p className="text-gray-600">
-                    청결하게 관리되는 화장실과 샤워 시설로 위생적인 생활 환경을 제공합니다.
+                    편안한 휴식을 취할 수 있는 깨끗하고 아늑한 숙소 환경을
+                    제공합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div className="relative h-64">
+                  <Image
+                    src="/dormitory-2.jpg"
+                    alt="숙소 내부모습"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">
+                    숙소 내부모습
+                  </h3>
+                  <p className="text-gray-600">
+                    개인 공간이 보장되는 침대와 수납공간으로 쾌적한 생활이
+                    가능합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div className="relative h-64">
+                  <Image
+                    src="/dormitory-3.jpg"
+                    alt="숙소 화장실"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">
+                    숙소 화장실
+                  </h3>
+                  <p className="text-gray-600">
+                    청결하게 관리되는 화장실과 샤워 시설로 위생적인 생활 환경을
+                    제공합니다.
                   </p>
                 </div>
               </div>
@@ -446,32 +810,58 @@ export default function FacilitiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                 <div className="relative h-64">
-                  <Image src="/dormitory-4.jpg" alt="숙소 내부모습" fill className="object-cover" />
+                  <Image
+                    src="/dormitory-4.jpg"
+                    alt="숙소 내부모습"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-purple-600 mb-2">4인실 숙소</h3>
-                  <p className="text-gray-600">4인 1실 구조로, 각 학생에게 개인 공간이 제공됩니다.</p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div className="relative h-64">
-                  <Image src="/dormitory-5.jpg" alt="숙소 화장실" fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-purple-600 mb-2">숙소 화장실</h3>
-                  <p className="text-gray-600">각 층마다 위치한 화장실은 항상 청결하게 관리되고 있습니다.</p>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
-                <div className="relative h-64">
-                  <Image src="/dormitory-6.jpg" alt="세탁실" fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-purple-600 mb-2">세탁실</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">
+                    4인실 숙소
+                  </h3>
                   <p className="text-gray-600">
-                    세탁 서비스를 제공하며, 필요시 직접 세탁할 수 있는 시설도 갖추고 있습니다.
+                    4인 1실 구조로, 각 학생에게 개인 공간이 제공됩니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div className="relative h-64">
+                  <Image
+                    src="/dormitory-5.jpg"
+                    alt="숙소 화장실"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">
+                    숙소 화장실
+                  </h3>
+                  <p className="text-gray-600">
+                    각 층마다 위치한 화장실은 항상 청결하게 관리되고 있습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                <div className="relative h-64">
+                  <Image
+                    src="/dormitory-6.jpg"
+                    alt="세탁실"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">
+                    세탁실
+                  </h3>
+                  <p className="text-gray-600">
+                    세탁 서비스를 제공하며, 필요시 직접 세탁할 수 있는 시설도
+                    갖추고 있습니다.
                   </p>
                 </div>
               </div>
@@ -513,7 +903,12 @@ export default function FacilitiesPage() {
           <div className="space-y-8">
             <div className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
               <div className="relative h-96">
-                <Image src="/camp-map.png" alt="아는공부캠프 오시는 길" fill className="object-cover" />
+                <Image
+                  src="/camp-map.png"
+                  alt="아는공부캠프 오시는 길"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
@@ -523,21 +918,37 @@ export default function FacilitiesPage() {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-1">주소</h4>
-                    <p className="text-gray-600">경기도 부천시 남양동 동로리 196</p>
-                    <p className="text-gray-600">도로명 주소: 경기 부천시 남양동 고한로봉길 99-32</p>
+                    <p className="text-gray-600">
+                      경기도 부천시 남양동 동로리 196
+                    </p>
+                    <p className="text-gray-600">
+                      도로명 주소: 경기 부천시 남양동 고한로봉길 99-32
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-700 mb-1">대중교통 이용 시</h4>
+                    <h4 className="font-semibold text-gray-700 mb-1">
+                      대중교통 이용 시
+                    </h4>
                     <ul className="space-y-1 text-gray-600">
-                      <li>• 지하철: 7호선 부천시청역 2번 출구에서 마을버스 이용</li>
-                      <li>• 버스: 66번, 12번 버스 이용 후 아는공부캠프 정류장 하차</li>
+                      <li>
+                        • 지하철: 7호선 부천시청역 2번 출구에서 마을버스 이용
+                      </li>
+                      <li>
+                        • 버스: 66번, 12번 버스 이용 후 아는공부캠프 정류장 하차
+                      </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-700 mb-1">자가용 이용 시</h4>
+                    <h4 className="font-semibold text-gray-700 mb-1">
+                      자가용 이용 시
+                    </h4>
                     <ul className="space-y-1 text-gray-600">
-                      <li>• 서울 방면: 서울외곽순환고속도로 → 부천IC → 남양동 방면</li>
-                      <li>• 인천 방면: 제2경인고속도로 → 부천IC → 남양동 방면</li>
+                      <li>
+                        • 서울 방면: 서울외곽순환고속도로 → 부천IC → 남양동 방면
+                      </li>
+                      <li>
+                        • 인천 방면: 제2경인고속도로 → 부천IC → 남양동 방면
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -636,7 +1047,8 @@ export default function FacilitiesPage() {
       <div className="bg-white p-6 rounded-lg border border-gray-200">
         <h2 className="text-xl font-bold text-gray-800 mb-4">시설 문의</h2>
         <p className="text-gray-600 mb-4">
-          캠프 시설에 대한 자세한 정보나 문의사항이 있으시면 아래 연락처로 문의해 주세요.
+          캠프 시설에 대한 자세한 정보나 문의사항이 있으시면 아래 연락처로
+          문의해 주세요.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
@@ -646,7 +1058,9 @@ export default function FacilitiesPage() {
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="font-semibold text-gray-700 mb-2">이메일 문의</h3>
-            <p className="text-blue-600 font-bold">facilities@summerstudycamp.kr</p>
+            <p className="text-blue-600 font-bold">
+              facilities@summerstudycamp.kr
+            </p>
             <p className="text-gray-500 text-sm">24시간 접수 가능</p>
           </div>
         </div>
