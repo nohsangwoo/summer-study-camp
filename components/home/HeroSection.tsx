@@ -132,21 +132,24 @@ export const HeroSection = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <Link href="/application/form">
-                <Button
-                  size="lg"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold"
-                >
-                  지금 신청하기
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+            {/* 신청하기 버튼 부분 강화 */}
+            <div className="flex flex-col gap-4 justify-center md:justify-start">
+              <div className="animate-pulse">
+                <Link href="/application/form">
+                  <Button
+                    size="lg"
+                    className="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold text-xl px-8 py-7 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-400 w-full"
+                  >
+                    지금 신청하기
+                    <ArrowRight className="ml-2 h-6 w-6" />
+                  </Button>
+                </Link>
+              </div>
               <Link href="/camp-info/curriculum">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-transparent border-white text-white hover:bg-white/10"
+                  className="bg-transparent border-white text-white hover:bg-white/10 mt-2"
                 >
                   커리큘럼 살펴보기
                 </Button>
