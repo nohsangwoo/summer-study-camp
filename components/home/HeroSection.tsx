@@ -38,9 +38,9 @@ export const HeroSection = () => {
             <div className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <div className="text-white">습관부터 성적까지</div>
               <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">
-                전교1등공부습관캠프 전일공이
+                전교1등 공부습관캠프
               </div>
-              <div className="text-white">답입니다</div>
+              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">전일공</div>
             </div>
           </div>
         </div>

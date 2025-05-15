@@ -101,7 +101,7 @@ export default function AdmissionPage() {
                 전화문의
               </span>
             </div>
-            <h3 className="text-3xl font-bold text-gray-800">11555-1157</h3>
+            <h3 className="text-3xl font-bold text-gray-800">1555-1157</h3>
             <p className="text-gray-500 mt-2">
               평일 09:00 - 18:00 | 토요일 09:00 - 13:00
             </p>
