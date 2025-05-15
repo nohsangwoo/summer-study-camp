@@ -13,16 +13,6 @@ export default function CampLifeTab() {
         <CardDescription>캠프 기간 동안의 학생 생활 규칙 및 안내사항입니다.</CardDescription>
       </CardHeader>
       <CardContent className="pt-6">
-        <div className="mb-6">
-          <Image
-            src="/camp-student-life.png"
-            alt="캠프 기간 학생 생활 안내"
-            width={800}
-            height={600}
-            className="w-full h-auto rounded-lg border border-gray-200 shadow-sm"
-          />
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           <div className="bg-white p-5 rounded-lg border border-blue-100 shadow-sm">
             <div className="flex items-center mb-4">

@@ -1,11 +1,10 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import ScheduleTab from "./components/ScheduleTab"
-import RegistrationTab from "./components/RegistrationTab"
-import ProgramTab from "./components/ProgramTab"
-import PreparationTab from "./components/PreparationTab"
-import CampLifeTab from "./components/CampLifeTab"
-import ContactInfo from "./components/ContactInfo"
-import ProgramGuideImage from "./components/ProgramGuideImage"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import ScheduleTab from './components/ScheduleTab'
+import RegistrationTab from './components/RegistrationTab'
+import ProgramTab from './components/ProgramTab'
+import PreparationTab from './components/PreparationTab'
+import CampLifeTab from './components/CampLifeTab'
+import ContactInfo from './components/ContactInfo'
 
 export default function CampGuidePage() {
   return (
@@ -13,7 +12,8 @@ export default function CampGuidePage() {
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">캠프 안내</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          전교1등 공부습관캠프 전일공의 일정, 등록 방법, 그리고 주차별 프로그램에 대한 상세 안내입니다.
+          전교1등 공부습관캠프 전일공의 일정, 등록 방법, 그리고 주차별
+          프로그램에 대한 상세 안내입니다.
         </p>
       </div>
 
@@ -48,7 +48,6 @@ export default function CampGuidePage() {
 
         {/* 프로그램 안내 탭 */}
         <TabsContent value="program">
-          <ProgramGuideImage />
           <ProgramTab />
         </TabsContent>
 
