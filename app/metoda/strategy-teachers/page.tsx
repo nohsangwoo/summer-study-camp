@@ -172,7 +172,7 @@ export default function StrategyTeachersPage() {
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">전략담임 소개</h1>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          위캔캠프의 전략담임은 각 과목별 전문성을 갖춘 우수한 교육자들로 구성되어 있습니다. 학생 개개인의 특성과 목표에
+          전일공의 전략담임은 각 과목별 전문성을 갖춘 우수한 교육자들로 구성되어 있습니다. 학생 개개인의 특성과 목표에
           맞는 맞춤형 교육을 제공하여 최상의 결과를 이끌어냅니다.
         </p>
       </div>
@@ -244,7 +244,7 @@ export default function StrategyTeachersPage() {
       {/* Role Link Section */}
       <div className="bg-blue-50 p-6 rounded-lg text-center mt-8">
         <h3 className="text-xl font-bold text-gray-800 mb-4">전략담임의 역할이 궁금하신가요?</h3>
-        <p className="text-gray-600 mb-6">위캔캠프 전략담임이 어떤 역할을 수행하는지 자세히 알아보세요.</p>
+        <p className="text-gray-600 mb-6">전일공 전략담임이 어떤 역할을 수행하는지 자세히 알아보세요.</p>
         <Button asChild>
           <Link href="/metoda/strategy-teachers-role">전략담임 역할 알아보기</Link>
         </Button>
@@ -335,7 +335,7 @@ export default function StrategyTeachersPage() {
       <div className="bg-gray-50 p-6 rounded-lg shadow-sm text-center mt-8">
         <h3 className="text-xl font-bold text-gray-800 mb-4">전문적인 전략담임과 함께 성적 향상을 경험하세요</h3>
         <p className="text-gray-600 mb-6">
-          위캔캠프의 전략담임들은 학생 개개인의 특성과 목표에 맞는 맞춤형 교육을 제공합니다. 지금 바로 상담을 신청하고
+          전일공의 전략담임들은 학생 개개인의 특성과 목표에 맞는 맞춤형 교육을 제공합니다. 지금 바로 상담을 신청하고
           최상의 교육 서비스를 경험해보세요.
         </p>
         <Button asChild className="bg-blue-600 hover:bg-blue-700">

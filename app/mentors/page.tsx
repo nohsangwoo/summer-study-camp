@@ -108,9 +108,9 @@ export default function MentorsPage() {
   return (
     <div className="container mx-auto py-12 px-4">
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">위캔캠프 멘토 소개</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">전일공 멘토 소개</h1>
         <p className="text-gray-600 max-w-3xl">
-          위캔캠프의 멘토들은 모두 국내 최상위권 의과대학 재학생으로 구성되어 있습니다. 각자의 전문 분야에서 학생들에게
+          전일공의 멘토들은 모두 국내 최상위권 의과대학 재학생으로 구성되어 있습니다. 각자의 전문 분야에서 학생들에게
           실질적이고 효과적인 학습 방법과 전략을 제공합니다.
         </p>
       </div>
@@ -223,7 +223,7 @@ export default function MentorsPage() {
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">멘토와 함께하는 1:1 맞춤 학습</h2>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            위캔캠프의 멘토들과 함께 여러분의 학습 목표를 달성해보세요. 각 분야 전문 멘토들이 여러분의 학습을 처음부터
+            전일공의 멘토들과 함께 여러분의 학습 목표를 달성해보세요. 각 분야 전문 멘토들이 여러분의 학습을 처음부터
             끝까지 책임지고 지도합니다.
           </p>
         </div>

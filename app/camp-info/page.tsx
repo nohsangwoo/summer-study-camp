@@ -30,7 +30,7 @@ export default function CampInfoPage() {
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-blue-500 mt-0.5" />
                 <span>
-                  <strong>장소:</strong> 서울특별시 강남구 위캔캠프 교육센터
+                  <strong>장소:</strong> 전일공 교육센터
                 </span>
               </li>
               <li className="flex items-start">
@@ -225,7 +225,7 @@ export default function CampInfoPage() {
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <Users className="h-10 w-10 text-purple-500 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">대표 인사말</h3>
-              <p className="text-sm text-gray-600">위캔캠프 대표의 교육 철학과 인사말을 확인하세요.</p>
+              <p className="text-sm text-gray-600">전일공 대표의 교육 철학과 인사말을 확인하세요.</p>
             </div>
           </Link>
         </div>

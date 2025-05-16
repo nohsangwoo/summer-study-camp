@@ -4,8 +4,8 @@ import type { Metadata } from "next"
 import { BookOpen, Star, Trophy, TrendingUp, CheckCircle } from "lucide-react"
 
 // export const metadata: Metadata = {
-//   title: "위캔캠프 교육멘토단 | 위캔캠프",
-//   description: "위캔캠프의 우수한 교육멘토단을 소개합니다.",
+//   title: "전일공 교육멘토단 | 전일공",
+//   description: "전일공의 우수한 교육멘토단을 소개합니다.",
 // }
 
 // 멘토 데이터 타입 정의
@@ -166,7 +166,7 @@ export default function MetodaAboutPage() {
     <div className="container mx-auto py-12 px-4">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-blue-600 inline-block border-b-4 border-blue-400 pb-2">
-          위캔캠프 교육멘토단
+          전일공 교육멘토단
         </h1>
       </div>
 
@@ -262,7 +262,7 @@ export default function MetodaAboutPage() {
       <div className="mt-8 bg-gray-50 p-6 rounded-lg">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">멘토단 소개</h2>
         <p className="text-gray-700 mb-4">
-          위캔캠프 교육멘토단은 서울대를 비롯한 국내 최상위권 대학교 재학생들로 구성되어 있습니다. 각 멘토는 자신의 전공
+          전일공 교육멘토단은 서울대를 비롯한 국내 최상위권 대학교 재학생들로 구성되어 있습니다. 각 멘토는 자신의 전공
           분야에서 뛰어난 학업 성취를 이루었으며, 학생들에게 효과적인 학습 방법과 진로 상담을 제공합니다.
         </p>
         <p className="text-gray-700">

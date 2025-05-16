@@ -8,7 +8,7 @@ export default function StrategyTeachersRolePage() {
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">전략담임 역할</h1>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          위캔캠프의 전략담임은 학생들의 학습과 생활을 체계적으로 관리하며, 최상의 결과를 이끌어내기 위한 다양한 역할을
+          전일공의 전략담임은 학생들의 학습과 생활을 체계적으로 관리하며, 최상의 결과를 이끌어내기 위한 다양한 역할을
           수행합니다.
         </p>
       </div>
@@ -122,7 +122,7 @@ export default function StrategyTeachersRolePage() {
       <div className="bg-gray-50 p-6 rounded-lg shadow-sm text-center mt-8">
         <h3 className="text-xl font-bold text-gray-800 mb-4">전략담임과 함께 최상위권 입시 성공을 향해 나아가세요</h3>
         <p className="text-gray-600 mb-6">
-          위캔캠프의 전문 전략담임들이 학생 개개인에게 맞춤화된 학습 및 입시 전략으로 여러분의 성공적인 대학 입시를
+          전일공의 전문 전략담임들이 학생 개개인에게 맞춤화된 학습 및 입시 전략으로 여러분의 성공적인 대학 입시를
           지원합니다.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
