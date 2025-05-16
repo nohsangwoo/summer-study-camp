@@ -250,46 +250,53 @@ export default function LineupPage() {
         <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
           <div className="flex flex-col items-center mb-10">
             <div className="bg-red-600 text-white rounded-lg p-4 text-center w-64 shadow-md">
-              <h3 className="font-bold">김동헌 대표 겸 연구소장</h3>
-              <p className="text-sm text-red-100">부산대 의학과</p>
+              <h3 className="font-bold">김동헌 연구소장</h3>
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             <div className="flex flex-col items-center">
               <div className="bg-purple-600 text-white rounded-lg p-3 text-center w-full shadow-md">
                 <h3 className="font-bold">김동헌</h3>
-                <p className="text-xs text-purple-100">학습연구팀장</p>
+                <p className="text-xs text-purple-100">콘텐츠개발팀장</p>
               </div>
               <div className="w-px h-6 bg-gray-300"></div>
               <div className="bg-purple-100 rounded-lg p-3 text-center w-full border border-purple-200">
-                <p className="text-sm text-purple-800">학습법 연구</p>
-                <p className="text-sm text-purple-800">학습 전략 개발</p>
+                <p className="text-sm text-purple-800">실전형 공부습관 설계</p>
               </div>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-blue-600 text-white rounded-lg p-3 text-center w-full shadow-md">
-                <h3 className="font-bold">윤태현</h3>
-                <p className="text-xs text-blue-100">멘토관리팀장</p>
+                <h3 className="font-bold">장서원</h3>
+                <p className="text-xs text-blue-100">학습연구팀장</p>
               </div>
               <div className="w-px h-6 bg-gray-300"></div>
               <div className="bg-blue-100 rounded-lg p-3 text-center w-full border border-blue-200">
-                <p className="text-sm text-blue-800">튜터링 방법론</p>
-                <p className="text-sm text-blue-800">멘토 교육 프로그램</p>
+                <p className="text-sm text-blue-800">학습법 개발 및 멘토 연수</p>
               </div>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="bg-teal-600 text-white rounded-lg p-3 text-center w-full shadow-md">
-                <h3 className="font-bold">장서원</h3>
-                <p className="text-xs text-teal-100">컨텐츠제작팀장</p>
+                <h3 className="font-bold">윤태현</h3>
+                <p className="text-xs text-teal-100">인사관리팀장</p>
               </div>
               <div className="w-px h-6 bg-gray-300"></div>
               <div className="bg-teal-100 rounded-lg p-3 text-center w-full border border-teal-200">
-                <p className="text-sm text-teal-800">교육 자료 제작</p>
-                <p className="text-sm text-teal-800">학습 콘텐츠 개발</p>
+                <p className="text-sm text-teal-800">멘토선발, 안전관리, 관계관리</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-green-600 text-white rounded-lg p-3 text-center w-full shadow-md">
+                <h3 className="font-bold">이상민</h3>
+                <p className="text-xs text-green-100">전략분석팀장</p>
+              </div>
+              <div className="w-px h-6 bg-gray-300"></div>
+              <div className="bg-green-100 rounded-lg p-3 text-center w-full border border-green-200">
+                <p className="text-sm text-green-800">개인 데이터 기반 입시 분석 및 전략 설계</p>
               </div>
             </div>
           </div>
