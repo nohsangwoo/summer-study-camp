@@ -1,15 +1,218 @@
 import { Utensils } from 'lucide-react'
+import { 
+  Accordion, 
+  AccordionContent, 
+  AccordionItem, 
+  AccordionTrigger 
+} from '@/components/ui/accordion'
 
 export default function MenuTable() {
+  const weekDays = ['월', '화', '수', '목', '금', '토', '일']
+  
+  // 요일별 식단 데이터
+  const menuData = [
+    // 월요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '미역국',
+        side1: '계란말이',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '부대찌개',
+        side1: '오징어볶음',
+        side2: '계란찜'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '버섯국',
+        side1: '제육볶음',
+        side2: '깍두기'
+      }
+    },
+    // 화요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '된장찌개',
+        side1: '잡채',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '김치찌개',
+        side1: '탕수육',
+        side2: '샐러드'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '어묵국',
+        side1: '닭볶음탕',
+        side2: '무말랭이'
+      }
+    },
+    // 수요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '콩나물국',
+        side1: '소시지구이',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '육개장',
+        side1: '불고기',
+        side2: '무생채'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '쇠고기무국',
+        side1: '낙지볶음',
+        side2: '김치'
+      }
+    },
+    // 목요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '유부국',
+        side1: '생선구이',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '된장찌개',
+        side1: '닭갈비',
+        side2: '시금치나물'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '계란국',
+        side1: '고등어구이',
+        side2: '김치'
+      }
+    },
+    // 금요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '떡국',
+        side1: '멸치볶음',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '순두부찌개',
+        side1: '갈비찜',
+        side2: '콩나물무침'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '북어국',
+        side1: '갈비찜',
+        side2: '김치'
+      }
+    },
+    // 토요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '시금치국',
+        side1: '햄구이',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '미소국',
+        side1: '돈까스',
+        side2: '단무지'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '들깨탕',
+        side1: '돈까스',
+        side2: '김치'
+      }
+    },
+    // 일요일
+    {
+      breakfast: {
+        main: '쌀밥',
+        soup: '맑은국',
+        side1: '두부조림',
+        side2: '김치'
+      },
+      lunch: {
+        main: '쌀밥',
+        soup: '감자국',
+        side1: '두루치기',
+        side2: '호박볶음'
+      },
+      dinner: {
+        main: '쌀밥',
+        soup: '순두부찌개',
+        side1: '불고기',
+        side2: '김치'
+      }
+    }
+  ]
+
+  // 모바일용 아코디언 메뉴 UI
+  const MobileMenuUI = () => (
+    <Accordion type="single" collapsible className="w-full">
+      {weekDays.map((day, index) => (
+        <AccordionItem key={index} value={`day-${index}`}>
+          <AccordionTrigger className="text-blue-700 font-bold py-3 px-4 bg-blue-50 hover:bg-blue-100 rounded-t-lg border border-blue-200">
+            {day}요일 식단
+          </AccordionTrigger>
+          <AccordionContent className="border border-t-0 border-blue-200 rounded-b-lg p-0 overflow-hidden">
+            <div className="bg-white p-4 border-b border-blue-100">
+              <h4 className="font-bold bg-blue-500 text-white py-2 px-3 rounded-md mb-3">아침</h4>
+              <div className="ml-2 space-y-1">
+                <p className="font-bold text-gray-800">{menuData[index].breakfast.main}</p>
+                <p className="text-blue-600">{menuData[index].breakfast.soup}</p>
+                <p className="text-gray-700">{menuData[index].breakfast.side1}</p>
+                <p className="text-red-500">{menuData[index].breakfast.side2}</p>
+              </div>
+            </div>
+            
+            <div className="bg-blue-50 p-4 border-b border-blue-100">
+              <h4 className="font-bold bg-blue-500 text-white py-2 px-3 rounded-md mb-3">점심</h4>
+              <div className="ml-2 space-y-1">
+                <p className="font-bold text-gray-800">{menuData[index].lunch.main}</p>
+                <p className="text-red-500">{menuData[index].lunch.soup}</p>
+                <p className="text-gray-700">{menuData[index].lunch.side1}</p>
+                <p className="text-gray-700">{menuData[index].lunch.side2}</p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-4">
+              <h4 className="font-bold bg-blue-500 text-white py-2 px-3 rounded-md mb-3">저녁</h4>
+              <div className="ml-2 space-y-1">
+                <p className="font-bold text-gray-800">{menuData[index].dinner.main}</p>
+                <p className="text-green-600">{menuData[index].dinner.soup}</p>
+                <p className="text-gray-700">{menuData[index].dinner.side1}</p>
+                <p className="text-red-500">{menuData[index].dinner.side2}</p>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  )
+
   return (
-    <div className="mb-8 bg-white p-6 rounded-lg border border-blue-300 shadow-md">
-      <h3 className="text-2xl font-bold text-blue-700 mb-6 flex items-center justify-center">
-        <Utensils className="h-6 w-6 text-blue-600 mr-2" />
+    <div className="mb-8 bg-white p-4 md:p-6 rounded-lg border border-blue-300 shadow-md">
+      <h3 className="text-xl md:text-2xl font-bold text-blue-700 mb-4 md:mb-6 flex items-center justify-center">
+        <Utensils className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mr-2" />
         미리캠퍼스 주간 식단표
       </h3>
 
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg mb-6">
-        <p className="text-center text-lg font-medium text-blue-800">
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-3 md:p-4 rounded-lg mb-4 md:mb-6">
+        <p className="text-center text-sm md:text-lg font-medium text-blue-800">
           <span className="text-red-600 font-bold">
             전교1등 공부습관캠프
           </span>
@@ -17,7 +220,13 @@ export default function MenuTable() {
         </p>
       </div>
 
-      <div className="overflow-x-auto">
+      {/* 모바일 화면용 아코디언 UI */}
+      <div className="block md:hidden">
+        <MobileMenuUI />
+      </div>
+
+      {/* 데스크톱 화면용 테이블 UI */}
+      <div className="hidden md:block overflow-x-auto">
         <table className="w-full border-collapse bg-white rounded-lg overflow-hidden">
           <thead>
             <tr className="bg-blue-600">
