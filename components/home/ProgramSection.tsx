@@ -26,55 +26,55 @@ export const ProgramSection = () => {
         </div>
 
         {/* 프로그램 버튼 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-12">
           <Link href="/program/study-habits" className="block">
-            <div className="rounded-xl p-8 flex flex-col items-center justify-center h-48 bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
+            <div className="rounded-xl p-4 md:p-8 flex flex-col items-center justify-center h-36 md:h-48 bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:opacity-10"></div>
-              <BookOpen className="h-10 w-10 text-blue-500 mb-4 group-hover:text-blue-600 transition-colors" />
-              <span className="text-blue-600 font-bold text-xl group-hover:text-blue-700 transition-colors">
+              <BookOpen className="h-8 w-8 md:h-10 md:w-10 text-blue-500 mb-2 md:mb-4 group-hover:text-blue-600 transition-colors" />
+              <span className="text-blue-600 font-bold text-base md:text-xl group-hover:text-blue-700 transition-colors">
                 공부습관
               </span>
-              <p className="text-blue-500/80 text-sm mt-2 text-center">
+              <p className="text-blue-500/80 text-xs md:text-sm mt-1 md:mt-2 text-center">
                 효율적인 학습 방법과 습관 형성
               </p>
             </div>
           </Link>
           <Link href="/program/progress-maintenance" className="block">
-            <div className="rounded-xl p-8 flex flex-col items-center justify-center h-48 bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
+            <div className="rounded-xl p-4 md:p-8 flex flex-col items-center justify-center h-36 md:h-48 bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500 transition-all duration-300 group-hover:w-full group-hover:opacity-10"></div>
-              <GraduationCap className="h-10 w-10 text-indigo-500 mb-4 group-hover:text-indigo-600 transition-colors" />
-              <span className="text-indigo-600 font-bold text-xl group-hover:text-indigo-700 transition-colors">
+              <GraduationCap className="h-8 w-8 md:h-10 md:w-10 text-indigo-500 mb-2 md:mb-4 group-hover:text-indigo-600 transition-colors" />
+              <span className="text-indigo-600 font-bold text-base md:text-xl group-hover:text-indigo-700 transition-colors">
                 진도유지
               </span>
-              <p className="text-indigo-500/80 text-sm mt-2 text-center">
+              <p className="text-indigo-500/80 text-xs md:text-sm mt-1 md:mt-2 text-center">
                 체계적인 학습 진도 관리
               </p>
             </div>
           </Link>
           <Link href="/program/self-directed-research" className="block">
-            <div className="rounded-xl p-8 flex flex-col items-center justify-center h-48 bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
+            <div className="rounded-xl p-4 md:p-8 flex flex-col items-center justify-center h-36 md:h-48 bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-teal-500 transition-all duration-300 group-hover:w-full group-hover:opacity-10"></div>
-              <Brain className="h-10 w-10 text-teal-500 mb-4 group-hover:text-teal-600 transition-colors" />
-              <span className="text-teal-600 font-bold text-xl text-center group-hover:text-teal-700 transition-colors">
+              <Brain className="h-8 w-8 md:h-10 md:w-10 text-teal-500 mb-2 md:mb-4 group-hover:text-teal-600 transition-colors" />
+              <span className="text-teal-600 font-bold text-base md:text-xl text-center group-hover:text-teal-700 transition-colors">
                 자기주도
                 <br />
                 주제탐구
               </span>
-              <p className="text-teal-500/80 text-sm mt-2 text-center">
+              <p className="text-teal-500/80 text-xs md:text-sm mt-1 md:mt-2 text-center">
                 창의적 사고력 향상
               </p>
             </div>
           </Link>
           <Link href="/program/med-school-care" className="block">
-            <div className="rounded-xl p-8 flex flex-col items-center justify-center h-48 bg-gradient-to-br from-rose-50 to-red-50 border border-rose-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
+            <div className="rounded-xl p-4 md:p-8 flex flex-col items-center justify-center h-36 md:h-48 bg-gradient-to-br from-rose-50 to-red-50 border border-rose-100 hover:shadow-md transition-all hover:translate-y-[-2px] group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-2 h-full bg-rose-500 transition-all duration-300 group-hover:w-full group-hover:opacity-10"></div>
-              <Award className="h-10 w-10 text-rose-500 mb-4 group-hover:text-rose-600 transition-colors" />
-              <span className="text-rose-600 font-bold text-xl text-center group-hover:text-rose-700 transition-colors">
+              <Award className="h-8 w-8 md:h-10 md:w-10 text-rose-500 mb-2 md:mb-4 group-hover:text-rose-600 transition-colors" />
+              <span className="text-rose-600 font-bold text-base md:text-xl text-center group-hover:text-rose-700 transition-colors">
                 의대.명문대입시
                 <br />
                 토탈케어
               </span>
-              <p className="text-rose-500/80 text-sm mt-2 text-center">
+              <p className="text-rose-500/80 text-xs md:text-sm mt-1 md:mt-2 text-center">
                 의대/명문대합격을 위한 종합관리
               </p>
             </div>
