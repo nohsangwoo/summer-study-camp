@@ -66,7 +66,7 @@ export const MentoringSection = () => {
             </div>
             <h3 className="text-yellow-300 font-extrabold text-2xl md:text-3xl mb-6 text-center flex items-center justify-center">
               <Target className="w-6 h-6 mr-2 text-yellow-300" />
-              아이 진도 학원 때문에 망설이지 마세요
+              아이 학원 진도 때문에 망설이지 마세요
             </h3>
             <div className="space-y-4 mb-6">
               <p className="text-white text-lg md:text-xl font-bold text-center bg-blue-600 bg-opacity-40 p-3 rounded-lg transform hover:scale-105 transition-transform duration-300">
@@ -207,13 +207,29 @@ export const MentoringSection = () => {
             </p>
             <div className="space-y-4 text-left">
               <p>
-                안녕하세요. 전교1등공부습관캠프 전일공의 대표이자 공부연구소장인 부산대 의대 김동헌입니다. 전국 의대생으로 구성된 저희 전일공 캠프는, 단순한 과외나 공부 지도가 아닌 <span className="font-semibold text-blue-600">'전교 1등의 공부법'</span>과 <span className="font-semibold text-blue-600">'자기주도 학습 시스템'</span>을 바탕으로 공부방해요소가 넘치는 요즘 아이들에게 실질적인 공부방법과 전략을 함께 제시하고자 합니다.
+                안녕하세요. 전교1등공부습관캠프 전일공의 대표이자 공부연구소장인
+                부산대 의대 김동헌입니다. 전국 의대생으로 구성된 저희 전일공
+                캠프는, 단순한 과외나 공부 지도가 아닌{' '}
+                <span className="font-semibold text-blue-600">
+                  '전교 1등의 공부법'
+                </span>
+                과{' '}
+                <span className="font-semibold text-blue-600">
+                  '자기주도 학습 시스템'
+                </span>
+                을 바탕으로 공부방해요소가 넘치는 요즘 아이들에게 실질적인
+                공부방법과 전략을 함께 제시하고자 합니다.
               </p>
               <p>
-                아울러 영어·수학·국어 진도 유지부터 의대(명문대) 합격 전략 상담, 자기주도 생기부 설계, 명사 특강과 병원 견학까지 전일공 캠프는 학습과 진로, 동기부여를 모두 아우르는 고밀도의 프로그램을 운영합니다.
+                아울러 영어·수학·국어 진도 유지부터 의대(명문대) 합격 전략 상담,
+                자기주도 생기부 설계, 명사 특강과 병원 견학까지 전일공 캠프는
+                학습과 진로, 동기부여를 모두 아우르는 고밀도의 프로그램을
+                운영합니다.
               </p>
               <p>
-                전문 연구팀(과외연구·튜터연구·콘텐츠개발·학생관리)이 함께하는 이번 캠프에서, 의대 및 명문대를 준비하는 여러분의 꿈을 실현할 수 있도록 최선을 다해 돕겠습니다.
+                전문 연구팀(과외연구·튜터연구·콘텐츠개발·학생관리)이 함께하는
+                이번 캠프에서, 의대 및 명문대를 준비하는 여러분의 꿈을 실현할 수
+                있도록 최선을 다해 돕겠습니다.
               </p>
             </div>
           </div>
