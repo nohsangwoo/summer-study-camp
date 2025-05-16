@@ -121,28 +121,50 @@ export default function StrategyTeachersPage() {
 
       {/* 우태연 전략담임 학력 및 경력 */}
       <div className="mt-8 mb-12 bg-gray-50 rounded-lg p-6 shadow-sm">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="bg-yellow-500 rounded-full p-2">
-            <GraduationCap className="h-6 w-6 text-white" />
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* 우태연 전략담임 이미지 */}
+          <div className="lg:w-1/4 flex-shrink-0">
+            <div className="relative overflow-hidden rounded-lg shadow-md bg-gradient-to-b from-yellow-100 to-white p-4">
+              <Image
+                src="/strategy-teachers/2.webp"
+                alt="우태연 전략담임"
+                width={220}
+                height={300}
+                className="mx-auto rounded-md"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-yellow-600 to-yellow-600/80 text-white p-4 text-center">
+                <h3 className="text-lg font-medium">전략담임</h3>
+                <h2 className="text-xl font-bold">우태연</h2>
+              </div>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold text-gray-800">우태연 전략담임 학력 및 경력</h2>
-        </div>
+          
+          {/* 학력 및 경력 정보 */}
+          <div className="lg:w-3/4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-yellow-500 rounded-full p-2">
+                <GraduationCap className="h-6 w-6 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-800">우태연 전략담임 학력 및 경력</h2>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
-            <h3 className="text-xl font-semibold text-blue-700 mb-4">학력</h3>
-            <ul className="space-y-2 list-disc list-inside text-gray-700">
-              <li>경북대학교 사학과 졸업</li>
-              <li>경북대학교 사학과 대학원 졸업</li>
-            </ul>
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
+                <h3 className="text-xl font-semibold text-blue-700 mb-4">학력</h3>
+                <ul className="space-y-2 list-disc list-inside text-gray-700">
+                  <li>경북대학교 사학과 졸업</li>
+                  <li>경북대학교 사학과 대학원 졸업</li>
+                </ul>
+              </div>
 
-          <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-sm">
-            <h3 className="text-xl font-semibold text-green-700 mb-4">경력</h3>
-            <ul className="space-y-2 list-disc list-inside text-gray-700">
-              <li>부산진고, 금정고, 분포고 진로진학상담교사</li>
-              <li>덕문여자고등학교 역사 및 진로진학상담교사</li>
-            </ul>
+              <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-sm">
+                <h3 className="text-xl font-semibold text-green-700 mb-4">경력</h3>
+                <ul className="space-y-2 list-disc list-inside text-gray-700">
+                  <li>부산진고, 금정고, 분포고 진로진학상담교사</li>
+                  <li>덕문여자고등학교 역사 및 진로진학상담교사</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
