@@ -9,7 +9,7 @@ export default function StrategyTeachersPage() {
       id: 1,
       name: "박미정 선생님",
       role: "전략담임부장",
-      image: "/asian-female-teacher-portrait.png",
+      image: "/strategy-teachers/1.webp",
       university: "부산대학교 교육학과",
       description:
         "35년간 진학지도 경험을 바탕으로 학생 개인별 학습 심층분석, 학습설계, 입시전략 수립을 담당하고 있습니다.",
@@ -18,7 +18,7 @@ export default function StrategyTeachersPage() {
       id: 2,
       name: "우태연 선생님",
       role: "전략담임",
-      image: "/asian-male-teacher-portrait.png",
+      image: "/strategy-teachers/2.webp",
       university: "경북대학교 사범대학",
       description:
         "35년간 진학지도 경험을 바탕으로 학생들이 학습에 집중할 수 있도록 생활관리를 담당하고 있습니다.",
@@ -33,7 +33,7 @@ export default function StrategyTeachersPage() {
         <div className="w-full lg:w-1/3 flex-shrink-0">
           <div className="relative overflow-hidden rounded-lg shadow-md bg-gradient-to-b from-blue-100 to-white p-4">
             <Image
-              src="/asian-female-teacher-portrait.png" 
+              src="/strategy-teachers/1.webp" 
               alt="박미정 전략담임부장"
               width={300}
               height={400}
