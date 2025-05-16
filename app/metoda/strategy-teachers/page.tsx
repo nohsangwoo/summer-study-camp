@@ -50,7 +50,7 @@ export default function StrategyTeachersPage() {
         <div className="w-full lg:w-2/3">
           <div className="flex items-start mb-6">
             <Quote className="h-8 w-8 text-blue-500 mr-2 flex-shrink-0 mt-1" />
-            <h2 className="text-2xl font-bold text-gray-800">전략담임소개</h2>
+            <h2 className="text-2xl font-bold text-gray-800">전략담임부장소개</h2>
           </div>
 
           <div className="space-y-4 text-gray-700 leading-relaxed">
@@ -114,6 +114,34 @@ export default function StrategyTeachersPage() {
               <li>부산교육청 진로교육연구회 회장 역임</li>
               <li>부산교육청 진학지원단 전문위원 역임</li>
               <li>한국대학교육협의회 대입상담교사단 역임</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 우태연 전략담임 학력 및 경력 */}
+      <div className="mt-8 mb-12 bg-gray-50 rounded-lg p-6 shadow-sm">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="bg-yellow-500 rounded-full p-2">
+            <GraduationCap className="h-6 w-6 text-white" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800">우태연 전략담임 학력 및 경력</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
+            <h3 className="text-xl font-semibold text-blue-700 mb-4">학력</h3>
+            <ul className="space-y-2 list-disc list-inside text-gray-700">
+              <li>경북대학교 사학과 졸업</li>
+              <li>경북대학교 사학과 대학원 졸업</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg border-l-4 border-green-500 shadow-sm">
+            <h3 className="text-xl font-semibold text-green-700 mb-4">경력</h3>
+            <ul className="space-y-2 list-disc list-inside text-gray-700">
+              <li>부산진고, 금정고, 분포고 진로진학상담교사</li>
+              <li>덕문여자고등학교 역사 및 진로진학상담교사</li>
             </ul>
           </div>
         </div>
