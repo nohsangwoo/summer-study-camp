@@ -9,7 +9,7 @@ export default function MentorsPage() {
       name: '김동헌',
       university: '부산대의대',
       position: '총괄 및 콘텐츠 개발팀장',
-      image: '/mentors/kimdongheon.jpg',
+      image: '/mentors/kimdongheon.webp',
       motto: '습관이 실력을 만들고, 실력이 미래를 바꿉니다.',
       description: [
         '콘텐츠개발팀에서는 단순한 공부법 전달이 아닌, 학생 개개인의 학습 성향을 분석하고, 입시 경쟁력을 갖춘 실전형 공부습관을 설계하는 것이 핵심입니다.',
@@ -39,7 +39,7 @@ export default function MentorsPage() {
       name: '윤태현',
       university: '부산대의대',
       position: '인사관리팀장',
-      image: '/mentors/yoontaehyun.jpg',
+      image: '/mentors/yoontaehyun.webp',
       motto: '관리란 통제가 아닌 돌봄입니다. 전일공의 모든 사람을 끝까지 챙기는 팀, 인사관리팀입니다.',
       description: [
         '전일공 캠프의 인사관리팀은 멘토와 멘티 모두가 캠프 안에서 최상의 콘디션과 집중력을 유지할 수 있도록 운영 전반에서 사람을 세심하게 관리하고 지원하는 현장 중심의 핵심 부서입니다.',

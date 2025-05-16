@@ -9,7 +9,7 @@ export default function DirectorGreetingPage() {
         <div className="w-full lg:w-1/3 flex-shrink-0">
           <div className="relative overflow-hidden rounded-lg shadow-md bg-gradient-to-b from-purple-100 to-white p-4">
             <Image
-              src="/mentors/kimdongheon.jpg"
+              src="/mentors/kimdongheon.webp"
               alt="김동헌 연구소장"
               width={300}
               height={400}

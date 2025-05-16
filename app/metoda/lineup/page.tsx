@@ -28,7 +28,7 @@ export default function LineupPage() {
       name: '김동헌',
       university: '부산대 의학과',
       role: '대표 겸 연구소장',
-      image: '/mentors/kimdongheon.jpg',
+      image: '/mentors/kimdongheon.webp',
       description:
         '의대생 멘토링 캠프를 제안하고 다양한 프로그램 기획에 주도적인 역할을 담당하고 있습니다.',
       achievements: [
@@ -45,7 +45,7 @@ export default function LineupPage() {
       name: '김동헌',
       university: '부산대 의학과',
       role: '컨텐츠개발팀장',
-      image: '/mentors/kimdongheon.jpg',
+      image: '/mentors/kimdongheon.webp',
       description:
         '효율적인 학습 방법론 연구와 학생 맞춤형 학습 전략 개발을 담당하고 있습니다.',
       achievements: [
@@ -81,7 +81,7 @@ export default function LineupPage() {
       name: '윤태현',
       university: '부산대 의학과',
       role: '멘토관리팀장',
-      image: '/mentors/yoontaehyun.jpg',
+      image: '/mentors/yoontaehyun.webp',
       description:
         '효과적인 튜터링 방법론 연구 및 멘토 교육 프로그램 개발을 담당하고 있습니다.',
       achievements: [

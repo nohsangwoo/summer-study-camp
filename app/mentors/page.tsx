@@ -19,7 +19,7 @@ export default function MentorsPage() {
       name: "김태윤",
       university: "중앙대 의예과",
       position: "콘텐츠연구실장",
-      image: "/mentors/kimdongheon.jpg", // 기존 이미지 재사용
+      image: "/mentors/kimdongheon.webp", // 기존 이미지 재사용
       shortDescription: "의대생들의 학습 콘텐츠 개발 및 연구를 담당합니다.",
       description: [
         "콘텐츠 연구실에서는 문제를 보는 시각이 나무라도 중요하다고 생각합니다.",
@@ -80,7 +80,7 @@ export default function MentorsPage() {
       name: "윤태현",
       university: "부산대 의예과",
       position: "입시전략실장",
-      image: "/mentors/yoontaehyun.jpg",
+      image: "/mentors/yoontaehyun.webp",
       shortDescription: "최신 의대 입시 전략과 정보를 연구하고 제공합니다.",
       description: [
         "입시전략실에서는 매년 변화하는 의대 입시 트렌드를 분석하고 최적의 전략을 수립합니다.",
