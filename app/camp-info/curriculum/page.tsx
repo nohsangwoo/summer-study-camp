@@ -61,16 +61,16 @@ export default function CurriculumPage() {
             </ul>
           </div>
           <Image
-            src="/curriculum-point1.jpg"
+            src="/curriculum/1.webp"
             alt="멘토와 함께하는 학습"
             width={500}
             height={350}
-            className="w-full h-auto"
+            className="w-full max-h-[350px] object-cover"
           />
         </div>
 
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <Image src="/curriculum-point2.jpg" alt="학습 계획 수립" width={500} height={350} className="w-full h-auto" />
+          <Image src="/curriculum/2.webp" alt="학습 계획 수립" width={500} height={350} className="w-full max-h-[350px] object-cover" />
           <div className="p-6">
             <h2 className="text-2xl font-bold mb-4">프로그램 구성</h2>
             <ul className="space-y-3">
