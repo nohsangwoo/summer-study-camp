@@ -239,7 +239,7 @@ export const MentoringSection = () => {
                 <p className="text-lg leading-relaxed">
                   영어·수학·국어 진도 유지부터 의대(명문대) 합격 전략 상담,
                   자기주도 생기부 설계,{' '}
-                  <span className="font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded whitespace-nowrap inline-block">
+                  <span className="font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded inline-block">
                     후원 병원인 큰솔병원에서의 1일 의사체험
                   </span>
                   까지

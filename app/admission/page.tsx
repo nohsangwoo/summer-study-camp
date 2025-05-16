@@ -27,7 +27,7 @@ export default function AdmissionPage() {
               />
             </div>
             <h2 className="text-3xl font-bold text-gray-700 mb-6">
-              고려대학교 KU캠프
+              전일공 캠프
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-8">
               썸머 공부습관 캠프에 관심을 가져주셔서 감사합니다. 아래 채널을
