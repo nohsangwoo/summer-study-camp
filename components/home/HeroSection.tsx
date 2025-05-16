@@ -106,13 +106,12 @@ export const HeroSection = () => {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기
-                    재활의료기관{' '}
+                    특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기 재활의료기관{' '}
                     <a
                       href="https://www.keunsol.co.kr/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors"
+                      className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors whitespace-nowrap inline-flex items-center bg-blue-800/30 px-2 py-0.5 rounded"
                     >
                       큰솔병원(의료법인 영재의료재단)
                     </a>{' '}
