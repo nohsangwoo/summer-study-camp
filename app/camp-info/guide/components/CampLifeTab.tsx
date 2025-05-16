@@ -112,18 +112,18 @@ export default function CampLifeTab() {
               </li>
               <li className="flex items-start">
                 <CheckCircle2 className="h-5 w-5 mr-2 text-blue-600 mt-0.5 flex-shrink-0" />
-                <span>상세주소는 아는공부법으로 학생 학년 이름 꼭 적어 주세요.</span>
+                <span>상세주소는 전일공법으로 학생 학년 이름 꼭 적어 주세요.</span>
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-gray-300">
               <p className="text-sm font-medium">
                 택배 발송주소: <span className="text-blue-700">경기 광주시 남한산 고라산길 99-32</span> /{" "}
-                <span className="text-blue-700">상세주소: 아는공부법(학생)조 학년 이름</span>
+                <span className="text-blue-700">상세주소: 전일공법(학생)조 학년 이름</span>
               </p>
               <p className="text-sm font-medium mt-1">
                 택배 발송시:{" "}
                 <span className="text-blue-700">
-                  받는 사람은 꼭 [아는공부법 OO조 중1 홍길동] 으로 기재 부탁드립니다.
+                  받는 사람은 꼭 [전일공법 OO조 중1 홍길동] 으로 기재 부탁드립니다.
                 </span>
               </p>
             </div>

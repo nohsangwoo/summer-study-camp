@@ -278,7 +278,7 @@ export const HeroSection = () => {
 
             <div className="relative rounded-lg overflow-hidden shadow-2xl transform rotate-1 transition-transform hover:rotate-0 duration-300">
               <Image
-                src="/student-group-activity.png"
+                src="/main/1.webp"
                 alt="학생 그룹 활동"
                 width={600}
                 height={400}

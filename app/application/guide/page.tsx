@@ -7,7 +7,7 @@ export default function ApplicationGuidePage() {
   return (
     <div className="container py-10 max-w-4xl">
       <div className="mb-10 text-center">
-        <h1 className="text-3xl font-bold mb-4">2025 아는공부 썸머스쿨 신청 안내</h1>
+        <h1 className="text-3xl font-bold mb-4">2025 썸머스쿨 신청 안내</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">국내 최고 & 국내 최다 규모의 독보적인 자기주도학습 프로그램</p>
       </div>
 

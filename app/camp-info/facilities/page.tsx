@@ -16,7 +16,7 @@ export default function FacilitiesPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">캠프시설</h1>
         <p className="text-gray-600">
-          편안함과 집중을 위한 최고의 학습 환경, 아는공부 학습장 및 기숙사
+          편안함과 집중을 위한 최고의 학습 환경, 전일공 학습장 및 기숙사
           시설을 소개합니다.
         </p>
       </div>
@@ -905,7 +905,7 @@ export default function FacilitiesPage() {
               <div className="relative h-96">
                 <Image
                   src="/camp-map.png"
-                  alt="아는공부캠프 오시는 길"
+                  alt="전일공캠프 오시는 길"
                   fill
                   className="object-cover"
                 />
@@ -913,7 +913,7 @@ export default function FacilitiesPage() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <MapPin className="h-5 w-5 text-red-600 mr-2" />
-                  아는공부캠프 오시는 길
+                  전일공캠프 오시는 길
                 </h3>
                 <div className="space-y-4">
                   <div>
@@ -934,7 +934,7 @@ export default function FacilitiesPage() {
                         • 지하철: 7호선 부천시청역 2번 출구에서 마을버스 이용
                       </li>
                       <li>
-                        • 버스: 66번, 12번 버스 이용 후 아는공부캠프 정류장 하차
+                        • 버스: 66번, 12번 버스 이용 후 전일공캠프 정류장 하차
                       </li>
                     </ul>
                   </div>
