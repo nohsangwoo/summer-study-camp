@@ -188,13 +188,27 @@ const HighSchoolSchedule = ({ day }: { day: 'weekday' | 'saturday' | 'sunday' })
 
   // 하루 일정 요약 정보
   const getDaySummary = (daySchedule: Array<{ time: string; content: string; note: string }>) => {
-    const studyTime = calculateTotalTime('자습', daySchedule) + 
-                      calculateTotalTime('모의고사', daySchedule) + 
-                      calculateTotalTime('테스트', daySchedule) +
-                      calculateTotalTime('오답', daySchedule);
+    // 중복 계산 방지를 위해 각 항목은 한 번만 계산
+    let studyTime = 0;
+    let mealTime = 0;
+    let lectureTime = 0;
     
-    const mealTime = calculateTotalTime('식사', daySchedule);
-    const lectureTime = calculateTotalTime('특강', daySchedule);
+    daySchedule.forEach(item => {
+      if (!item.note) return; // 시간 정보가 없으면 건너뜀
+      
+      const minutes = parseInt(item.note.replace(/[^0-9]/g, ''));
+      if (isNaN(minutes)) return; // 숫자 변환 실패 시 건너뜀
+      
+      const content = item.content.toLowerCase();
+      
+      if (content.includes('식사') || content.includes('아침') || content.includes('점심') || content.includes('저녁')) {
+        mealTime += minutes;
+      } else if (content.includes('특강')) {
+        lectureTime += minutes;
+      } else if (content.includes('자습') || content.includes('모의고사') || content.includes('테스트') || content.includes('오답')) {
+        studyTime += minutes;
+      }
+    });
     
     const wakeupTime = daySchedule[0].time;
     const lastActivity = daySchedule[daySchedule.length - 1];
