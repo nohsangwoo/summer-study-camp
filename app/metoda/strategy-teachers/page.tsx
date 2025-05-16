@@ -7,38 +7,21 @@ export default function StrategyTeachersPage() {
   const teachers = [
     {
       id: 1,
-      name: "김민영 선생님",
-      role: "수학 전략담임",
-      image: "/placeholder.svg?key=i86t1",
-      university: "서울대학교 수학교육과",
+      name: "박미정 선생님",
+      role: "전략담임부장",
+      image: "/asian-female-teacher-portrait.png",
+      university: "부산대학교 교육학과",
       description:
-        "10년 이상의 수학 교육 경력을 바탕으로 학생들의 수학적 사고력을 향상시키는 데 중점을 둡니다. 개념 이해부터 문제 해결까지 체계적인 지도를 제공합니다.",
+        "35년간 진학지도 경험을 바탕으로 학생 개인별 학습 심층분석, 학습설계, 입시전략 수립을 담당하고 있습니다.",
     },
     {
       id: 2,
-      name: "이지원 선생님",
-      role: "국어 전략담임",
-      image: "/asian-female-teacher-portrait.png",
-      university: "고려대학교 국어국문학과",
-      description:
-        "문학과 비문학 모두에 정통한 국어 전문가로, 학생들의 독해력과 사고력 향상에 탁월한 지도력을 발휘합니다.",
-    },
-    {
-      id: 3,
-      name: "박준서 선생님",
-      role: "영어 전략담임",
+      name: "우태연 선생님",
+      role: "전략담임",
       image: "/asian-male-teacher-portrait.png",
-      university: "연세대학교 영어영문학과",
+      university: "경북대학교 사범대학",
       description:
-        "영어 독해와 문법에 특화된 지도로 학생들의 영어 실력을 단기간에 향상시키는 전략적 학습법을 제공합니다.",
-    },
-    {
-      id: 4,
-      name: "최서연 선생님",
-      role: "과학 전략담임",
-      image: "/placeholder.svg?key=i86t1",
-      university: "서울대학교 화학과",
-      description: "물리, 화학, 생물 등 과학 전 영역에 걸친 체계적인 지도로 이과 학생들의 성적 향상을 이끌어냅니다.",
+        "35년간 진학지도 경험을 바탕으로 학생들이 학습에 집중할 수 있도록 생활관리를 담당하고 있습니다.",
     },
   ]
 
@@ -147,7 +130,7 @@ export default function StrategyTeachersPage() {
       {/* 대형 슬로건 배너 */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl mb-12 shadow-lg">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
-          "전교1등 공부습관캠프, <span className="text-yellow-300">전략담임</span>과 함께 성적 향상의 길을 열다"
+          <span className="text-yellow-300">전략담임</span>과 함께하는 성적향상 여정
         </h2>
       </div>
 
