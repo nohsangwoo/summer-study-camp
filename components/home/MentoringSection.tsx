@@ -303,7 +303,7 @@ export const MentoringSection = () => {
                 <div className="relative w-full aspect-square">
                   <Image
                     src="/placeholder.svg"
-                    alt="윤태현 멘토"
+                    alt="이상민 멘토"
                     fill
                     className="object-cover"
                   />
@@ -312,7 +312,7 @@ export const MentoringSection = () => {
                   <p className="text-gray-700 font-medium">
                     부산대의대
                     <br />
-                    윤태현
+                    이상민
                   </p>
                 </div>
               </div>
