@@ -30,18 +30,18 @@ export const StatsSection = () => {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-6 border border-white/20">
-            <h3 className="text-4xl font-bold text-center text-yellow-300 mb-2">85%</h3>
-            <p className="text-center text-blue-100">성적 향상률</p>
+            <h3 className="text-2xl md:text-4xl font-bold text-center text-yellow-300 mb-0 md:mb-2">85%</h3>
+            <p className="text-center text-blue-100 text-xs md:text-base">성적 향상률</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-6 border border-white/20">
-            <h3 className="text-4xl font-bold text-center text-yellow-300 mb-2">92%</h3>
-            <p className="text-center text-blue-100">목표 대학 합격률</p>
+            <h3 className="text-2xl md:text-4xl font-bold text-center text-yellow-300 mb-0 md:mb-2">92%</h3>
+            <p className="text-center text-blue-100 text-xs md:text-base">목표 대학 합격률</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-6 border border-white/20">
-            <h3 className="text-4xl font-bold text-center text-yellow-300 mb-2">1,200+</h3>
-            <p className="text-center text-blue-100">누적 수료 학생</p>
+            <h3 className="text-2xl md:text-4xl font-bold text-center text-yellow-300 mb-0 md:mb-2">1,200+</h3>
+            <p className="text-center text-blue-100 text-xs md:text-base">누적 수료 학생</p>
           </div>
         </div>
       </div>
