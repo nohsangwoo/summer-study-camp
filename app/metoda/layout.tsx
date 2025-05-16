@@ -11,7 +11,7 @@ export default function MetodaLayout({ children }: MetodaLayoutProps) {
       {/* 멘토단 헤더 */}
       <div className="w-full border-b border-gray-200 py-8 bg-gradient-to-r from-purple-50 to-white">
         <div className="container">
-          <h1 className="text-3xl font-bold text-gray-800">멘토단</h1>
+          <h1 className="text-3xl font-bold text-gray-800">공부습관연구소</h1>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ const mainMenuItems = [
     ],
   },
   {
-    title: "멘토단",
+    title: "공부습관연구소",
     href: "/metoda/director-greeting", // 첫 번째 하위 메뉴 항목으로 변경
     subMenu: [
       { title: "연구소장인사말", href: "/metoda/director-greeting" },
