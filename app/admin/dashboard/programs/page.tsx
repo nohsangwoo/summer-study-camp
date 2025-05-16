@@ -32,7 +32,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 interface Program {
   id: string
   name: string
-  category: "썸머스쿨" | "특강" | "멘토링" | "상담" | "기타"
+  category: "썸머캠프" | "특강" | "멘토링" | "상담" | "기타"
   duration: string
   price: number
   discountPrice?: number
@@ -50,7 +50,7 @@ const samplePrograms: Program[] = [
   {
     id: "PRG-2025-001",
     name: "2025 썸머 공부습관 캠프 A코스",
-    category: "썸머스쿨",
+    category: "썸머캠프",
     duration: "4주",
     price: 2800000,
     discountPrice: 2500000,
@@ -65,7 +65,7 @@ const samplePrograms: Program[] = [
   {
     id: "PRG-2025-002",
     name: "2025 썸머 공부습관 캠프 B코스",
-    category: "썸머스쿨",
+    category: "썸머캠프",
     duration: "3주",
     price: 2200000,
     status: "모집중",
@@ -151,7 +151,7 @@ const samplePrograms: Program[] = [
 
 // 카테고리별 색상 정의
 const categoryColors = {
-  썸머스쿨: "bg-blue-100 text-blue-800",
+  썸머캠프: "bg-blue-100 text-blue-800",
   특강: "bg-purple-100 text-purple-800",
   멘토링: "bg-green-100 text-green-800",
   상담: "bg-amber-100 text-amber-800",
@@ -296,7 +296,7 @@ export default function ProgramsPage() {
               <DropdownMenuContent align="end" className="w-56">
                 <DropdownMenuLabel>카테고리 필터</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {(["썸머스쿨", "특강", "멘토링", "상담", "기타"] as const).map((category) => (
+                {(["썸머캠프", "특강", "멘토링", "상담", "기타"] as const).map((category) => (
                   <DropdownMenuItem key={category} onSelect={(e) => e.preventDefault()}>
                     <div className="flex items-center space-x-2">
                       <Checkbox
@@ -676,12 +676,12 @@ export default function ProgramsPage() {
                 <Label htmlFor="category" className="text-right">
                   카테고리 *
                 </Label>
-                <Select name="category" defaultValue="썸머스쿨" required>
+                <Select name="category" defaultValue="썸머캠프" required>
                   <SelectTrigger className="col-span-3">
                     <SelectValue placeholder="카테고리 선택" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="썸머스쿨">썸머스쿨</SelectItem>
+                    <SelectItem value="썸머캠프">썸머캠프</SelectItem>
                     <SelectItem value="특강">특강</SelectItem>
                     <SelectItem value="멘토링">멘토링</SelectItem>
                     <SelectItem value="상담">상담</SelectItem>
@@ -868,7 +868,7 @@ export default function ProgramsPage() {
                       <SelectValue placeholder="카테고리 선택" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="썸머스쿨">썸머스쿨</SelectItem>
+                      <SelectItem value="썸머캠프">썸머캠프</SelectItem>
                       <SelectItem value="특강">특강</SelectItem>
                       <SelectItem value="멘토링">멘토링</SelectItem>
                       <SelectItem value="상담">상담</SelectItem>

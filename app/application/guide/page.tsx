@@ -7,7 +7,7 @@ export default function ApplicationGuidePage() {
   return (
     <div className="container py-10 max-w-4xl">
       <div className="mb-10 text-center">
-        <h1 className="text-3xl font-bold mb-4">2025 썸머스쿨 신청 안내</h1>
+        <h1 className="text-3xl font-bold mb-4">2025 전일공 썸머캠프 신청 안내</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">국내 최고 & 국내 최다 규모의 독보적인 자기주도학습 프로그램</p>
       </div>
 
@@ -32,12 +32,12 @@ export default function ApplicationGuidePage() {
 
                   <div className="border-l-4 border-blue-200 pl-4 ml-7 space-y-3">
                     <div>
-                      <p className="font-semibold">【썸머스쿨 A코스(4주)】</p>
+                      <p className="font-semibold">【썸머캠프 A코스(4주)】</p>
                       <p>2025년 07월 27일(토요일) ~ 2025년 08월 16일(토요일): 4주 과정</p>
                     </div>
 
                     <div>
-                      <p className="font-semibold">【썸머스쿨 B코스(3주)】</p>
+                      <p className="font-semibold">【썸머캠프 B코스(3주)】</p>
                       <p>2025년 07월 27일(토요일) ~ 2025년 08월 09일(토요일): 3주 과정</p>
                     </div>
 
@@ -83,7 +83,7 @@ export default function ApplicationGuidePage() {
               {/* 우측 내용 */}
               <div className="md:col-span-4 space-y-4">
                 <div>
-                  <p className="font-semibold">【썸머스쿨 A코스(4주)】</p>
+                  <p className="font-semibold">【썸머캠프 A코스(4주)】</p>
                   <p>
                     25.07.27(토) ~ 25.08.16(토) 4주 과정: 정가가 <span className="line-through">3,800,000원</span> ▶{" "}
                     <span className="text-red-500 font-bold">할인가 3,500,000원</span> (5월 00일까지 사전 등록 할인)
@@ -91,7 +91,7 @@ export default function ApplicationGuidePage() {
                 </div>
 
                 <div>
-                  <p className="font-semibold">【썸머스쿨 B코스(3주)】</p>
+                  <p className="font-semibold">【썸머캠프 B코스(3주)】</p>
                   <p>
                     25.07.27(토) ~ 25.08.09(토) 3주 과정: 정가가 <span className="line-through">3,000,000원</span> ▶{" "}
                     <span className="text-red-500 font-bold">할인가 2,780,000원</span> (5월 00일까지 사전 등록 할인)

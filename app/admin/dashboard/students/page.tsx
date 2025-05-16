@@ -32,7 +32,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-001",
       name: "김지훈",
-      course: "썸머스쿨 A코스(4주)",
+      course: "썸머캠프 A코스(4주)",
       grade: "고등학교 2학년",
       status: "신청완료",
       phone: "010-1234-5678",
@@ -42,7 +42,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-002",
       name: "이서연",
-      course: "썸머스쿨 B코스(3주)",
+      course: "썸머캠프 B코스(3주)",
       grade: "고등학교 1학년",
       status: "결제완료",
       phone: "010-2345-6789",
@@ -52,7 +52,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-003",
       name: "박민준",
-      course: "썸머스쿨 A코스(4주)",
+      course: "썸머캠프 A코스(4주)",
       grade: "고등학교 3학년",
       status: "결제대기",
       phone: "010-3456-7890",
@@ -62,7 +62,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-004",
       name: "정하은",
-      course: "썸머스쿨 A코스(4주)",
+      course: "썸머캠프 A코스(4주)",
       grade: "고등학교 2학년",
       status: "결제완료",
       phone: "010-4567-8901",
@@ -72,7 +72,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-005",
       name: "최준서",
-      course: "썸머스쿨 B코스(3주)",
+      course: "썸머캠프 B코스(3주)",
       grade: "고등학교 1학년",
       status: "신청완료",
       phone: "010-5678-9012",
@@ -82,7 +82,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-006",
       name: "강지원",
-      course: "썸머스쿨 A코스(4주)",
+      course: "썸머캠프 A코스(4주)",
       grade: "고등학교 3학년",
       status: "취소",
       phone: "010-6789-0123",
@@ -92,7 +92,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-007",
       name: "윤서진",
-      course: "썸머스쿨 B코스(3주)",
+      course: "썸머캠프 B코스(3주)",
       grade: "고등학교 2학년",
       status: "결제완료",
       phone: "010-7890-1234",
@@ -102,7 +102,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-008",
       name: "임도현",
-      course: "썸머스쿨 A코스(4주)",
+      course: "썸머캠프 A코스(4주)",
       grade: "고등학교 1학년",
       status: "결제완료",
       phone: "010-8901-2345",
@@ -112,7 +112,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-009",
       name: "한소율",
-      course: "썸머스쿨 B코스(3주)",
+      course: "썸머캠프 B코스(3주)",
       grade: "고등학교 3학년",
       status: "결제대기",
       phone: "010-9012-3456",
@@ -122,7 +122,7 @@ export default function AdminStudentsPage() {
     {
       id: "STD-2025-010",
       name: "송민석",
-      course: "썸머스쿨 A코스(4주)",
+      course: "썸머캠프 A코스(4주)",
       grade: "고등학교 2학년",
       status: "수료",
       phone: "010-0123-4567",
@@ -250,8 +250,8 @@ export default function AdminStudentsPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">모든 코스</SelectItem>
-                  <SelectItem value="썸머스쿨 A코스(4주)">A코스(4주)</SelectItem>
-                  <SelectItem value="썸머스쿨 B코스(3주)">B코스(3주)</SelectItem>
+                  <SelectItem value="썸머캠프 A코스(4주)">A코스(4주)</SelectItem>
+                  <SelectItem value="썸머캠프 B코스(3주)">B코스(3주)</SelectItem>
                 </SelectContent>
               </Select>
             </div>
