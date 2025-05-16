@@ -18,23 +18,40 @@ export default function CampGuidePage() {
       </div>
 
       <Tabs defaultValue="schedule" className="w-full mb-12">
-        <TabsList className="grid w-full grid-cols-5">
-          <TabsTrigger value="schedule" className="text-base">
-            일정 안내
-          </TabsTrigger>
-          <TabsTrigger value="registration" className="text-base">
-            등록 방법
-          </TabsTrigger>
-          <TabsTrigger value="program" className="text-base">
-            프로그램 안내
-          </TabsTrigger>
-          <TabsTrigger value="preparation" className="text-base">
-            준비물 안내
-          </TabsTrigger>
-          <TabsTrigger value="camplife" className="text-base">
-            캠프 생활
-          </TabsTrigger>
-        </TabsList>
+        <div className="relative mb-8 overflow-x-auto pb-3">
+          <TabsList className="flex w-max min-w-full space-x-2">
+            <TabsTrigger 
+              value="schedule" 
+              className="text-xs md:text-base py-2 whitespace-nowrap"
+            >
+              일정 안내
+            </TabsTrigger>
+            <TabsTrigger 
+              value="registration" 
+              className="text-xs md:text-base py-2 whitespace-nowrap"
+            >
+              등록 방법
+            </TabsTrigger>
+            <TabsTrigger 
+              value="program" 
+              className="text-xs md:text-base py-2 whitespace-nowrap"
+            >
+              프로그램 안내
+            </TabsTrigger>
+            <TabsTrigger 
+              value="preparation" 
+              className="text-xs md:text-base py-2 whitespace-nowrap"
+            >
+              준비물 안내
+            </TabsTrigger>
+            <TabsTrigger 
+              value="camplife" 
+              className="text-xs md:text-base py-2 whitespace-nowrap"
+            >
+              캠프 생활
+            </TabsTrigger>
+          </TabsList>
+        </div>
 
         {/* 일정 안내 탭 */}
         <TabsContent value="schedule">
