@@ -197,26 +197,26 @@ export const MentoringSection = () => {
           </div>
         </div>
 
-        <div className="text-center mb-8 my-24">
+        <div className="text-center mb-8 my-16 md:my-24">
           <h3 className="text-xl font-semibold mb-4">
             전교1등공부습관캠프 1:1 멘토진
           </h3>
-          <div className="max-w-4xl mx-auto text-gray-700 mb-8 bg-white p-6 rounded-lg shadow-lg border-2 border-blue-100">
-            <h2 className="text-2xl font-bold mb-6 text-center text-blue-800 border-b-2 border-blue-200 pb-3">
+          <div className="max-w-4xl mx-auto text-gray-700 mb-8 bg-white p-3 md:p-6 rounded-lg shadow-lg border-2 border-blue-100">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center text-blue-800 border-b-2 border-blue-200 pb-3">
               전교1등 공부방법 연구소 전일공 캠프에 오신 것을 환영합니다.
             </h2>
             <div className="space-y-4 text-left">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-20 h-1 bg-blue-500 rounded mr-3"></div>
-                <span className="text-xl font-semibold text-blue-800">
+              <div className="flex items-center justify-center mb-3 md:mb-4">
+                <div className="w-12 md:w-20 h-1 bg-blue-500 rounded mr-2 md:mr-3"></div>
+                <span className="text-lg md:text-xl font-semibold text-blue-800">
                   전일공 캠프
                 </span>
-                <div className="w-20 h-1 bg-blue-500 rounded ml-3"></div>
+                <div className="w-12 md:w-20 h-1 bg-blue-500 rounded ml-2 md:ml-3"></div>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <div className="bg-blue-50 p-3 md:p-6 rounded-lg border-l-4 border-blue-500">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-600 rounded-full p-2 mr-3">
+                  <div className="bg-blue-600 rounded-full p-1 md:p-2 mr-2 md:mr-3 flex-shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6 text-white"
@@ -232,23 +232,24 @@ export const MentoringSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-blue-800">
+                  <h3 className="text-lg md:text-xl font-bold text-blue-800">
                     특별 프로그램
                   </h3>
                 </div>
                 <p className="text-lg leading-relaxed">
-                  영어·수학·국어 진도 유지부터 의대(명문대) 합격 전략 상담,
-                  자기주도 생기부 설계,{' '}
-                  <span className="font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded inline-block">
+                  <span className="block md:inline">영어·수학·국어 진도 유지부터</span>{' '}
+                  <span className="block md:inline">의대(명문대) 합격 전략 상담,</span>
+                  <span className="block md:inline">자기주도 생기부 설계,</span>{' '}
+                  <span className="font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded inline-block mt-1 md:mt-0">
                     후원 병원인 큰솔병원에서의 1일 의사체험
                   </span>
                   까지
                 </p>
               </div>
 
-              <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500 mt-6">
+              <div className="bg-yellow-50 p-3 md:p-6 rounded-lg border-l-4 border-yellow-500 mt-4 md:mt-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-yellow-500 rounded-full p-2 mr-3">
+                  <div className="bg-yellow-500 rounded-full p-1 md:p-2 mr-2 md:mr-3 flex-shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6 text-white"
@@ -264,20 +265,21 @@ export const MentoringSection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-yellow-800">
+                  <h3 className="text-lg md:text-xl font-bold text-yellow-800">
                     전문연구팀 구성
                   </h3>
                 </div>
                 <p className="text-lg leading-relaxed">
-                  <span className="font-semibold text-blue-600">
+                  <span className="font-semibold text-blue-600 inline-block md:inline mt-1 md:mt-0">
                     전문연구팀인 공부습관연구소
                   </span>
-                  (콘텐츠개발, 학습법연구, 인사관리, 입시전략개발)와
-                  <span className="font-semibold text-blue-600">
+                  <span className="block md:inline">(콘텐츠개발, 학습법연구, 인사관리, 입시전략개발)와</span>
+                  <span className="font-semibold text-blue-600 inline-block md:inline mt-1 md:mt-0">
                     입시전문가 전략담당교수
                   </span>
-                  가 함께하는 이번 캠프에서, 의대 및 명문대를 준비하는 여러분의
-                  꿈을 실현할 수 있도록 최선을 다해 돕겠습니다.
+                  <span className="block md:inline">가 함께하는 이번 캠프에서,</span>{' '}
+                  <span className="block md:inline">의대 및 명문대를 준비하는 여러분의</span>
+                  <span className="block md:inline">꿈을 실현할 수 있도록 최선을 다해 돕겠습니다.</span>
                 </p>
               </div>
             </div>
