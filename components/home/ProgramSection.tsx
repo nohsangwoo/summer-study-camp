@@ -1,14 +1,17 @@
-import Link from "next/link"
-import { BookOpen, GraduationCap, Brain, Award } from "lucide-react"
+import Link from 'next/link'
+import { BookOpen, GraduationCap, Brain, Award } from 'lucide-react'
 
 export const ProgramSection = () => {
   return (
     <div className="py-16 bg-white">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">프로그램 소개</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+            프로그램 소개
+          </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            의대 합격을 위한 체계적인 프로그램으로 여러분의 꿈을 현실로 만들어 드립니다.
+            의대 합격을 위한 체계적인 프로그램으로 여러분의 꿈을 현실로 만들어
+            드립니다.
           </p>
         </div>
 
@@ -16,7 +19,8 @@ export const ProgramSection = () => {
         <div className="text-center mb-10">
           <div className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-lg">
             <p className="font-medium">
-              "전교1등 공부습관캠프는 <span className="font-bold">공부방법부터 달라집니다</span>"
+              "전교1등 공부습관캠프는{' '}
+              <span className="font-bold">공부방법부터 달라집니다</span>"
             </p>
           </div>
         </div>
@@ -30,7 +34,9 @@ export const ProgramSection = () => {
               <span className="text-blue-600 font-bold text-xl group-hover:text-blue-700 transition-colors">
                 공부습관
               </span>
-              <p className="text-blue-500/80 text-sm mt-2 text-center">효율적인 학습 방법과 습관 형성</p>
+              <p className="text-blue-500/80 text-sm mt-2 text-center">
+                효율적인 학습 방법과 습관 형성
+              </p>
             </div>
           </Link>
           <Link href="/program/progress-maintenance" className="block">
@@ -40,7 +46,9 @@ export const ProgramSection = () => {
               <span className="text-indigo-600 font-bold text-xl group-hover:text-indigo-700 transition-colors">
                 진도유지
               </span>
-              <p className="text-indigo-500/80 text-sm mt-2 text-center">체계적인 학습 진도 관리</p>
+              <p className="text-indigo-500/80 text-sm mt-2 text-center">
+                체계적인 학습 진도 관리
+              </p>
             </div>
           </Link>
           <Link href="/program/self-directed-research" className="block">
@@ -52,7 +60,9 @@ export const ProgramSection = () => {
                 <br />
                 주제탐구
               </span>
-              <p className="text-teal-500/80 text-sm mt-2 text-center">창의적 사고력 향상</p>
+              <p className="text-teal-500/80 text-sm mt-2 text-center">
+                창의적 사고력 향상
+              </p>
             </div>
           </Link>
           <Link href="/program/med-school-care" className="block">
@@ -60,15 +70,17 @@ export const ProgramSection = () => {
               <div className="absolute top-0 left-0 w-2 h-full bg-rose-500 transition-all duration-300 group-hover:w-full group-hover:opacity-10"></div>
               <Award className="h-10 w-10 text-rose-500 mb-4 group-hover:text-rose-600 transition-colors" />
               <span className="text-rose-600 font-bold text-xl text-center group-hover:text-rose-700 transition-colors">
-                의대입시
+                의대.명문대입시
                 <br />
                 토탈케어
               </span>
-              <p className="text-rose-500/80 text-sm mt-2 text-center">의대 합격을 위한 종합 관리</p>
+              <p className="text-rose-500/80 text-sm mt-2 text-center">
+                의대/명문대합격을 위한 종합관리
+              </p>
             </div>
           </Link>
         </div>
       </div>
     </div>
   )
-} 
+}

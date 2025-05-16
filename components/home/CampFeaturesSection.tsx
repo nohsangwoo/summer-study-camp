@@ -46,14 +46,14 @@ export const CampFeaturesSection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div className="bg-blue-50 p-5 rounded-lg">
-              <p className="text-gray-800 font-medium text-center">전교1등 의대생이 함께 세우는 3주 계획표</p>
+            <div className="bg-blue-50 p-3 sm:p-5 rounded-lg h-full flex items-center justify-center">
+              <p className="text-gray-800 font-medium text-center text-xs sm:text-sm md:text-base">전교1등 의대생이 함께 세우는 3주 계획표</p>
             </div>
-            <div className="bg-blue-50 p-5 rounded-lg">
-              <p className="text-gray-800 font-medium text-center">전교1등 의대생 및 입시 전문가가 제작한 3주완성 커리큘럼</p>
+            <div className="bg-blue-50 p-3 sm:p-5 rounded-lg h-full flex items-center justify-center">
+              <p className="text-gray-800 font-medium text-center text-xs sm:text-sm md:text-base">전교1등 의대생과 전문가의 3주완성 커리큘럼</p>
             </div>
-            <div className="bg-blue-50 p-5 rounded-lg">
-              <p className="text-gray-800 font-medium text-center">부모님께 공부의 전 과정을 매일 리뷰합니다</p>
+            <div className="bg-blue-50 p-3 sm:p-5 rounded-lg h-full flex items-center justify-center">
+              <p className="text-gray-800 font-medium text-center text-xs sm:text-sm md:text-base">부모님께 공부의 전 과정을 매일 리뷰합니다</p>
             </div>
           </div>
         </div>
