@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import { Quote, Award, BookOpen, Star, User } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 interface Testimonial {
   id: string
@@ -12,6 +15,22 @@ interface Testimonial {
 }
 
 export default function RecommendationsPage() {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  }
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  }
+  
   const testimonials: Testimonial[] = [
     {
       id: 'park',
@@ -22,7 +41,7 @@ export default function RecommendationsPage() {
         '진짜 성장은, 스스로 공부하는 법을 깨닫는 순간부터 시작됩니다.',
         "의사라는 꿈을 품든, 아직 뚜렷한 진로를 찾지 못했든 모든 청소년에게 필요한 첫걸음은 '스스로 생각하고 스스로 공부하는 힘', 바로 자기주도학습의 기반을 다지는 것입니다.",
         '전일공 캠프는 단순한 성적 향상을 넘어, 공부의 본질을 이해하고 자기 삶의 방향을 스스로 설계할 수 있는 힘을 길러주는 특별한 여정입니다.',
-        "지역의 의대생 멘토들이 직접 함께 생활하며 실패와 성장, 고민과 극복의 과정을 진솔하게 들려주는 이 캠프는 단순한 강의나 정보 전달을 넘어서는 **'살아 있는 배움'**을 제공합니다.",
+        "지역의 의대생 멘토들이 직접 함께 생활하며 실패와 성장, 고민과 극복의 과정을 진솔하게 들려주는 이 캠프는 단순한 강의나 정보 전달을 넘어서는 '살아 있는 배움'을 제공합니다.",
         '우리는 이 뜻깊은 캠프를 함께 만드는 후원 의료인 그룹으로서, 이 프로그램이 아이들의 자기주도성과 진로 감각을 일깨우는 결정적인 전환점이 되리라 믿습니다.',
         '스스로를 이끄는 힘이 진짜 실력입니다. 전일공 캠프는 그 힘을 깨우는 첫 번째 경험이 되어줄 것입니다.',
       ],
@@ -65,50 +84,70 @@ export default function RecommendationsPage() {
   ]
 
   return (
-    <div>
-      <div className="flex items-start mb-8">
-        <Star className="h-8 w-8 text-yellow-500 mr-2 flex-shrink-0 mt-1" />
-        <h2 className="text-2xl font-bold text-gray-800">추천사</h2>
-      </div>
-
-      <p className="text-gray-600 mb-10">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="container max-w-5xl py-6 sm:py-8 px-0 sm:px-4"
+    >
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-6 sm:mb-10 sm:px-0"
+      >
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 sm:mb-4">추천사</h1>
+        <p className="text-sm sm:text-base text-gray-600">
+          전일공 캠프를 추천해주신 분들의 이야기를 들어보세요.
+        </p>
+      </motion.div>
+      <motion.p 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-10 sm:px-0">
         전일공 캠프는 다양한 분야의 전문가들로부터 높은 평가를 받고 있습니다.
         의료계와 교육계의 전문가들이 직접 경험하고 추천하는 전일공 캠프의 가치를
         확인해보세요.
-      </p>
+      </motion.p>
 
-      <div className="space-y-16">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="space-y-8 sm:space-y-16">
         {testimonials.map(testimonial => (
-          <div
+          <motion.div
             key={testimonial.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+            variants={itemVariants}
+            className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 sm:mx-0"
           >
-            <div className="p-6 md:p-8">
-              <div className="flex flex-col lg:flex-row gap-8 mb-8">
+            <div className="p-4 sm:p-6 md:p-8">
+              <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 mb-6 sm:mb-8">
                 {/* 추천인 사진 */}
                 <div className="w-full lg:w-1/3 flex-shrink-0">
-                  <div className="relative overflow-hidden rounded-lg shadow-md bg-gradient-to-b from-blue-50 to-white p-4">
+                  <div className="relative overflow-hidden rounded-lg shadow-sm bg-gradient-to-b from-blue-50 to-white p-3 sm:p-4 border border-gray-100">
                     <Image
                       src={testimonial.image || '/placeholder.svg'}
                       alt={`${testimonial.name} 사진`}
                       width={300}
                       height={400}
-                      className="mx-auto rounded-md"
+                      className="mx-auto rounded-md w-full h-auto"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-600/80 text-white p-4 text-center">
-                      <h3 className="text-lg font-medium">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-600/80 text-white p-3 sm:p-4 text-center">
+                      <h3 className="text-base sm:text-lg font-medium">
                         {testimonial.title}
                       </h3>
-                      <h2 className="text-xl font-bold">{testimonial.name}</h2>
+                      <h2 className="text-lg sm:text-xl font-bold">{testimonial.name}</h2>
                     </div>
                   </div>
                 </div>
 
                 {/* 추천사 내용 */}
                 <div className="w-full lg:w-2/3">
-                  <div className="flex items-start mb-6">
-                    <Quote className="h-8 w-8 text-blue-500 mr-2 flex-shrink-0 mt-1" />
-                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <div className="flex items-start mb-4 sm:mb-6">
+                    <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-blue-500 mr-2 flex-shrink-0 mt-1" />
+                    <div className="space-y-3 sm:space-y-4 text-gray-700 leading-relaxed text-sm sm:text-base">
                       {testimonial.content.map((paragraph, index) => (
                         <p key={index}>{paragraph}</p>
                       ))}
@@ -119,20 +158,20 @@ export default function RecommendationsPage() {
 
               {/* 학력 및 경력 (있는 경우에만 표시) */}
               {(testimonial.education || testimonial.career) && (
-                <div className="mt-8 bg-gray-50 rounded-lg p-6 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                    <Award className="h-6 w-6 text-blue-500 mr-2" />
+                <div className="mt-6 sm:mt-8 bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-200">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 sm:mb-6 flex items-center">
+                    <Award className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500 mr-2" />
                     학력 및 경력
                   </h3>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                     {testimonial.education && (
-                      <div>
-                        <h4 className="text-lg font-semibold text-blue-700 mb-4 flex items-center">
-                          <BookOpen className="h-5 w-5 mr-2" />
+                      <div className="bg-white p-3 sm:p-4 rounded-lg border border-gray-100 shadow-sm">
+                        <h4 className="text-base sm:text-lg font-semibold text-blue-700 mb-3 sm:mb-4 flex items-center">
+                          <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                           학력
                         </h4>
-                        <ul className="space-y-2 list-disc list-inside text-gray-700">
+                        <ul className="space-y-1 sm:space-y-2 list-disc list-inside text-sm sm:text-base text-gray-700">
                           {testimonial.education.map((item, index) => (
                             <li key={index}>{item}</li>
                           ))}
@@ -141,12 +180,12 @@ export default function RecommendationsPage() {
                     )}
 
                     {testimonial.career && (
-                      <div>
-                        <h4 className="text-lg font-semibold text-blue-700 mb-4 flex items-center">
-                          <User className="h-5 w-5 mr-2" />
+                      <div className="bg-white p-3 sm:p-4 rounded-lg border border-gray-100 shadow-sm">
+                        <h4 className="text-base sm:text-lg font-semibold text-blue-700 mb-3 sm:mb-4 flex items-center">
+                          <User className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                           경력
                         </h4>
-                        <ul className="space-y-2 list-disc list-inside text-gray-700">
+                        <ul className="space-y-1 sm:space-y-2 list-disc list-inside text-sm sm:text-base text-gray-700">
                           {testimonial.career.map((item, index) => (
                             <li key={index}>{item}</li>
                           ))}
@@ -158,20 +197,20 @@ export default function RecommendationsPage() {
               )}
 
               {/* 서명 */}
-              <div className="flex justify-end mt-8">
-                <div className="text-right">
-                  <h3 className="text-xl font-bold text-blue-600 mb-1">
+              <div className="flex justify-end mt-6 sm:mt-8">
+                <div className="text-right bg-blue-50 rounded-lg px-4 sm:px-6 py-2 sm:py-3 shadow-sm border border-blue-100">
+                  <h3 className="text-base sm:text-lg font-bold text-blue-600 mb-0 sm:mb-1">
                     {testimonial.title}
                   </h3>
-                  <h4 className="text-2xl font-bold text-gray-800">
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-800">
                     {testimonial.name}
                   </h4>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
