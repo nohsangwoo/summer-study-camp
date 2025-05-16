@@ -201,36 +201,46 @@ export const MentoringSection = () => {
           <h3 className="text-xl font-semibold mb-4">
             전교1등공부습관캠프 1:1 멘토진
           </h3>
-          <div className="max-w-4xl mx-auto text-gray-700 mb-8 bg-white p-6 rounded-lg shadow-md">
-            <p className="text-lg font-medium mb-4">
+          <div className="max-w-4xl mx-auto text-gray-700 mb-8 bg-white p-6 rounded-lg shadow-lg border-2 border-blue-100">
+            <h2 className="text-2xl font-bold mb-6 text-center text-blue-800 border-b-2 border-blue-200 pb-3">
               전교1등 공부방법 연구소 전일공 캠프에 오신 것을 환영합니다.
-            </p>
+            </h2>
             <div className="space-y-4 text-left">
-              <p>
-                안녕하세요. 전교1등공부습관캠프 전일공의 대표이자 공부연구소장인
-                부산대 의대 김동헌입니다. 전국 의대생으로 구성된 저희 전일공
-                캠프는, 단순한 과외나 공부 지도가 아닌{' '}
-                <span className="font-semibold text-blue-600">
-                  '전교 1등의 공부법'
-                </span>
-                과{' '}
-                <span className="font-semibold text-blue-600">
-                  '자기주도 학습 시스템'
-                </span>
-                을 바탕으로 공부방해요소가 넘치는 요즘 아이들에게 실질적인
-                공부방법과 전략을 함께 제시하고자 합니다.
-              </p>
-              <p>
-                아울러 영어·수학·국어 진도 유지부터 의대(명문대) 합격 전략 상담,
-                자기주도 생기부 설계, 명사 특강과 병원 견학까지 전일공 캠프는
-                학습과 진로, 동기부여를 모두 아우르는 고밀도의 프로그램을
-                운영합니다.
-              </p>
-              <p>
-                전문 연구팀(과외연구·튜터연구·콘텐츠개발·학생관리)이 함께하는
-                이번 캠프에서, 의대 및 명문대를 준비하는 여러분의 꿈을 실현할 수
-                있도록 최선을 다해 돕겠습니다.
-              </p>
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-20 h-1 bg-blue-500 rounded mr-3"></div>
+                <span className="text-xl font-semibold text-blue-800">전일공 캠프</span>
+                <div className="w-20 h-1 bg-blue-500 rounded ml-3"></div>
+              </div>
+              
+              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-600 rounded-full p-2 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-blue-800">특별 프로그램</h3>
+                </div>
+                <p className="text-lg leading-relaxed">
+                  영어·수학·국어 진도 유지부터 의대(명문대) 합격 전략 상담,
+                  자기주도 생기부 설계, <span className="font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded">후원 병원인 큰솔병원에서의 1일 의사체험</span>까지
+                </p>
+              </div>
+              
+              <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500 mt-6">
+                <div className="flex items-center mb-4">
+                  <div className="bg-yellow-500 rounded-full p-2 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-yellow-800">전문연구팀 구성</h3>
+                </div>
+                <p className="text-lg leading-relaxed">
+                  <span className="font-semibold text-blue-600">전문연구팀인 공부습관연구소</span>(콘텐츠개발, 학습법연구, 인사관리, 입시전략개발)와 
+                  <span className="font-semibold text-blue-600">입시전문가 전략담당교수</span>가 함께하는 이번 캠프에서, 의대 및 명문대를 준비하는 여러분의 꿈을 실현할 수 있도록 최선을 다해 돕겠습니다.
+                </p>
+              </div>
             </div>
           </div>
           <p className="text-gray-700 mb-6">
