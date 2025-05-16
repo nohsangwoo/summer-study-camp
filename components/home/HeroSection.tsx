@@ -36,11 +36,13 @@ export const HeroSection = () => {
         <div className="text-center mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/20 max-w-5xl mx-auto">
             <div className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <div className="text-white">습관부터 성적까지</div>
+              <div className="text-white">공부습관부터 내신까지</div>
               <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">
                 전교1등 공부습관캠프
               </div>
-              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">전일공</div>
+              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">
+                전일공
+              </div>
             </div>
           </div>
         </div>
@@ -65,7 +67,9 @@ export const HeroSection = () => {
                   <span>수준별 관리로 국영수심화까지</span>
                 </div>
                 <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
-                  <span>수행평가 대비 주제탐구 및 독서보고서 작성 방법 익히기</span>
+                  <span>
+                    수행평가 대비 주제탐구 및 독서보고서 작성 방법 익히기
+                  </span>
                 </div>
                 <div className="flex items-center justify-center text-center p-3">
                   <span>실제 병원에서의 1일 의사체험으로 동기부여까지</span>
@@ -89,17 +93,21 @@ export const HeroSection = () => {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    <span className="font-semibold text-yellow-200">전일공</span>은 
-                    부산대학교 의과대학 교육봉사 동아리 <span className="text-yellow-200">'메디쌤'</span> 리더,
-                    김동헌 멘토를 필두로 인성과 실력을 겸비한 의대생 멘토 20여명이 함께 하는
-                    공부습관 전문 집중 캠프입니다.
+                    <span className="font-semibold text-yellow-200">
+                      전일공
+                    </span>
+                    은 부산대학교 의과대학 교육봉사 동아리{' '}
+                    <span className="text-yellow-200">'메디쌤'</span> 리더,
+                    김동헌 멘토를 필두로 인성과 실력을 겸비한 의대생 멘토
+                    20여명이 함께 하는 공부습관 전문 집중 캠프입니다.
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기 재활의료기관{' '}
+                    특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기
+                    재활의료기관{' '}
                     <a
                       href="https://www.keunsol.co.kr/"
                       target="_blank"
@@ -107,25 +115,30 @@ export const HeroSection = () => {
                       className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors"
                     >
                       큰솔병원(의료법인 영재의료재단)
-                    </a>
-                    {' '}박재흥 원장의 공식 후원으로 운영됩니다.
+                    </a>{' '}
+                    박재흥 원장의 공식 후원으로 운영됩니다.
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    매 학기 전환점이 되는 방학 기간,<br />
-                    공부습관 리셋이 필요한 학생,<br />
-                    명문대, 의대를 목표로 도약을 준비 중인 학생들을 위해<br />
-                    실제 전교 1등을 경험한 멘토들이 직접 습관을 설계하고, 실전 루틴을 만들어줍니다.
+                    매 학기 전환점이 되는 방학 기간,
+                    <br />
+                    공부습관 리셋이 필요한 학생,
+                    <br />
+                    명문대, 의대를 목표로 도약을 준비 중인 학생들을 위해
+                    <br />
+                    실제 전교 1등을 경험한 멘토들이 직접 습관을 설계하고, 실전
+                    루틴을 만들어줍니다.
                   </p>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p className="font-semibold text-yellow-200">
-                    수도권 학부모 만족도 98%,<br />
+                    수도권 학부모 만족도 98%,
+                    <br />
                     이제 부산·경남에서도 만날 수 있습니다.
                   </p>
                 </div>
@@ -162,14 +175,18 @@ export const HeroSection = () => {
             <div className="mb-6 flex justify-between items-center">
               <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
                 <GraduationCap className="h-6 w-6 text-yellow-300 mr-2" />
-                <span className="text-white font-medium text-sm">전교1등 멘토 직접 지도</span>
+                <span className="text-white font-medium text-sm">
+                  전교1등 멘토 직접 지도
+                </span>
               </div>
               <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
                 <Star className="h-6 w-6 text-yellow-300 mr-2" />
-                <span className="text-white font-medium text-sm">부산 유일 의사체험 프로그램</span>
+                <span className="text-white font-medium text-sm">
+                  부산 유일 의사체험 프로그램
+                </span>
               </div>
             </div>
-            
+
             <div className="relative rounded-lg overflow-hidden shadow-2xl transform rotate-1 transition-transform hover:rotate-0 duration-300">
               <Image
                 src="/student-group-activity.png"

@@ -10,7 +10,7 @@ export const StatsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">캠프 성과</h2>
           <p className="text-lg text-blue-200 max-w-3xl mx-auto">
-            전1공 캠프의 체계적인 프로그램을 통해 많은 학생들이 꿈을 이루었습니다.
+            전일공 캠프의 체계적인 프로그램을 통해 많은 학생들이 꿈을 이루었습니다.
           </p>
         </div>
 
