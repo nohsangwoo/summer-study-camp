@@ -197,7 +197,7 @@ export const HeroSection = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-900/80 to-transparent p-6">
                 <p className="text-white font-medium">
-                  의학계열, 명문대 진학을 희망하는 입시생을 위한 캠프
+                  의학계열 또는 명문대 진학을 희망하는 학생을 위한 캠프
                 </p>
               </div>
             </div>
