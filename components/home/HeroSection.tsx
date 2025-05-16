@@ -73,26 +73,26 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center px-1 md:px-0">
-          <div className="w-full md:w-1/2 text-white mb-8 md:mb-0 md:pr-8">
+        <div className="flex flex-col md:flex-row items-center px-1 md:px-0 max-w-full overflow-hidden">
+          <div className="w-full md:w-1/2 text-white mb-6 md:mb-0 md:pr-8">
             {/* 주요 포인트 */}
-            <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20 mb-8">
+            <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-blue-400/20 mb-6 md:mb-8">
               <div className="text-center mb-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-white">
                   <span className="text-yellow-300">전일공</span>의 약속
                 </h2>
               </div>
-              <div className="space-y-6 text-xl md:text-2xl font-medium">
-                <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+              <div className="space-y-3 md:space-y-6 text-base md:text-xl lg:text-2xl font-medium">
+                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
                   <span>하루 14시간 3주 공부 습관 완성</span>
                 </div>
-                <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
                   <span>과목별 집중 특강으로 학교공부 대비</span>
                 </div>
-                <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
                   <span>수준별 관리로 국영수심화까지</span>
                 </div>
-                <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
+                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
                   <span className="md:inline">
                   {isMobile ? (
                     <>
@@ -104,7 +104,7 @@ export const HeroSection = () => {
                   )}
                 </span>
                 </div>
-                <div className="flex items-center justify-center text-center p-3">
+                <div className="flex items-center justify-center text-center p-2 md:p-3">
                   <span>
                   {isMobile ? (
                     <>
@@ -120,14 +120,14 @@ export const HeroSection = () => {
             </div>
 
             {/* 캠프 소개 - 개선된 레이아웃 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 mb-6 md:mb-8">
               <h3 className="text-xl font-semibold text-yellow-300 mb-4">
                 캠프 소개
               </h3>
-              <div className="space-y-4 text-blue-50">
+              <div className="space-y-3 md:space-y-4 text-sm md:text-base text-blue-50">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
-                  <p className="font-semibold text-yellow-200 text-xl">
+                  <p className="font-semibold text-yellow-200 text-lg md:text-xl">
                     "전교 1등의 공부습관을, 내 아이의 습관으로"
                   </p>
                 </div>
@@ -135,52 +135,100 @@ export const HeroSection = () => {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    <span className="font-semibold text-yellow-200">
+                    <span className="font-semibold text-yellow-200 text-sm md:text-base">
                       전일공
                     </span>
                     은 부산대학교 의과대학 교육봉사 동아리{' '}
-                    <span className="text-yellow-200">'메디쌤'</span> 리더,
-                    김동헌 멘토를 필두로 인성과 실력을 겸비한 의대생 멘토
-                    20여명이 함께 하는 공부습관 전문 집중 캠프입니다.
+                    <span className="text-yellow-200">'메디쌤'</span>{' '}
+                    {isMobile ? (
+                      <span className="block mt-1">리더,</span>
+                    ) : (
+                      "리더,"
+                    )}
+                    {isMobile ? (
+                      <>
+                        <span className="block">김동헌 멘토를 필두로</span>
+                        <span className="block">인성과 실력을 겸비한 의대생 멘토</span>
+                      </>
+                    ) : (
+                      "김동헌 멘토를 필두로 인성과 실력을 겸비한 의대생 멘토"
+                    )}
+                    {isMobile ? (
+                      <span className="block">20여명이 함께 하는 공부습관 전문 집중 캠프입니다.</span>
+                    ) : (
+                      "20여명이 함께 하는 공부습관 전문 집중 캠프입니다."
+                    )}
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기 재활의료기관{' '}
+                    {isMobile ? (
+                      <>
+                        <span className="block">특히 본 캠프는 부산대 의대 선배이자,</span>
+                        <span className="block">부산 최대 회복기 재활의료기관{' '}</span>
+                      </>
+                    ) : (
+                      "특히 본 캠프는 부산대 의대 선배이자, 부산 최대 회복기 재활의료기관{' '}"
+                    )}
                     <a
                       href="https://www.keunsol.co.kr/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors whitespace-nowrap inline-flex items-center bg-blue-800/30 px-2 py-0.5 rounded"
+                      className="underline decoration-yellow-300 hover:text-yellow-100 transition-colors inline-flex items-center bg-blue-800/30 px-2 py-0.5 rounded my-1 md:my-0"
                     >
                       큰솔병원(의료법인 영재의료재단)
                     </a>{' '}
-                    박재흥 원장의 공식 후원으로 운영됩니다.
+                    {isMobile ? (
+                      <span className="block mt-1">박재흥 원장의 공식 후원으로 운영됩니다.</span>
+                    ) : (
+                      "박재흥 원장의 공식 후원으로 운영됩니다."
+                    )}
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
-                    매 학기 전환점이 되는 방학 기간,
-                    <br />
-                    공부습관 리셋이 필요한 학생,
-                    <br />
-                    명문대, 의대를 목표로 도약을 준비 중인 학생들을 위해
-                    <br />
-                    실제 전교 1등을 경험한 멘토들이 직접 습관을 설계하고, 실전
-                    루틴을 만들어줍니다.
+                    {isMobile ? (
+                      <>
+                        <span className="block mb-1">매 학기 전환점이 되는 방학 기간,</span>
+                        <span className="block mb-1">공부습관 리셋이 필요한 학생,</span>
+                        <span className="block mb-1">명문대, 의대를 목표로 도약을 준비 중인 학생들을 위해</span>
+                        <span className="block">실제 전교 1등을 경험한 멘토들이 직접 습관을 설계하고,</span>
+                        <span className="block">실전 루틴을 만들어줍니다.</span>
+                      </>
+                    ) : (
+                      <>
+                        매 학기 전환점이 되는 방학 기간,
+                        <br />
+                        공부습관 리셋이 필요한 학생,
+                        <br />
+                        명문대, 의대를 목표로 도약을 준비 중인 학생들을 위해
+                        <br />
+                        실제 전교 1등을 경험한 멘토들이 직접 습관을 설계하고, 실전
+                        루틴을 만들어줍니다.
+                      </>
+                    )}
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p className="font-semibold text-yellow-200">
-                    수도권 학부모 만족도 98%,
-                    <br />
-                    이제 부산·경남에서도 만날 수 있습니다.
+                    {isMobile ? (
+                      <>
+                        <span className="block">수도권 학부모 만족도 98%,</span>
+                        <span className="block">이제 부산·경남에서도 만날 수 있습니다.</span>
+                      </>
+                    ) : (
+                      <>
+                        수도권 학부모 만족도 98%,
+                        <br />
+                        이제 부산·경남에서도 만날 수 있습니다.
+                      </>
+                    )}
                   </p>
                 </div>
               </div>
@@ -213,14 +261,14 @@ export const HeroSection = () => {
 
           <div className="w-full md:w-1/2 relative">
             {/* 상단에 배지 요소 추가 */}
-            <div className="mb-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
+            <div className="mb-4 md:mb-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
               <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
                 <GraduationCap className="h-6 w-6 text-yellow-300 mr-2" />
                 <span className="text-white font-medium text-sm">
                   전교1등 멘토 직접 지도
                 </span>
               </div>
-              <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
+              <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-2 md:p-3 border border-blue-400/30 flex items-center w-full sm:w-auto justify-center sm:justify-start">
                 <Star className="h-6 w-6 text-yellow-300 mr-2" />
                 <span className="text-white font-medium text-sm">
                   부산 유일 의사체험 프로그램
@@ -244,22 +292,22 @@ export const HeroSection = () => {
             </div>
 
             {/* 하단에 실적 지표 추가 */}
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
-                <p className="text-yellow-300 text-2xl font-bold">98%</p>
-                <p className="text-white text-sm">학부모 만족도</p>
+            <div className="mt-4 md:mt-6 grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4">
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-xl md:text-2xl font-bold">98%</p>
+                <p className="text-white text-xs md:text-sm">학부모 만족도</p>
               </div>
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
-                <p className="text-yellow-300 text-2xl font-bold">3주</p>
-                <p className="text-white text-sm">공부습관 형성 기간</p>
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-xl md:text-2xl font-bold">3주</p>
+                <p className="text-white text-xs md:text-sm">공부습관 형성 기간</p>
               </div>
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
-                <p className="text-yellow-300 text-2xl font-bold">20+</p>
-                <p className="text-white text-sm">의대생 멘토 인원</p>
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-xl md:text-2xl font-bold">20+</p>
+                <p className="text-white text-xs md:text-sm">의대생 멘토 인원</p>
               </div>
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
-                <p className="text-yellow-300 text-2xl font-bold">14시간</p>
-                <p className="text-white text-sm">하루 집중학습</p>
+              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+                <p className="text-yellow-300 text-xl md:text-2xl font-bold">14시간</p>
+                <p className="text-white text-xs md:text-sm">하루 집중학습</p>
               </div>
             </div>
 
