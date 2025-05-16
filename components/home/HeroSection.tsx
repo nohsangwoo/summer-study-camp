@@ -1,9 +1,29 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, GraduationCap, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useEffect, useState } from 'react'
 
 export const HeroSection = () => {
+  // Check if we're on mobile for specific mobile-only adjustments
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    // Initial check
+    checkIfMobile()
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile)
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkIfMobile)
+  }, [])
   return (
     <div className="relative w-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 overflow-hidden">
       {/* 배경 패턴 */}
@@ -12,43 +32,49 @@ export const HeroSection = () => {
       </div>
 
       {/* 히어로 콘텐츠 */}
-      <div className="container relative z-10 py-16 md:py-24">
+      <div className="container relative z-10 py-12 md:py-24">  {/* Reduced top padding on mobile */}
         {/* 캠프 타이틀 */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            여름방학 전교1등 공부습관캠프{' '}
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 px-2">
+            <span className="md:inline block">여름방학 전교1등</span>{' '}
+            <span className="md:inline block">공부습관캠프{' '}</span>
             <span className="text-yellow-300">전일공</span>
           </h1>
           {/* 새로운 슬로건 추가 */}
-          <p className="text-white text-lg mt-3 italic">
-            <span className="bg-blue-700/50 px-3 py-1 rounded-full">
+          <p className="text-white text-base md:text-lg mt-3 italic px-3">
+            <span className="bg-blue-700/50 px-2 md:px-3 py-1 rounded-full inline-block mb-1">
               "관리학원,개인과외,인강 장점만 담았습니다"
             </span>
           </p>
-          <p className="text-white text-lg mt-2 italic">
-            <span className="bg-blue-700/50 px-3 py-1 rounded-full">
-              "3주만 투자하세요, 자기주도학습태도로 1년 내내 지속되는 성적"
+          <p className="text-white text-base md:text-lg mt-2 italic px-3">
+            <span className="bg-blue-700/50 px-2 md:px-3 py-1 rounded-full inline-block">
+              <span className="md:inline block">"3주만 투자하세요,</span>{' '}
+              <span className="md:inline block">자기주도학습태도로 1년 내내 지속되는 성적"</span>
             </span>
           </p>
         </div>
 
         {/* 핵심 메시지 - 훅 */}
-        <div className="text-center mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/20 max-w-5xl mx-auto">
-            <div className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <div className="text-white">공부습관부터 내신까지</div>
-              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">
-                전교1등 공부습관캠프
+        <div className="text-center mb-10 md:mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-12 border border-white/20 max-w-5xl mx-auto">
+            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <div className="text-white">
+                <span className="md:inline block">공부습관부터</span>{' '}
+                <span className="md:inline block">내신까지</span>
               </div>
-              <div className="text-yellow-300 my-4 md:my-6 text-5xl md:text-7xl lg:text-8xl">
+              <div className="text-yellow-300 my-3 md:my-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight">
+                <span className="md:inline block">전교1등</span>{' '}
+                <span className="md:inline block">공부습관캠프</span>
+              </div>
+              <div className="text-yellow-300 my-3 md:my-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl">
                 전일공
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 text-white mb-10 md:mb-0 md:pr-8">
+        <div className="flex flex-col md:flex-row items-center px-1 md:px-0">
+          <div className="w-full md:w-1/2 text-white mb-8 md:mb-0 md:pr-8">
             {/* 주요 포인트 */}
             <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20 mb-8">
               <div className="text-center mb-4">
@@ -67,12 +93,28 @@ export const HeroSection = () => {
                   <span>수준별 관리로 국영수심화까지</span>
                 </div>
                 <div className="flex items-center justify-center text-center p-3 border-b border-white/20">
-                  <span>
-                    수행평가 대비 주제탐구 및 독서보고서 작성 방법 익히기
-                  </span>
+                  <span className="md:inline">
+                  {isMobile ? (
+                    <>
+                      <span className="block">수행평가 대비 주제탐구 및</span>
+                      <span className="block">독서보고서 작성 방법 익히기</span>
+                    </>
+                  ) : (
+                    "수행평가 대비 주제탐구 및 독서보고서 작성 방법 익히기"
+                  )}
+                </span>
                 </div>
                 <div className="flex items-center justify-center text-center p-3">
-                  <span>실제 병원에서의 1일 의사체험으로 동기부여까지</span>
+                  <span>
+                  {isMobile ? (
+                    <>
+                      <span className="block">실제 병원에서의 1일</span>
+                      <span className="block">의사체험으로 동기부여까지</span>
+                    </>
+                  ) : (
+                    "실제 병원에서의 1일 의사체험으로 동기부여까지"
+                  )}
+                </span>
                 </div>
               </div>
             </div>
@@ -171,7 +213,7 @@ export const HeroSection = () => {
 
           <div className="w-full md:w-1/2 relative">
             {/* 상단에 배지 요소 추가 */}
-            <div className="mb-6 flex justify-between items-center">
+            <div className="mb-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
               <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
                 <GraduationCap className="h-6 w-6 text-yellow-300 mr-2" />
                 <span className="text-white font-medium text-sm">
@@ -202,7 +244,7 @@ export const HeroSection = () => {
             </div>
 
             {/* 하단에 실적 지표 추가 */}
-            <div className="mt-6 grid grid-cols-2 gap-4">
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
               <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20 text-center">
                 <p className="text-yellow-300 text-2xl font-bold">98%</p>
                 <p className="text-white text-sm">학부모 만족도</p>
