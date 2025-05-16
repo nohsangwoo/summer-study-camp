@@ -44,7 +44,7 @@ export default function AdminLoginPage() {
         <Card className="border-2">
           <CardHeader className="space-y-1 text-center">
             <CardTitle className="text-2xl font-bold">관리자 로그인</CardTitle>
-            <CardDescription>썸머 공부습관 캠프 관리자 페이지에 로그인하세요</CardDescription>
+            <CardDescription>전교1등 공부습관 캠프 관리자 페이지에 로그인하세요</CardDescription>
           </CardHeader>
           <form onSubmit={handleLogin}>
             <CardContent className="space-y-4">

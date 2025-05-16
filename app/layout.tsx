@@ -10,8 +10,8 @@ import AdminFloatingButton from "@/components/admin-floating-button"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "썸머 공부습관 캠프",
-  description: "의대생 공부습관 연구소가 제공하는 썸머 공부습관 캠프입니다.",
+  title: "전교1등 공부습관캠프 전일공",
+  description: "의대생 공부습관 연구소가 제공하는 전교1등 공부습관 캠프입니다.",
     generator: 'v0.dev'
 }
 

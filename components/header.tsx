@@ -69,9 +69,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-xl md:text-2xl bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">
-              썸머 공부습관 캠프
+          <Link href="/" className="flex flex-col items-start space-y-0">
+            <span className="font-medium text-sm md:text-base bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent leading-tight">
+              전교1등공부습관캠프
+            </span>
+            <span className="font-extrabold text-xl md:text-3xl bg-gradient-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent leading-tight">
+              전일공
             </span>
           </Link>
         </div>
