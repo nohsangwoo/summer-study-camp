@@ -1,6 +1,88 @@
 import React from 'react';
 
 const MiddleSchoolSchedule = ({ day }: { day: 'weekday' | 'saturday' | 'sunday' }) => {
+  // 활동 유형에 따른 색상 구분
+  const activityColors = {
+    식사: 'bg-orange-100 border-l-4 border-orange-400',
+    학습: 'bg-blue-50 border-l-4 border-blue-400',
+    휴식: 'bg-green-50 border-l-4 border-green-400',
+    특강: 'bg-purple-50 border-l-4 border-purple-400',
+    기타: 'bg-gray-50 border-l-4 border-gray-400',
+  };
+
+  // 활동 유형 결정 함수
+  const getActivityType = (content: string) => {
+    if (content.includes('식사') || content.includes('아침') || content.includes('점심') || content.includes('저녁')) return '식사';
+    if (content.includes('쉬는') || content.includes('기상') || content.includes('강의장 입실')) return '휴식';
+    if (content.includes('특강')) return '특강';
+    if (content.includes('자습') || content.includes('테스트') || content.includes('오답') || content.includes('과외')) return '학습';
+    return '기타';
+  };
+
+  // 시간 문자열을 분으로 변환하는 함수
+  const timeToMinutes = (timeStr: string) => {
+    const [hours, minutes] = timeStr.split(':').map(Number);
+    return hours * 60 + minutes;
+  };
+
+  // 시간 범위의 총 분 계산 함수
+  const calculateDuration = (timeRange: string) => {
+    if (!timeRange.includes('-')) return 0;
+    
+    const [startTime, endTime] = timeRange.split('-');
+    const startMinutes = timeToMinutes(startTime);
+    const endMinutes = timeToMinutes(endTime);
+    
+    // 만약 종료 시간이 시작 시간보다 이전이면 (다음날까지 이어지는 경우)
+    return endMinutes < startMinutes 
+      ? endMinutes + 24 * 60 - startMinutes 
+      : endMinutes - startMinutes;
+  };
+
+  // 일정 아이템 타입 정의
+  type ScheduleItem = {
+    time: string;
+    content: string;
+    note: string;
+  };
+
+  // 처리된 일정 아이템 타입 정의
+  type ProcessedScheduleItem = ScheduleItem & {
+    duration: string;
+  };
+
+  // 일정 데이터를 시간대별로 구조화
+  const getScheduleByTimeBlocks = <T extends ScheduleItem>(scheduleData: T[]): {
+    early: T[];
+    morning: T[];
+    afternoon: T[];
+    evening: T[];
+  } => {
+    const result = {
+      early: [] as T[],
+      morning: [] as T[],
+      afternoon: [] as T[],
+      evening: [] as T[],
+    };
+
+    scheduleData.forEach(item => {
+      const timeStart = item.time.split('-')[0] || item.time;
+      const hour = parseInt(timeStart.split(':')[0]);
+
+      if (hour < 8) {
+        result.early.push(item);
+      } else if (hour >= 8 && hour < 12) {
+        result.morning.push(item);
+      } else if (hour >= 12 && hour < 18) {
+        result.afternoon.push(item);
+      } else {
+        result.evening.push(item);
+      }
+    });
+
+    return result;
+  };
+
   const schedules = {
     weekday: [
       { time: '6:30', content: '기상', note: '' },
@@ -61,63 +143,184 @@ const MiddleSchoolSchedule = ({ day }: { day: 'weekday' | 'saturday' | 'sunday' 
     ],
   };
 
-  // 모바일에서는 카드 형태로 표시
-  const MobileScheduleView = () => (
-    <div className="space-y-3">
-      {schedules[day].map((item, index) => (
-        <div 
-          key={index} 
-          className={`border rounded-lg overflow-hidden ${index % 2 === 1 ? 'bg-gray-50' : 'bg-white'}`}
-        >
-          <div className="bg-indigo-600 text-white py-2 px-4 font-medium">
-            {item.time}
-          </div>
-          <div className="p-3">
-            <div className="flex flex-col">
-              <div className="font-medium text-gray-800">{item.content}</div>
-              {item.note && <div className="text-sm text-gray-600 mt-1">{item.note}</div>}
+  // 일정 데이터에 시간 계산 추가
+  const processedSchedules = {
+    weekday: schedules.weekday.map(item => ({
+      ...item,
+      duration: item.note || (item.time.includes('-') ? `${calculateDuration(item.time)}분` : '')
+    })),
+    saturday: schedules.saturday.map(item => ({
+      ...item,
+      duration: item.note || (item.time.includes('-') ? `${calculateDuration(item.time)}분` : '')
+    })),
+    sunday: schedules.sunday.map(item => ({
+      ...item,
+      duration: item.note || (item.time.includes('-') ? `${calculateDuration(item.time)}분` : '')
+    })),
+  };
+
+  // 총 시간 계산 함수
+  const calculateTotalTime = (activities: string, items: Array<{ time: string; content: string; note: string }>) => {
+    let total = 0;
+    items.forEach(item => {
+      if (item.content.toLowerCase().includes(activities.toLowerCase()) && item.note) {
+        const minutes = parseInt(item.note.replace(/[^0-9]/g, ''));
+        if (!isNaN(minutes)) total += minutes;
+      }
+    });
+    return total;
+  };
+
+  // 하루 일정 요약 정보
+  const getDaySummary = (daySchedule: Array<{ time: string; content: string; note: string }>) => {
+    const studyTime = calculateTotalTime('자습', daySchedule) + 
+                      calculateTotalTime('테스트', daySchedule) + 
+                      calculateTotalTime('과외', daySchedule) +
+                      calculateTotalTime('오답', daySchedule);
+    
+    const mealTime = calculateTotalTime('식사', daySchedule);
+    const lectureTime = calculateTotalTime('특강', daySchedule);
+    
+    const wakeupTime = daySchedule[0].time;
+    const lastActivity = daySchedule[daySchedule.length - 1];
+    const bedtime = lastActivity.time.includes('-') 
+                  ? lastActivity.time.split('-')[1] 
+                  : '23:00';
+    
+    return {
+      wakeupTime,
+      bedtime,
+      studyTime,
+      mealTime,
+      lectureTime
+    };
+  };
+
+  const timeBlocks = getScheduleByTimeBlocks(schedules[day]);
+  const summary = getDaySummary(schedules[day]);
+  const processedTimeBlocks = getScheduleByTimeBlocks(processedSchedules[day]);
+
+  // 시간대별 일정표 구성요소
+  const TimeBlockSection = ({ title, items, icon }: 
+    { title: string; items: ProcessedScheduleItem[]; icon: string }) => (
+    <div className="mb-6">
+      <h3 className="text-base font-bold mb-3 flex items-center">
+        <span className="w-7 h-7 bg-indigo-600 text-white rounded-full flex items-center justify-center mr-2">{icon}</span>
+        {title}
+      </h3>
+      <div className="space-y-2">
+        {items.map((item, idx) => {
+          const activityType = getActivityType(item.content);
+          return (
+            <div key={idx} className={`p-3 rounded-md ${activityColors[activityType as keyof typeof activityColors]}`}>
+              <div className="flex flex-col sm:flex-row sm:items-center">
+                <div className="font-semibold text-gray-800 min-w-24 mb-1 sm:mb-0">{item.time}</div>
+                <div className="flex-1">
+                  <div className="font-medium">{item.content}</div>
+                  <div className="flex justify-between items-center mt-1">
+                    {/* 모바일에서는 아래에 표시 */}
+                    <div className="text-xs text-gray-500 sm:hidden">
+                      {item.duration && (
+                        <span className="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700">
+                          {item.duration}
+                        </span>
+                      )}
+                    </div>
+                    {/* 데스크톱에서는 오른쪽에 표시 */}
+                    <div className="hidden sm:block">
+                      {item.duration && (
+                        <span className="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700">
+                          {item.duration}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
+          );
+        })}
+      </div>
     </div>
   );
 
-  // 데스크톱에서는 테이블 형태로 표시
-  const DesktopScheduleView = () => (
-    <table className="min-w-full border border-gray-200">
-      <thead>
-        <tr className="bg-gray-800 text-white">
-          <th className="py-3 px-4 text-left border-b border-gray-300 w-1/4">시간</th>
-          <th className="py-3 px-4 text-left border-b border-gray-300 w-1/2">학습내용</th>
-          <th className="py-3 px-4 text-left border-b border-gray-300 w-1/4">비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        {schedules[day].map((item, index) => (
-          <tr 
-            key={index} 
-            className={`border-b border-gray-200 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}
-          >
-            <td className="py-3 px-4 text-gray-700">{item.time}</td>
-            <td className="py-3 px-4 text-gray-700">{item.content}</td>
-            <td className="py-3 px-4 text-gray-700">{item.note}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+  // 모바일 및 데스크톱용 시간표 뷰
+  const ScheduleView = () => (
+    <div>
+      {/* 일정 요약 정보 */}
+      <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100 mb-6">
+        <h3 className="text-lg font-semibold text-indigo-800 mb-3">일일 일정 요약</h3>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="bg-white p-3 rounded-md shadow-sm">
+            <div className="text-xs text-gray-500">기상시간</div>
+            <div className="font-bold text-lg text-gray-800">{summary.wakeupTime}</div>
+          </div>
+          <div className="bg-white p-3 rounded-md shadow-sm">
+            <div className="text-xs text-gray-500">취침시간</div>
+            <div className="font-bold text-lg text-gray-800">{summary.bedtime}</div>
+          </div>
+          <div className="bg-white p-3 rounded-md shadow-sm">
+            <div className="text-xs text-gray-500">학습시간</div>
+            <div className="font-bold text-lg text-indigo-600">{Math.floor(summary.studyTime / 60)}시간 {summary.studyTime % 60}분</div>
+          </div>
+          <div className="bg-white p-3 rounded-md shadow-sm">
+            <div className="text-xs text-gray-500">식사시간</div>
+            <div className="font-bold text-lg text-orange-600">{Math.floor(summary.mealTime / 60)}시간 {summary.mealTime % 60}분</div>
+          </div>
+          <div className="bg-white p-3 rounded-md shadow-sm md:col-span-1">
+            <div className="text-xs text-gray-500">특강시간</div>
+            <div className="font-bold text-lg text-purple-600">{Math.floor(summary.lectureTime / 60)}시간 {summary.lectureTime % 60}분</div>
+          </div>
+        </div>
+      </div>
+
+      {/* 활동 유형 범례 */}
+      <div className="flex flex-wrap gap-2 mb-6 justify-center sm:justify-start">
+        <div className="text-sm font-medium ml-1 mr-2">활동 유형:</div>
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-blue-400 rounded-sm mr-1"></div>
+          <span className="text-xs text-gray-700">학습</span>
+        </div>
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-orange-400 rounded-sm mr-1"></div>
+          <span className="text-xs text-gray-700">식사</span>
+        </div>
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-green-400 rounded-sm mr-1"></div>
+          <span className="text-xs text-gray-700">휴식</span>
+        </div>
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-purple-400 rounded-sm mr-1"></div>
+          <span className="text-xs text-gray-700">특강</span>
+        </div>
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-gray-400 rounded-sm mr-1"></div>
+          <span className="text-xs text-gray-700">기타</span>
+        </div>
+      </div>
+
+      {/* 시간대별 일정표 */}
+      <div className="space-y-4">
+        {processedTimeBlocks.early.length > 0 && (
+          <TimeBlockSection title="이른 아침" items={processedTimeBlocks.early} icon="🌅" />
+        )}
+        {processedTimeBlocks.morning.length > 0 && (
+          <TimeBlockSection title="오전" items={processedTimeBlocks.morning} icon="☀️" />
+        )}
+        {processedTimeBlocks.afternoon.length > 0 && (
+          <TimeBlockSection title="오후" items={processedTimeBlocks.afternoon} icon="🌤️" />
+        )}
+        {processedTimeBlocks.evening.length > 0 && (
+          <TimeBlockSection title="저녁" items={processedTimeBlocks.evening} icon="🌙" />
+        )}
+      </div>
+    </div>
   );
 
   return (
     <div className="overflow-x-auto">
-      {/* 모바일 뷰 */}
-      <div className="md:hidden">
-        <MobileScheduleView />
-      </div>
-      
-      {/* 데스크톱 뷰 */}
-      <div className="hidden md:block">
-        <DesktopScheduleView />
+      <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-0">
+        <ScheduleView />
       </div>
     </div>
   );
