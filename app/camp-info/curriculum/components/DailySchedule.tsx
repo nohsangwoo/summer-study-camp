@@ -11,15 +11,15 @@ export default function DailySchedule() {
   const [activeGrade, setActiveGrade] = useState<'high' | 'middle'>('high')
 
   return (
-    <div className="mt-12 mb-16">
+    <div className="mt-6 md:mt-12 mb-12">
       <div className="border-b border-gray-200 mb-6">
-        <h2 className=" text-xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 flex items-center">
+        <h2 className="text-xl font-bold text-gray-800 border-b-2 border-indigo-600 pb-2 flex items-center">
           <Clock className="mr-2 h-5 w-5 text-indigo-600" />
           일과 시간표
         </h2>
       </div>
 
-      <h3 className="text-lg font-bold text-gray-700 mb-4">전교1등 공부습관캠프 하루일과 스케줄표</h3>
+      <h3 className="text-base md:text-lg font-bold text-gray-700 mb-4">전교1등 공부습관캠프 하루일과 스케줄표</h3>
       
       <ScheduleTabNav
         activeDay={activeDay}
@@ -30,7 +30,7 @@ export default function DailySchedule() {
 
       <div className="mb-4">
         <div className="bg-blue-50 px-4 py-3 rounded-lg border border-blue-100">
-          <h4 className="text-md font-semibold text-blue-800 mb-1">
+          <h4 className="text-sm md:text-md font-semibold text-blue-800 mb-1">
             {activeGrade === 'high' ? '고등학생' : '중학생'} 
             {activeDay === 'weekday' ? ' 평일' : activeDay === 'saturday' ? ' 토요일' : ' 일요일'} 
             일과표

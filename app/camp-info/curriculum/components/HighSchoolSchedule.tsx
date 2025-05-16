@@ -59,29 +59,64 @@ const HighSchoolSchedule = ({ day }: { day: 'weekday' | 'saturday' | 'sunday' })
     ],
   };
 
+  // 모바일에서는 카드 형태로 표시
+  const MobileScheduleView = () => (
+    <div className="space-y-3">
+      {schedules[day].map((item, index) => (
+        <div 
+          key={index} 
+          className={`border rounded-lg overflow-hidden ${index % 2 === 1 ? 'bg-gray-50' : 'bg-white'}`}
+        >
+          <div className="bg-blue-600 text-white py-2 px-4 font-medium">
+            {item.time}
+          </div>
+          <div className="p-3">
+            <div className="flex flex-col">
+              <div className="font-medium text-gray-800">{item.content}</div>
+              {item.note && <div className="text-sm text-gray-600 mt-1">{item.note}</div>}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  // 데스크톱에서는 테이블 형태로 표시
+  const DesktopScheduleView = () => (
+    <table className="min-w-full border border-gray-200">
+      <thead>
+        <tr className="bg-gray-800 text-white">
+          <th className="py-3 px-4 text-left border-b border-gray-300 w-1/4">시간</th>
+          <th className="py-3 px-4 text-left border-b border-gray-300 w-1/2">학습내용</th>
+          <th className="py-3 px-4 text-left border-b border-gray-300 w-1/4">비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        {schedules[day].map((item, index) => (
+          <tr 
+            key={index} 
+            className={`border-b border-gray-200 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}
+          >
+            <td className="py-3 px-4 text-gray-700">{item.time}</td>
+            <td className="py-3 px-4 text-gray-700">{item.content}</td>
+            <td className="py-3 px-4 text-gray-700">{item.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full border border-gray-200">
-        <thead>
-          <tr className="bg-gray-800 text-white">
-            <th className="py-3 px-4 text-left border-b border-gray-300 w-1/4">시간</th>
-            <th className="py-3 px-4 text-left border-b border-gray-300 w-1/2">학습내용</th>
-            <th className="py-3 px-4 text-left border-b border-gray-300 w-1/4">비고</th>
-          </tr>
-        </thead>
-        <tbody>
-          {schedules[day].map((item, index) => (
-            <tr 
-              key={index} 
-              className={`border-b border-gray-200 ${index % 2 === 1 ? 'bg-gray-50' : ''}`}
-            >
-              <td className="py-3 px-4 text-gray-700">{item.time}</td>
-              <td className="py-3 px-4 text-gray-700">{item.content}</td>
-              <td className="py-3 px-4 text-gray-700">{item.note}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {/* 모바일 뷰 */}
+      <div className="md:hidden">
+        <MobileScheduleView />
+      </div>
+      
+      {/* 데스크톱 뷰 */}
+      <div className="hidden md:block">
+        <DesktopScheduleView />
+      </div>
     </div>
   );
 };
