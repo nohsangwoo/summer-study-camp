@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center md:justify-end gap-2 text-gray-600">
               <MapPin className="h-4 w-4 flex-shrink-0" />
-              <p className="text-sm">부산시 영도구 태종로 727 국립한국해양대학교 아라관</p>
+              <p className="text-sm">주소 : </p>
             </div>
           </div>
         </div>
