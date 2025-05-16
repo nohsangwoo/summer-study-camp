@@ -18,7 +18,7 @@ export default function StrategyTeachersRolePage() {
         <div className="flex flex-col items-center">
           <div className="w-[700px] h-[400px] relative">
             <Image
-              src="/placeholder.svg"
+              src="/strategy-teachers-role/1.webp"
               alt="개인별 학습 심층 분석"
               fill
               className="rounded-lg shadow-md object-cover"
@@ -44,7 +44,7 @@ export default function StrategyTeachersRolePage() {
         <div className="flex flex-col items-center">
           <div className="w-[700px] h-[400px] relative">
             <Image
-              src="/placeholder.svg"
+              src="/strategy-teachers-role/2.webp"
               alt="개별 분석자료를 통한 수업과 학습 설계"
               fill
               className="rounded-lg shadow-md object-cover"
@@ -70,7 +70,7 @@ export default function StrategyTeachersRolePage() {
         <div className="flex flex-col items-center">
           <div className="w-[700px] h-[400px] relative">
             <Image
-              src="/placeholder.svg"
+              src="/strategy-teachers-role/3.webp"
               alt="학생 생활 관리"
               fill
               className="rounded-lg shadow-md object-cover"
@@ -96,7 +96,7 @@ export default function StrategyTeachersRolePage() {
         <div className="flex flex-col items-center">
           <div className="w-[700px] h-[400px] relative">
             <Image
-              src="/placeholder.svg"
+              src="/strategy-teachers-role/4.webp"
               alt="맞춤형 입시 전략"
               fill
               className="rounded-lg shadow-md object-cover"
