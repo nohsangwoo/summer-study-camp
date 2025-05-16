@@ -9,14 +9,12 @@ export const PromotionSection = () => {
         <div className="mb-12 text-center">
           <div className="bg-yellow-400 text-gray-900 py-6 px-4 rounded-lg inline-block mb-6 shadow-lg transform -rotate-1">
             <h2 className="text-2xl md:text-3xl font-bold">
-              대치맘 사이 화제의 공부습관캠프
-              <br />
               대치맘들이 학원대신 선택했다는 공부습관캠프
               <br />
-              드디어 부산 경남에서도 열립니다
+              드디어 드디어 부울경 상륙
               <br />
               <span className="text-3xl md:text-4xl text-blue-800">
-                전교 1등 공부습관의 비밀, 지금 확인하세요
+                전교1등 공부습관의 비밀, 지금 확인하세요
               </span>
             </h2>
           </div>
@@ -124,8 +122,8 @@ export const PromotionSection = () => {
               </h3>
             </div>
             <p className="text-gray-700">
-              여름방학 20박21일 동안 전교1등 의대생 중심 멘토들이 1:1로 학생들의 학습
-              방법을 교정하고 최적의 공부습관을 형성합니다.
+              여름방학 20박21일 동안 전교1등 의대생 중심 멘토들이 1:1로 학생들의
+              학습 방법을 교정하고 최적의 공부습관을 형성합니다.
             </p>
           </div>
 
@@ -154,7 +152,9 @@ export const PromotionSection = () => {
               </h3>
             </div>
             <p className="text-gray-700">
-              공부습관+과목별집중특강+주제탐구활동+독서활동+병원견학 프로그램 등 전국 어디서도 볼 수 없는 전일공만의 특별 프로그램으로 학습효율을 극대화 합니다.
+              공부습관+과목별집중특강+주제탐구활동+독서활동+병원견학 프로그램 등
+              전국 어디서도 볼 수 없는 전일공만의 특별 프로그램으로 학습효율을
+              극대화 합니다.
             </p>
           </div>
         </div>
