@@ -8,7 +8,7 @@ import ContactInfo from './components/ContactInfo'
 
 export default function CampGuidePage() {
   return (
-    <div className="container mx-auto py-8 px-4">
+    <div className="container mx-auto py-8 px-0 sm:px-4">
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">캠프 안내</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
