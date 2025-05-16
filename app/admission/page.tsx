@@ -31,7 +31,7 @@ export default function AdmissionPage() {
                   alt="전일공 로고"
                   width={130}
                   height={160}
-                  className="relative z-10 mx-auto drop-shadow-sm"
+                  className="relative z-10 mx-auto drop-shadow-sm rounded-full"
                 />
               </div>
             </div>
