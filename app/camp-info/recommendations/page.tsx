@@ -17,7 +17,7 @@ export default function RecommendationsPage() {
       id: "park",
       name: "박재홍",
       title: "큰솔병원 병원장",
-      image: "/placeholder.svg",
+      image: "/recommendations/the-head-of-a-hospital.avif",
       content: [
         "진짜 성장은, 스스로 공부하는 법을 깨닫는 순간부터 시작됩니다.",
         "의사라는 꿈을 품든, 아직 뚜렷한 진로를 찾지 못했든 모든 청소년에게 필요한 첫걸음은 '스스로 생각하고 스스로 공부하는 힘', 바로 자기주도학습의 기반을 다지는 것입니다.",
