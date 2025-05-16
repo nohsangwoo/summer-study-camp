@@ -73,7 +73,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center px-1 md:px-0 max-w-full overflow-hidden">
+        <div className="flex flex-col md:flex-row items-center px-1 md:px-0 max-w-full">
           <div className="w-full md:w-1/2 text-white mb-6 md:mb-0 md:pr-8">
             {/* 주요 포인트 */}
             <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-blue-400/20 mb-6 md:mb-8">
@@ -259,7 +259,7 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 relative">
+          <div className="w-full md:w-1/2 relative" style={{ paddingTop: '1rem', paddingBottom: '1rem', paddingRight: '1rem', paddingLeft: '1rem' }}>
             {/* 상단에 배지 요소 추가 */}
             <div className="mb-4 md:mb-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
               <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
@@ -311,11 +311,11 @@ export const HeroSection = () => {
               </div>
             </div>
 
-            {/* 장식 요소들 유지 */}
-            <div className="absolute -top-4 -right-4 bg-yellow-400 rounded-full p-3 shadow-lg">
+            {/* 장식 요소들 유지 - 수정된 포지셔닝 */}
+            <div className="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 bg-yellow-400 rounded-full p-3 shadow-lg z-10">
               <Star className="h-6 w-6 text-blue-900" />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-indigo-700 rounded-full p-3 shadow-lg">
+            <div className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-1/3 bg-indigo-700 rounded-full p-3 shadow-lg z-10">
               <GraduationCap className="h-6 w-6 text-white" />
             </div>
           </div>
