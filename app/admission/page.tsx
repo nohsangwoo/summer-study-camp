@@ -17,21 +17,38 @@ export default function AdmissionPage() {
       <div className="flex-1 py-12 bg-gray-50">
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <Image
-                src="/korea-university-logo.png"
-                alt="고려대학교 로고"
-                width={120}
-                height={150}
-                className="mx-auto"
-              />
+            <div className="relative flex justify-center mb-8">
+              {/* Decorative background elements */}
+              <div className="absolute -z-10 w-48 h-48 bg-gradient-to-tr from-blue-100 to-indigo-50 rounded-full opacity-70 blur-lg"></div>
+              <div className="absolute -z-10 -bottom-4 left-1/2 -translate-x-1/2 w-64 h-6 bg-blue-100 rounded-full opacity-50 blur-md"></div>
+              
+              {/* Logo with animation */}
+              <div className="relative p-4 transform hover:scale-105 transition-transform duration-300">
+                <div className="absolute inset-0 bg-white rounded-full shadow-lg opacity-90"></div>
+                <div className="absolute inset-0 border-2 border-dashed border-blue-300 rounded-full animate-spin-slow"></div>
+                <Image
+                  src="/logo.webp"
+                  alt="전일공 로고"
+                  width={130}
+                  height={160}
+                  className="relative z-10 mx-auto drop-shadow-sm"
+                />
+              </div>
             </div>
-            <h2 className="text-3xl font-bold text-gray-700 mb-6">
-              전일공 캠프
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-              썸머 공부습관 캠프에 관심을 가져주셔서 감사합니다. 아래 채널을
-              통해 캠프에 대한 상세한 정보와 입소 상담을 받아보세요.
+            
+            <div className="relative">
+              {/* Decorative element */}
+              <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-20 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+              
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 relative inline-block">
+                전일공 캠프
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-red-400 transform scale-x-0 transition-transform group-hover:scale-x-100"></span>
+              </h2>
+            </div>
+            
+            <p className="text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+              <span className="font-medium text-blue-600">썸머 공부습관 캠프</span>에 관심을 가져주셔서 감사합니다. 
+              아래 채널을 통해 캠프에 대한 상세한 정보와 입소 상담을 받아보세요.
             </p>
           </div>
 
