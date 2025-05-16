@@ -21,7 +21,7 @@ export default function MentorsPage() {
       name: '장서원',
       university: '부산대의대',
       position: '학습연구팀장',
-      image: '/mentors/jangseo-won.jpg',
+      image: '/mentors/jangserwon.webp',
       motto:
         '혼자 하는 공부가 막막할 때, 가장 먼저 떠올리는 사람. 전일공 멘토는 단순한 도우미가 아닌, 습관을 바꾸는 동행자입니다.',
       description: [
