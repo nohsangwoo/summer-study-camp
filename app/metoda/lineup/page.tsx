@@ -16,6 +16,7 @@ interface MentorProfile {
   role: string
   image: string
   description: string
+  motto?: string
   achievements?: string[]
 }
 
@@ -43,7 +44,7 @@ export default function LineupPage() {
       id: 'kimdongheon',
       name: '김동헌',
       university: '부산대 의학과',
-      role: '학습연구팀장',
+      role: '컨텐츠개발팀장',
       image: '/mentors/kimdongheon.jpg',
       description:
         '효율적인 학습 방법론 연구와 학생 맞춤형 학습 전략 개발을 담당하고 있습니다.',
@@ -57,17 +58,19 @@ export default function LineupPage() {
 
   const learningTeam: MentorProfile[] = [
     {
-      id: 'jangserwon',
+      id: 'jangseo-won',
       name: '장서원',
       university: '부산대 의학과',
       role: '학습연구팀장',
-      image: '/mentors/jangserwon.jpg',
+      image: '/mentors/jangseo-won.jpg',
+      motto:
+        '혼자 하는 공부가 막막할 때, 가장 먼저 떠올리는 사람. 전일공 멘토는 단순한 도우미가 아닌, 습관을 바꾸는 동행자입니다.',
       description:
-        '효율적인 학습 방법론 연구와 학생 맞춤형 학습 전략 개발을 담당하고 있습니다.',
+        '멘토들의 실전 경험을 토대로 성적이 아닌 학습 습관과 동기부여에 초점을 맞춥니다.',
       achievements: [
-        '부산대학교 의과대학 수석 입학',
-        '전국 의대생 학습법 연구 프로젝트 리더',
-        '의학교육 혁신 포럼 발표자',
+        '연구팀장으로서 직접 개발한 멘토링 프로그램으로 20명 멘토들 교육',
+        '4년간의 멘토링 경험을 바탕으로 학생 맞춤형 학습전략 구축',
+        '단순 주입이 아닌 학생이 스스로 성장하는 자기주도 학습 시스템 설계',
       ],
     },
   ]
@@ -229,7 +232,7 @@ export default function LineupPage() {
               key={mentor.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 "
             >
-              <div className="relative h-64 bg-gradient-to-b from-purple-100 to-white">
+              <div className="relative h-72 bg-gradient-to-b from-purple-100 to-white">
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
                 <Image
                   src={mentor.image || '/placeholder.svg'}
@@ -248,9 +251,7 @@ export default function LineupPage() {
                 <p className="text-purple-600 font-medium mb-4">
                   {mentor.university}
                 </p>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {mentor.description}
-                </p>
+                <p className="text-gray-600 mb-4">{mentor.description}</p>
               </div>
             </div>
           ))}
@@ -289,6 +290,47 @@ export default function LineupPage() {
                   {mentor.name}
                 </h3>
                 <p className="text-blue-600 font-medium mb-4">
+                  {mentor.university}
+                </p>
+                <p className="text-gray-600">{mentor.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 전략분석팀 소개 */}
+      <div className="mb-16">
+        <div className="flex items-center mb-8">
+          <div className="bg-green-100 p-2 rounded-full mr-3">
+            <UserCog className="h-6 w-6 text-green-600" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-800">전략분석팀</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {strategyAnalysisTeam.map(mentor => (
+            <div
+              key={mentor.id}
+              className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div className="relative h-72 bg-gradient-to-b from-green-100 to-white">
+                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
+                <Image
+                  src={mentor.image || '/placeholder.svg'}
+                  alt={mentor.name}
+                  fill
+                  className="object-cover object-center"
+                />
+                <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {mentor.role}
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-1">
+                  {mentor.name}
+                </h3>
+                <p className="text-green-600 font-medium mb-4">
                   {mentor.university}
                 </p>
                 <p className="text-gray-600">{mentor.description}</p>
