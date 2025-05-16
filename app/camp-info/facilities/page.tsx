@@ -27,24 +27,38 @@ export default function FacilitiesPage() {
       </div>
 
       <Tabs defaultValue="study" className="mb-12">
-        <TabsList className="grid w-full grid-cols-4 mb-8">
-          <TabsTrigger value="study" className="flex items-center gap-2">
-            <BookOpen className="h-4 w-4" />
-            <span>학습시설</span>
-          </TabsTrigger>
-          <TabsTrigger value="dining" className="flex items-center gap-2">
-            <Utensils className="h-4 w-4" />
-            <span>식당 내부모습</span>
-          </TabsTrigger>
-          <TabsTrigger value="dormitory" className="flex items-center gap-2">
-            <Bed className="h-4 w-4" />
-            <span>숙소 내부모습</span>
-          </TabsTrigger>
-          <TabsTrigger value="location" className="flex items-center gap-2">
-            <MapPin className="h-4 w-4" />
-            <span>오시는 길</span>
-          </TabsTrigger>
-        </TabsList>
+        <div className="relative mb-8 overflow-x-auto pb-3">
+          <TabsList className="flex w-max min-w-full space-x-2">
+            <TabsTrigger 
+              value="study" 
+              className="flex items-center gap-2 text-xs md:text-sm py-2 whitespace-nowrap"
+            >
+              <BookOpen className="h-4 w-4" />
+              <span>학습시설</span>
+            </TabsTrigger>
+            <TabsTrigger 
+              value="dining" 
+              className="flex items-center gap-2 text-xs md:text-sm py-2 whitespace-nowrap"
+            >
+              <Utensils className="h-4 w-4" />
+              <span>식당 내부모습</span>
+            </TabsTrigger>
+            <TabsTrigger 
+              value="dormitory" 
+              className="flex items-center gap-2 text-xs md:text-sm py-2 whitespace-nowrap"
+            >
+              <Bed className="h-4 w-4" />
+              <span>숙소 내부모습</span>
+            </TabsTrigger>
+            <TabsTrigger 
+              value="location" 
+              className="flex items-center gap-2 text-xs md:text-sm py-2 whitespace-nowrap"
+            >
+              <MapPin className="h-4 w-4" />
+              <span>오시는 길</span>
+            </TabsTrigger>
+          </TabsList>
+        </div>
 
         {/* 학습시설 */}
         <TabsContent value="study">
