@@ -1,3 +1,4 @@
+'use client'
 import {
   MapPin,
   Home,
@@ -8,6 +9,8 @@ import {
   Coffee,
 } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useRef, useEffect, useState } from 'react'
 import StudyFacilities from '@/app/camp-info/facilities/components/StudyFacilities'
 import DiningFacilities from '@/app/camp-info/facilities/components/DiningFacilities'
 import DormitoryFacilities from '@/app/camp-info/facilities/components/DormitoryFacilities'
@@ -27,8 +30,39 @@ export default function FacilitiesPage() {
       </div>
 
       <Tabs defaultValue="study" className="mb-12">
-        <div className="relative mb-8 overflow-x-auto pb-3">
-          <TabsList className="flex w-max min-w-full space-x-2">
+        <div className="relative">
+          {/* Fixed scroll buttons - positioned absolutely relative to parent */}
+          <div className="absolute left-0 top-[calc(50%_-_6px)] -translate-y-1/2 z-20 md:hidden">
+            <button 
+              className="bg-gray-400/30 hover:bg-gray-500/70 transition-colors w-5 h-10 flex items-center justify-center rounded-md shadow-md"
+              onClick={() => {
+                const tabsContainer = document.querySelector('.tabs-scroll-container');
+                if (tabsContainer) {
+                  tabsContainer.scrollBy({ left: -150, behavior: 'smooth' });
+                }
+              }}
+            >
+              <ChevronLeft className="h-4 w-4 text-white" />
+            </button>
+          </div>
+          
+          <div className="absolute right-0 top-[calc(50%_-_6px)] -translate-y-1/2 z-20 md:hidden">
+            <button 
+              className="bg-gray-400/30 hover:bg-gray-500/70 transition-colors w-5 h-10 flex items-center justify-center rounded-md shadow-md"
+              onClick={() => {
+                const tabsContainer = document.querySelector('.tabs-scroll-container');
+                if (tabsContainer) {
+                  tabsContainer.scrollBy({ left: 150, behavior: 'smooth' });
+                }
+              }}
+            >
+              <ChevronRight className="h-4 w-4 text-white" />
+            </button>
+          </div>
+          
+          {/* Scrollable tabs container with padding for buttons */}
+          <div className="overflow-x-auto tabs-scroll-container px-6 md:px-0 mb-8 pb-3">
+            <TabsList className="flex w-max min-w-full space-x-2">
             <TabsTrigger
               value="study"
               className="flex items-center gap-2 text-xs md:text-sm py-2 whitespace-nowrap"
@@ -58,6 +92,7 @@ export default function FacilitiesPage() {
               <span>오시는 길</span>
             </TabsTrigger>
           </TabsList>
+          </div>
         </div>
 
         {/* 학습시설 */}
