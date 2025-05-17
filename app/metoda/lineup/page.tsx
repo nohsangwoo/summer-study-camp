@@ -131,13 +131,13 @@ export default function LineupPage() {
         <div className="grid grid-cols-1 gap-8">
           <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div className="flex flex-col md:flex-row">
-              <div className="relative h-80 md:w-1/3 bg-gradient-to-b from-red-100 to-white">
+              <div className="relative h-[32rem] md:w-1/3 bg-gradient-to-b from-red-100 to-white">
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
                 <Image
                   src={coreTeam[0].image || '/placeholder.svg'}
                   alt={coreTeam[0].name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {coreTeam[0].role}
@@ -191,13 +191,13 @@ export default function LineupPage() {
               key={member.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="relative h-72 bg-gradient-to-b from-teal-100 to-white">
+              <div className="relative h-[26rem] bg-gradient-to-b from-teal-100 to-white">
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
                 <Image
                   src={member.image || '/placeholder.svg'}
                   alt={member.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {member.role}
@@ -232,13 +232,13 @@ export default function LineupPage() {
               key={mentor.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 "
             >
-              <div className="relative h-72 bg-gradient-to-b from-purple-100 to-white">
+              <div className="relative h-[26rem] bg-gradient-to-b from-purple-100 to-white">
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
                 <Image
                   src={mentor.image || '/placeholder.svg'}
                   alt={mentor.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {mentor.role}
@@ -273,13 +273,13 @@ export default function LineupPage() {
               key={mentor.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="relative h-72 bg-gradient-to-b from-blue-100 to-white">
+              <div className="relative h-[26rem] bg-gradient-to-b from-blue-100 to-white">
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
                 <Image
                   src={mentor.image || '/placeholder.svg'}
                   alt={mentor.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {mentor.role}
@@ -314,13 +314,13 @@ export default function LineupPage() {
               key={mentor.id}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="relative h-72 bg-gradient-to-b from-green-100 to-white">
+              <div className="relative h-[26rem] bg-gradient-to-b from-green-100 to-white">
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] bg-repeat opacity-10"></div>
                 <Image
                   src={mentor.image || '/placeholder.svg'}
                   alt={mentor.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {mentor.role}
