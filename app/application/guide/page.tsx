@@ -127,7 +127,7 @@ export default function ApplicationGuidePage() {
                 <h3 className="font-bold text-lg text-blue-800 mb-1">온라인 접수</h3>
                 <div className="flex items-center justify-center md:justify-start space-x-2">
                   <p className="text-gray-700 font-medium">선착순</p>
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full font-bold text-sm animate-pulse">30명 한정</span>
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full font-bold text-sm animate-pulse">500명 한정</span>
                 </div>
               </div>
             </div>
