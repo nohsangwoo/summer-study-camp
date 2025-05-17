@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen } from "lucide-react"
+import { BookOpen, Clock, Users, CalendarDays, CalendarCheck, Award, ArrowRight, MapPin } from "lucide-react"
 
 export default function ProgramTab() {
   const programs = [
@@ -9,9 +9,9 @@ export default function ProgramTab() {
       bgColor: "bg-teal-500",
       title: "입소안내 (캠프기간 캠프 일정 참조 요망)",
       items: [
-        "※ 입소시 제출서류: 캠프 입소 서약서 및 입소 확인서",
-        "※ 코배지, 방배정, 캠퍼 티셔츠 상장넘 배정",
-        "※ 입소시간: 13:00(중1,고1)/ 14:00(중2,고2)/ 15:00(중3,고3) (캠페너 자체의 경우 안내 시간대에 맞춰서 입소가능)"
+        "입소시 제출서류: 캠프 입소 서약서 및 입소 확인서",
+        "코배지, 방배정, 캠퍼 티셔츠 상장넘 배정",
+        "입소시간: 13:00(중1,고1)/ 14:00(중2,고2)/ 15:00(중3,고3)"
       ]
     },
     {
@@ -95,20 +95,67 @@ export default function ProgramTab() {
             <div key={program.id} className="relative">
               {/* 모바일 뷰 */}
               <div className="md:hidden">
-                <div className={`${program.bgColor} text-white font-bold py-2 px-4 rounded-t-lg text-center`}>
-                  {program.label}
+                <div className={`${program.bgColor} text-white font-bold py-3 px-4 rounded-t-lg flex items-center justify-between`}>
+                  <div className="flex items-center">
+                    {program.label === "입소일" && <CalendarCheck className="h-5 w-5 mr-2" />}
+                    {program.label === "퇴소일" && <CalendarDays className="h-5 w-5 mr-2" />}
+                    {program.label === "학부모 세미나" && <Users className="h-5 w-5 mr-2" />}
+                    {program.label.includes("주차") && <Award className="h-5 w-5 mr-2" />}
+                    <span className="text-lg">{program.label}</span>
+                  </div>
+                  <ArrowRight className="h-4 w-4 opacity-70" />
                 </div>
-                <div className="border border-gray-200 rounded-b-lg p-4 bg-white">
-                  <h3 className="font-bold mb-3 text-sm">{program.title}</h3>
-                  {program.items && (
-                    <ul className="space-y-2 text-sm">
-                      {program.items.map((item, idx) => (
-                        <li key={idx} className="leading-tight">{item}</li>
-                      ))}
-                    </ul>
+                
+                <div className="border border-gray-200 rounded-b-lg p-5 bg-white">
+                  {/* 타이틀과 입소일 특별 처리 */}
+                  <h3 className="font-medium mb-4 text-gray-700 leading-tight">{program.title}</h3>
+                  
+                  {/* 입소일/퇴소일 특별 처리 */}
+                  {program.label === "입소일" && (
+                    <div className="bg-blue-50 rounded-lg p-3 mb-3 border border-blue-100">
+                      <div className="flex items-center mb-2">
+                        <Clock className="h-5 w-5 text-blue-600 mr-2" />
+                        <h4 className="font-bold text-blue-700">입소 시간</h4>
+                      </div>
+                      <div className="grid grid-cols-1 gap-2 ml-7">
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium">중1, 고1</span>
+                          <span className="font-bold text-blue-800 bg-white px-3 py-1 rounded-full shadow-sm">13:00</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium">중2, 고2</span>
+                          <span className="font-bold text-blue-800 bg-white px-3 py-1 rounded-full shadow-sm">14:00</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium">중3, 고3</span>
+                          <span className="font-bold text-blue-800 bg-white px-3 py-1 rounded-full shadow-sm">15:00</span>
+                        </div>
+                      </div>
+                    </div>
                   )}
+                  
+                  {/* 주차별 프로그램 내용 */}
+                  {program.items && (
+                    <div className="space-y-3">
+                      {program.items.map((item, idx) => {
+                        const itemText = item.startsWith("※ ") ? item.substring(2) : item;
+                        return (
+                          <div key={idx} className="flex items-start">
+                            <div className="h-5 w-5 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                              <span className="text-xs font-bold text-gray-500">{idx+1}</span>
+                            </div>
+                            <p className="text-sm text-gray-700 leading-tight flex-1">{itemText}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                  
+                  {/* 학부모 세미나 특별 처리 */}
                   {program.description && (
-                    <p className="text-sm leading-relaxed">{program.description}</p>
+                    <div className="mt-3 bg-purple-50 rounded-lg p-3 text-sm leading-relaxed border border-purple-100">
+                      <p className="text-gray-700">{program.description}</p>
+                    </div>
                   )}
                 </div>
               </div>
