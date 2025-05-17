@@ -5,6 +5,66 @@ import Link from 'next/link'
 import { ArrowRight, GraduationCap, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+
+// 애니메이션 변수 정의
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1,
+    transition: { duration: 0.6 }
+  }
+}
+
+const slideUp = {
+  hidden: { y: 30, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1,
+    transition: { type: 'spring', stiffness: 50, damping: 20 }
+  }
+}
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const slideIn = (direction = 'left') => {
+  return {
+    hidden: { 
+      x: direction === 'left' ? -60 : 60, 
+      opacity: 0 
+    },
+    visible: { 
+      x: 0, 
+      opacity: 1,
+      transition: { 
+        type: 'spring',
+        stiffness: 50, 
+        damping: 20 
+      }
+    }
+  }
+}
+
+const scaleIn = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: { 
+    scale: 1, 
+    opacity: 1,
+    transition: { 
+      type: 'spring',
+      stiffness: 70,
+      damping: 20
+    }
+  }
+}
 
 export const HeroSection = () => {
   // Check if we're on mobile for specific mobile-only adjustments
@@ -25,74 +85,142 @@ export const HeroSection = () => {
     return () => window.removeEventListener('resize', checkIfMobile)
   }, [])
   return (
-    <div className="relative w-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 overflow-hidden">
+    <motion.div 
+      className="relative w-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 overflow-hidden"
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+    >
       {/* 배경 패턴 */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern-bg.png')] bg-repeat"></div>
       </div>
 
       {/* 히어로 콘텐츠 */}
-      <div className="container relative z-10 py-12 md:py-24">  {/* Reduced top padding on mobile */}
+      <motion.div 
+        className="container relative z-10 py-12 md:py-24"
+        variants={fadeIn}
+      >  {/* Reduced top padding on mobile */}
         {/* 캠프 타이틀 */}
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          variants={slideUp}
+        >
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 px-2">
             <span className="md:inline block">여름방학 전교1등</span>{' '}
             <span className="md:inline block">공부습관캠프{' '}</span>
             <span className="text-yellow-300">전일공</span>
           </h1>
           {/* 새로운 슬로건 추가 */}
-          <p className="text-white text-base md:text-lg mt-3 italic px-3">
+          <motion.p 
+            className="text-white text-base md:text-lg mt-3 italic px-3"
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            transition={{delay: 0.3}}
+          >
             <span className="bg-blue-700/50 px-2 md:px-3 py-1 rounded-full inline-block mb-1">
               "관리학원,개인과외,인강 장점만 담았습니다"
             </span>
-          </p>
-          <p className="text-white text-base md:text-lg mt-2 italic px-3">
+          </motion.p>
+          <motion.p 
+            className="text-white text-base md:text-lg mt-2 italic px-3"
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            transition={{delay: 0.5}}
+          >
             <span className="bg-blue-700/50 px-2 md:px-3 py-1 rounded-full inline-block">
               <span className="md:inline block">"3주만 투자하세요,</span>{' '}
               <span className="md:inline block">자기주도학습태도로 1년 내내 지속되는 성적"</span>
             </span>
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* 핵심 메시지 - 훅 */}
-        <div className="text-center mb-10 md:mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-12 border border-white/20 max-w-5xl mx-auto">
+        <motion.div 
+          className="text-center mb-10 md:mb-16"
+          variants={scaleIn}
+        >
+          <motion.div 
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-12 border border-white/20 max-w-5xl mx-auto"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <div className="text-white">
+              <motion.div 
+                className="text-white"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
                 <span className="md:inline block">공부습관부터</span>{' '}
                 <span className="md:inline block">내신까지</span>
-              </div>
-              <div className="text-yellow-300 my-3 md:my-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight">
+              </motion.div>
+              <motion.div 
+                className="text-yellow-300 my-3 md:my-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
                 <span className="md:inline block">전교1등</span>{' '}
                 <span className="md:inline block">공부습관캠프</span>
-              </div>
-              <div className="text-yellow-300 my-3 md:my-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl">
+              </motion.div>
+              <motion.div 
+                className="text-yellow-300 my-3 md:my-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
+              >
                 전일공
-              </div>
+              </motion.div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div className="flex flex-col md:flex-row items-center px-1 md:px-0 max-w-full">
-          <div className="w-full md:w-1/2 text-white mb-6 md:mb-0 md:pr-8">
+          <motion.div 
+            className="w-full md:w-1/2 text-white mb-6 md:mb-0 md:pr-8"
+            variants={slideIn('left')}
+          >
             {/* 주요 포인트 */}
-            <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-blue-400/20 mb-6 md:mb-8">
+            <motion.div 
+              className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-blue-400/20 mb-6 md:mb-8"
+              variants={fadeIn}
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="text-center mb-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-white">
                   <span className="text-yellow-300">전일공</span>의 약속
                 </h2>
               </div>
-              <div className="space-y-3 md:space-y-6 text-base md:text-xl lg:text-2xl font-medium">
-                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
+              <motion.div 
+                className="space-y-3 md:space-y-6 text-base md:text-xl lg:text-2xl font-medium"
+                variants={staggerContainer}
+              >
+                <motion.div 
+                  className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20"
+                  variants={slideUp}
+                >
                   <span>하루 14시간 3주 공부 습관 완성</span>
-                </div>
-                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20"
+                  variants={slideUp}
+                >
                   <span>과목별 집중 특강으로 학교공부 대비</span>
-                </div>
-                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20"
+                  variants={slideUp}
+                >
                   <span>수준별 관리로 국영수심화까지</span>
-                </div>
-                <div className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center justify-center text-center p-2 md:p-3 border-b border-white/20"
+                  variants={slideUp}
+                >
                   <span className="md:inline">
                   {isMobile ? (
                     <>
@@ -103,8 +231,11 @@ export const HeroSection = () => {
                     "수행평가 대비 주제탐구 및 독서보고서 작성 방법 익히기"
                   )}
                 </span>
-                </div>
-                <div className="flex items-center justify-center text-center p-2 md:p-3">
+                </motion.div>
+                <motion.div 
+                  className="flex items-center justify-center text-center p-2 md:p-3"
+                  variants={slideUp}
+                >
                   <span>
                   {isMobile ? (
                     <>
@@ -115,24 +246,38 @@ export const HeroSection = () => {
                     "실제 병원에서의 1일 의사체험으로 동기부여까지"
                   )}
                 </span>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
             {/* 캠프 소개 - 개선된 레이아웃 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 mb-6 md:mb-8">
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 mb-6 md:mb-8"
+              variants={fadeIn}
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <h3 className="text-xl font-semibold text-yellow-300 mb-4">
                 캠프 소개
               </h3>
-              <div className="space-y-3 md:space-y-4 text-sm md:text-base text-blue-50">
-                <div className="flex items-start">
+              <motion.div 
+                className="space-y-3 md:space-y-4 text-sm md:text-base text-blue-50"
+                variants={staggerContainer}
+              >
+                <motion.div 
+                  className="flex items-start"
+                  variants={slideUp}
+                >
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p className="font-semibold text-yellow-200 text-lg md:text-xl">
                     "전교 1등의 공부습관을, 내 아이의 습관으로"
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start">
+                <motion.div 
+                  className="flex items-start"
+                  variants={slideUp}
+                >
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
                     <span className="font-semibold text-yellow-200 text-sm md:text-base">
@@ -159,9 +304,12 @@ export const HeroSection = () => {
                       "20여명이 함께 하는 공부습관 전문 집중 캠프입니다."
                     )}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start">
+                <motion.div 
+                  className="flex items-start"
+                  variants={slideUp}
+                >
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
                     {isMobile ? (
@@ -186,9 +334,12 @@ export const HeroSection = () => {
                       "박재흥 원장의 공식 후원으로 운영됩니다."
                     )}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start">
+                <motion.div 
+                  className="flex items-start"
+                  variants={slideUp}
+                >
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p>
                     {isMobile ? (
@@ -212,9 +363,12 @@ export const HeroSection = () => {
                       </>
                     )}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start">
+                <motion.div 
+                  className="flex items-start"
+                  variants={slideUp}
+                >
                   <div className="flex-shrink-0 w-1 h-full bg-yellow-300 mr-3 mt-1"></div>
                   <p className="font-semibold text-yellow-200">
                     {isMobile ? (
@@ -230,13 +384,21 @@ export const HeroSection = () => {
                       </>
                     )}
                   </p>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
             {/* 신청하기 버튼 부분 강화 */}
-            <div className="flex flex-col gap-4 justify-center md:justify-start">
-              <div className="animate-pulse">
+            <motion.div 
+              className="flex flex-col gap-4 justify-center md:justify-start"
+              variants={staggerContainer}
+            >
+              <motion.div 
+                className="animate-pulse"
+                variants={scaleIn}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Link href="/application/form">
                   <Button
                     size="lg"
@@ -246,37 +408,62 @@ export const HeroSection = () => {
                     <ArrowRight className="ml-2 h-6 w-6" />
                   </Button>
                 </Link>
-              </div>
-              <Link href="/camp-info/curriculum">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-transparent border-white text-white hover:bg-white/10 mt-2"
-                >
-                  커리큘럼 살펴보기
-                </Button>
-              </Link>
-            </div>
-          </div>
+              </motion.div>
+              <motion.div
+                variants={fadeIn}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link href="/camp-info/curriculum">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-transparent border-white text-white hover:bg-white/10 mt-2"
+                  >
+                    커리큘럼 살펴보기
+                  </Button>
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
-          <div className="w-full md:w-1/2 relative" style={{ paddingTop: '1rem', paddingBottom: '1rem', paddingRight: '1rem', paddingLeft: '1rem' }}>
+          <motion.div 
+            className="w-full md:w-1/2 relative" 
+            style={{ paddingTop: '1rem', paddingBottom: '1rem', paddingRight: '1rem', paddingLeft: '1rem' }}
+            variants={slideIn('right')}
+          >
             {/* 상단에 배지 요소 추가 */}
-            <div className="mb-4 md:mb-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
-              <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center">
+            <motion.div 
+              className="mb-4 md:mb-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0"
+              variants={staggerContainer}
+            >
+              <motion.div 
+                className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-3 border border-blue-400/30 flex items-center"
+                variants={fadeIn}
+                whileHover={{ scale: 1.05 }}
+              >
                 <GraduationCap className="h-6 w-6 text-yellow-300 mr-2" />
                 <span className="text-white font-medium text-sm">
                   전교1등 멘토 직접 지도
                 </span>
-              </div>
-              <div className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-2 md:p-3 border border-blue-400/30 flex items-center w-full sm:w-auto justify-center sm:justify-start">
+              </motion.div>
+              <motion.div 
+                className="bg-blue-900/70 backdrop-blur-sm rounded-lg p-2 md:p-3 border border-blue-400/30 flex items-center w-full sm:w-auto justify-center sm:justify-start"
+                variants={fadeIn}
+                whileHover={{ scale: 1.05 }}
+              >
                 <Star className="h-6 w-6 text-yellow-300 mr-2" />
                 <span className="text-white font-medium text-sm">
                   부산 유일 의사체험 프로그램
                 </span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="relative rounded-lg overflow-hidden shadow-2xl transform rotate-1 transition-transform hover:rotate-0 duration-300">
+            <motion.div 
+              className="relative rounded-lg overflow-hidden shadow-2xl transform rotate-1 transition-transform hover:rotate-0 duration-300"
+              whileHover={{ scale: 1.03, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Image
                 src="/main/1.webp"
                 alt="학생 그룹 활동"
@@ -289,38 +476,69 @@ export const HeroSection = () => {
                   의학계열 또는 명문대 진학을 희망하는 학생을 위한 캠프
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* 하단에 실적 지표 추가 */}
-            <div className="mt-4 md:mt-6 grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4">
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+            <motion.div 
+              className="mt-4 md:mt-6 grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4"
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div 
+                className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center"
+                variants={scaleIn}
+                whileHover={{ y: -8 }}
+              >
                 <p className="text-yellow-300 text-xl md:text-2xl font-bold">98%</p>
                 <p className="text-white text-xs md:text-sm">학부모 만족도</p>
-              </div>
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+              </motion.div>
+              <motion.div 
+                className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center"
+                variants={scaleIn}
+                whileHover={{ y: -8 }}
+              >
                 <p className="text-yellow-300 text-xl md:text-2xl font-bold">3주</p>
                 <p className="text-white text-xs md:text-sm">공부습관 형성 기간</p>
-              </div>
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+              </motion.div>
+              <motion.div 
+                className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center"
+                variants={scaleIn}
+                whileHover={{ y: -8 }}
+              >
                 <p className="text-yellow-300 text-xl md:text-2xl font-bold">20+</p>
                 <p className="text-white text-xs md:text-sm">의대생 멘토 인원</p>
-              </div>
-              <div className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center">
+              </motion.div>
+              <motion.div 
+                className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-blue-400/20 text-center"
+                variants={scaleIn}
+                whileHover={{ y: -8 }}
+              >
                 <p className="text-yellow-300 text-xl md:text-2xl font-bold">14시간</p>
                 <p className="text-white text-xs md:text-sm">하루 집중학습</p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* 장식 요소들 유지 - 수정된 포지셔닝 */}
-            <div className="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 bg-yellow-400 rounded-full p-3 shadow-lg z-10">
+            <motion.div 
+              className="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 bg-yellow-400 rounded-full p-3 shadow-lg z-10"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 1, type: "spring", stiffness: 200 }}
+            >
               <Star className="h-6 w-6 text-blue-900" />
-            </div>
-            <div className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-1/3 bg-indigo-700 rounded-full p-3 shadow-lg z-10">
+            </motion.div>
+            <motion.div 
+              className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-1/3 bg-indigo-700 rounded-full p-3 shadow-lg z-10"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
+            >
               <GraduationCap className="h-6 w-6 text-white" />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* 물결 모양 구분선 */}
       <div className="absolute bottom-0 left-0 right-0">
@@ -329,13 +547,16 @@ export const HeroSection = () => {
           viewBox="0 0 1440 120"
           className="w-full h-auto"
         >
-          <path
+          <motion.path
             fill="#f9fafb"
             fillOpacity="1"
             d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
-          ></path>
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+          ></motion.path>
         </svg>
       </div>
-    </div>
+    </motion.div>
   )
 }
