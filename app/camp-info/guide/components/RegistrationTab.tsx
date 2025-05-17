@@ -4,60 +4,8 @@ import { Button } from "@/components/ui/button"
 import { CreditCard, FileText, CheckCircle2, ArrowRight, ExternalLink, Send, DollarSign, CalendarClock } from "lucide-react"
 import Link from "next/link"
 
-type ContentSection = {
-  type: "list" | "note";
-  items?: string[];
-  text?: string;
-}
-
-type RegistrationInfoItem = {
-  id: number;
-  title: string;
-  content: ContentSection[];
-}
 
 export default function RegistrationTab() {
-  const registrationInfo: RegistrationInfoItem[] = [
-    {
-      id: 1,
-      title: "등록방법",
-      content: [
-        {
-          type: "list",
-          items: [
-            "온라인 원서접수(캠프 신청하기 버튼 클릭)",
-            "예약금(1,000,000원)을 아래 지정 계좌로 납부",
-            "<span class='font-medium'>[등록계좌] 하나은행 448-910057-84804 예금주: 아이는공부하듯</span>"
-          ]
-        },
-        {
-          type: "note",
-          text: "※ 입금자는 학생이름이어야만 확인이 가능합니다. ex) 중3 김아무"
-        },
-        {
-          type: "note",
-          text: "※ 잔금 납부일 : 캠프 신청 홈페이지 참조"
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: "일대일 상담안내",
-      content: [
-        {
-          type: "list",
-          items: [
-            "캠프 시작 2주전까지 가능",
-            "학생이 원하는 부분으로 진행 가능하며, 과목은 국어, 수학, 영어입니다.",
-            "1구좌에 6시간 수업이 진행이 됩니다.",
-            "6구좌 이상 신청 및 시 전화로 상담 먼저 진행 후 신청 바랍니다.",
-            "1구좌 비용은 220,000원입니다.",
-            "캠프가 시작되면 일대일 수업 추가가 안되오니, 미리 신청 부탁드립니다."
-          ]
-        }
-      ]
-    }
-  ]
 
   const covidInfo = [
     "입소 시 음성 확인서를 제출하지 않으셔도 됩니다.",
@@ -202,11 +150,12 @@ export default function RegistrationTab() {
           <MobileRegistrationView />
         </div>
 
-        {/* 데스크톱 화면용 테이블 레이아웃 */}
-        <div className="hidden md:block">
-          <div className="mb-6 text-center">
+        {/* 데스크톱 화면용 카드 레이아웃 */}
+        <div className="hidden md:block space-y-8">
+          {/* 캠프 신청 버튼 */}
+          <div className="text-center py-4">
             <Link href="/application/form">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-5 text-lg rounded-lg shadow-md transition-all" size="lg">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-lg shadow-md transition-all" size="lg">
                 <Send className="mr-2 h-5 w-5" />
                 캠프 신청하기
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -214,49 +163,147 @@ export default function RegistrationTab() {
             </Link>
           </div>
           
-          <Table>
-            <TableHeader className="bg-slate-100">
-              <TableRow>
-                <TableHead className="w-1/4 font-bold">구분</TableHead>
-                <TableHead className="w-1/4 font-bold">항목</TableHead>
-                <TableHead className="w-2/4 font-bold">내용</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell rowSpan={2} className="font-medium bg-slate-700 text-white align-middle text-center">
-                  등록 방법
-                </TableCell>
-                <TableCell className="font-medium bg-gray-100">등록방법</TableCell>
-                <TableCell>
-                  <ol className="list-decimal pl-5 space-y-1">
-                    <li>
-                      온라인 원서접수 (아래 신청 버튼 클릭)
-                    </li>
-                    <li>예약금(1,000,000원)을 아래 지정 계좌로 납부</li>
-                    <li className="font-medium">[등록계좌] 하나은행 448-910057-84804 예금주: 아이는공부하듯</li>
-                  </ol>
-                  <p className="mt-2 text-sm text-gray-600">
-                    ※ 입금자는 학생이름이어야만 확인이 가능합니다. ex) 중3 김아무
-                  </p>
-                  <p className="text-sm text-gray-600">※ 잔금 납부일 : 캠프 신청 홈페이지 참조</p>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium bg-gray-100">일대일 상담안내</TableCell>
-                <TableCell>
-                  <ol className="list-decimal pl-5 space-y-1">
-                    <li>캠프 시작 2주전까지 가능</li>
-                    <li>학생이 원하는 부분으로 진행 가능하며, 과목은 국어, 수학, 영어입니다.</li>
-                    <li>1구좌에 6시간 수업이 진행이 됩니다.</li>
-                    <li>6구좌 이상 신청 및 시 전화로 상담 먼저 진행 후 신청 바랍니다.</li>
-                    <li>1구좌 비용은 220,000원입니다.</li>
-                    <li>캠프가 시작되면 일대일 수업 추가가 안되오니, 미리 신청 부탁드립니다.</li>
-                  </ol>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+          {/* 등록 방법 섹션 */}
+          <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+            <div className="bg-blue-600 p-4 text-white">
+              <h2 className="text-xl font-bold flex items-center">
+                <CreditCard className="h-6 w-6 mr-3" />
+                등록 방법
+              </h2>
+            </div>
+            
+            <div className="p-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* 등록 절차 */}
+                <div>
+                  <h3 className="text-lg font-bold mb-4 flex items-center text-blue-700">
+                    <CalendarClock className="h-5 w-5 mr-2" />
+                    등록 절차
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 bg-blue-100 rounded-full h-8 w-8 flex items-center justify-center mr-3 mt-0.5">
+                        <span className="text-blue-700 font-bold">1</span>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800 mb-1">온라인 원서 접수</h4>
+                        <p className="text-gray-600">"캠프 신청하기" 버튼을 클릭하여 온라인 접수를 진행합니다.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 bg-blue-100 rounded-full h-8 w-8 flex items-center justify-center mr-3 mt-0.5">
+                        <span className="text-blue-700 font-bold">2</span>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800 mb-1">예약금 납부</h4>
+                        <p className="text-gray-600">지정된 계좌로 예약금을 입금합니다.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 bg-blue-100 rounded-full h-8 w-8 flex items-center justify-center mr-3 mt-0.5">
+                        <span className="text-blue-700 font-bold">3</span>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-800 mb-1">접수 완료 확인</h4>
+                        <p className="text-gray-600">접수 완료 후 확인 연락을 드립니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 계좌 정보 */}
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                  <h3 className="text-lg font-bold mb-4 flex items-center text-blue-700">
+                    <DollarSign className="h-5 w-5 mr-2" />
+                    입금 계좌 정보
+                  </h3>
+                  
+                  <div className="bg-white p-5 rounded-lg border border-blue-200 shadow-sm">
+                    <div className="mb-3 text-gray-700">
+                      <span className="font-medium">예약금:</span> <span className="text-lg font-bold text-blue-800">₩1,000,000</span>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-4 rounded-md mb-4">
+                      <div className="font-bold text-blue-800">하나은행</div>
+                      <div className="text-xl font-bold text-blue-900 my-2">448-910057-84804</div>
+                      <div className="text-sm text-blue-700">예금주: 아이는공부하듯</div>
+                    </div>
+                    
+                    <div className="text-sm text-gray-600 space-y-2">
+                      <p className="flex items-start">
+                        <span className="text-red-500 mr-1 flex-shrink-0">※</span>
+                        <span>입금자는 학생이름으로 해주세요. (예: 중3 김아무)</span>
+                      </p>
+                      <p className="flex items-start">
+                        <span className="text-red-500 mr-1 flex-shrink-0">※</span>
+                        <span>잔금 납부일: 캠프 신청 홈페이지 참조</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* 일대일 상담 섹션 */}
+          <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+            <div className="bg-purple-600 p-4 text-white">
+              <h2 className="text-xl font-bold flex items-center">
+                <CalendarClock className="h-6 w-6 mr-3" />
+                일대일 상담 안내
+              </h2>
+            </div>
+            
+            <div className="p-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+                <div className="lg:col-span-2">
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 mr-3 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-gray-700">캠프 시작 <span className="font-medium">2주전까지</span> 신청 가능합니다.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 mr-3 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-gray-700">학생이 원하는 부분으로 진행 가능하며, 과목은 <span className="font-medium">국어, 수학, 영어</span>입니다.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 mr-3 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-gray-700">6구좌 이상 신청 시 전화 상담을 먼저 진행해주세요.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 mr-3 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="text-gray-700 font-medium">캠프 시작 후에는 추가 신청이 불가합니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-purple-50 p-5 rounded-lg border border-purple-200">
+                  <h3 className="text-lg font-bold mb-3 text-purple-800">가격 안내</h3>
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-purple-100">
+                    <div className="text-2xl font-bold text-purple-700 mb-1">₩220,000</div>
+                    <div className="text-sm text-gray-600 flex items-center">
+                      <span className="font-medium mr-2">한 구좌 당</span> 
+                      <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">6시간</span>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-600">* 구좌는 학생의 필요에 따라 추가 가능합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="mt-8">
             <h3 className="text-xl font-bold mb-4 flex items-center">
