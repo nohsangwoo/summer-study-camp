@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { CreditCard, FileText, CheckCircle2, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { CreditCard, FileText, CheckCircle2, ArrowRight, ExternalLink, Send, DollarSign, CalendarClock } from "lucide-react"
+import Link from "next/link"
 
 type ContentSection = {
   type: "list" | "note";
@@ -23,7 +25,7 @@ export default function RegistrationTab() {
         {
           type: "list",
           items: [
-            "온라인 원서접수(<a href='https://www.14hours.co.kr/88' class='text-blue-600 hover:underline'>https://www.14hours.co.kr/88</a>)",
+            "온라인 원서접수(캠프 신청하기 버튼 클릭)",
             "예약금(1,000,000원)을 아래 지정 계좌로 납부",
             "<span class='font-medium'>[등록계좌] 하나은행 448-910057-84804 예금주: 아이는공부하듯</span>"
           ]
@@ -68,34 +70,98 @@ export default function RegistrationTab() {
   // 모바일용 카드 형태 UI
   const MobileRegistrationView = () => (
     <div className="space-y-6">
-      {registrationInfo.map((info) => (
-        <Card key={info.id} className="border-l-4 border-l-blue-500">
-          <CardHeader className="pb-2 pt-4 px-4 bg-blue-50">
-            <CardTitle className="text-lg text-blue-700">{info.title}</CardTitle>
-          </CardHeader>
-          <CardContent className="p-4">
-            {info.content.map((section, idx) => (
-              <div key={idx} className="mb-3">
-                {section.type === "list" && section.items && (
-                  <ol className="list-decimal pl-5 space-y-2">
-                    {section.items.map((item, i) => (
-                      <li key={i} dangerouslySetInnerHTML={{ __html: item }}></li>
-                    ))}
-                  </ol>
-                )}
-                {section.type === "note" && section.text && (
-                  <p className="text-sm text-gray-600 mt-1">{section.text}</p>
-                )}
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      ))}
+      {/* 온라인 접수 신청 버튼 */}
+      <div className="text-center mb-2">
+        <Link href="/application/form">
+          <Button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-medium py-6 text-lg rounded-lg shadow-md transition-all" size="lg">
+            <Send className="mr-2 h-5 w-5" />
+            온라인 접수 신청하기
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
+      </div>
 
+      {/* 등록방법 */}
+      <Card className="border-l-4 border-l-blue-500 overflow-hidden">
+        <CardHeader className="pb-2 pt-4 px-4 bg-blue-50">
+          <CardTitle className="text-lg text-blue-700 flex items-center">
+            <CreditCard className="h-5 w-5 mr-2 text-blue-600" />
+            등록방법
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-0">
+          <div className="p-4 border-b border-gray-100">
+            <h4 className="font-medium text-gray-800 mb-3 flex items-center">
+              <CalendarClock className="h-4 w-4 mr-2 text-blue-500" />
+              접수 절차
+            </h4>
+            <ol className="list-decimal pl-5 space-y-2">
+              <li className="text-gray-700">온라인 원서 접수 ("캠프 신청하기" 버튼 클릭)</li>
+              <li className="text-gray-700">예약금 납부 (₩1,000,000)</li>
+              <li className="text-gray-700">접수 완료 확인 연락</li>
+            </ol>
+
+
+          </div>
+
+          {/* 계좌 정보 - 눈에 띄게 표시 */}
+          <div className="bg-gray-50 p-4 border-b border-gray-100">
+            <h4 className="font-medium text-gray-800 mb-3 flex items-center">
+              <DollarSign className="h-4 w-4 mr-2 text-blue-500" />
+              입금 계좌 정보
+            </h4>
+            <div className="bg-white rounded-lg border border-blue-200 p-4 shadow-sm">
+              <div className="font-medium text-gray-700 mb-1">예약금: ₩1,000,000</div>
+              <div className="bg-blue-50 p-3 rounded-md">
+                <div className="font-bold text-blue-800">하나은행</div>
+                <div className="text-lg font-bold text-blue-900 my-1">448-910057-84804</div>
+                <div className="text-sm text-blue-700">예금주: 아이는공부하듯</div>
+              </div>
+              <div className="mt-3 text-sm text-gray-600 pl-1">
+                <p className="flex items-start">
+                  <span className="text-red-500 mr-1">※</span>
+                  <span>입금자는 학생이름으로 해주세요. (예: 중3 김아무)</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-red-500 mr-1">※</span>
+                  <span>잔금 납부일: 캠프 신청 홈페이지 참조</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* 일대일 상담 안내 */}
+      <Card className="border-l-4 border-l-purple-500 overflow-hidden">
+        <CardHeader className="pb-2 pt-4 px-4 bg-purple-50">
+          <CardTitle className="text-lg text-purple-700 flex items-center">
+            <CalendarClock className="h-5 w-5 mr-2 text-purple-600" />
+            일대일 상담 안내
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-4">
+          <div className="space-y-3">
+            <div className="bg-purple-50/80 p-3 rounded-md border border-purple-100 flex items-center mb-3">
+              <div className="text-lg font-bold text-purple-700 mr-3">₩220,000</div>
+              <div className="text-gray-700">1구좌 / 6시간</div>
+            </div>
+            
+            <ol className="list-decimal pl-5 space-y-2">
+              <li className="text-gray-700">캠프 시작 2주전까지 신청 가능</li>
+              <li className="text-gray-700">학생이 원하는 부분으로 진행 가능 (국어, 수학, 영어)</li>
+              <li className="text-gray-700">6구좌 이상 신청 시 전화 상담 먼저 진행</li>
+              <li className="text-gray-700 font-medium">캠프 시작 후에는 추가 신청 불가</li>
+            </ol>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* 제출 서류 */}
       <Card className="border-l-4 border-l-green-500">
         <CardHeader className="pb-2 pt-4 px-4 bg-green-50">
           <CardTitle className="text-lg flex items-center">
-            <FileText className="h-4 w-4 mr-2 text-green-600" />
+            <FileText className="h-5 w-5 mr-2 text-green-600" />
             제출 서류
           </CardTitle>
         </CardHeader>
@@ -138,6 +204,16 @@ export default function RegistrationTab() {
 
         {/* 데스크톱 화면용 테이블 레이아웃 */}
         <div className="hidden md:block">
+          <div className="mb-6 text-center">
+            <Link href="/application/form">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-5 text-lg rounded-lg shadow-md transition-all" size="lg">
+                <Send className="mr-2 h-5 w-5" />
+                캠프 신청하기
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+          
           <Table>
             <TableHeader className="bg-slate-100">
               <TableRow>
@@ -155,11 +231,7 @@ export default function RegistrationTab() {
                 <TableCell>
                   <ol className="list-decimal pl-5 space-y-1">
                     <li>
-                      온라인 원서접수(
-                      <a href="https://www.14hours.co.kr/88" className="text-blue-600 hover:underline">
-                        https://www.14hours.co.kr/88
-                      </a>
-                      )
+                      온라인 원서접수 (아래 신청 버튼 클릭)
                     </li>
                     <li>예약금(1,000,000원)을 아래 지정 계좌로 납부</li>
                     <li className="font-medium">[등록계좌] 하나은행 448-910057-84804 예금주: 아이는공부하듯</li>
