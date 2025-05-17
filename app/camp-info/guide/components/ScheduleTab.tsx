@@ -14,13 +14,13 @@ export default function ScheduleTab() {
   const MobileScheduleView = () => (
     <div className="space-y-4">
       {scheduleItems.map((item) => (
-        <Card key={item.id} className="border-l-4 border-l-blue-500">
-          <CardContent className="p-4">
-            <div className="flex items-start">
-              <div className="bg-blue-100 text-blue-700 px-3 py-2 rounded-md font-medium text-sm w-28">
+        <Card key={item.id} className="border-l-4 border-l-blue-500 flex items-center ">
+          <CardContent className="p-4 ">
+            <div className="flex items-center">
+              <div className="bg-blue-100 text-blue-700 pl-3 pr-5 py-2 rounded-md font-medium text-sm whitespace-nowrap">
                 {item.title}
               </div>
-              <div className="ml-4 text-gray-700">
+              <div className="ml-4 text-gray-700 text-sm">
                 {item.content.split('\n').map((line, i) => (
                   <div key={i}>{line}</div>
                 ))}
