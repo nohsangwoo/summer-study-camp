@@ -1,10 +1,13 @@
+'use client'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import ScheduleTab from './components/ScheduleTab'
 import RegistrationTab from './components/RegistrationTab'
 import ProgramTab from './components/ProgramTab'
 import PreparationTab from './components/PreparationTab'
+
 import CampLifeTab from './components/CampLifeTab'
 import ContactInfo from './components/ContactInfo'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function CampGuidePage() {
   return (
@@ -18,8 +21,38 @@ export default function CampGuidePage() {
       </div>
 
       <Tabs defaultValue="schedule" className="w-full mb-12">
-        <div className="relative mb-8 overflow-x-auto pb-3">
-          <TabsList className="flex w-max min-w-full space-x-2">
+        <div className="relative mb-8 pb-3">
+          {/* Fixed scroll buttons - positioned absolutely relative to parent */}
+          <div className="absolute left-0 top-[calc(50%_-_6px)] -translate-y-1/2 z-20 md:hidden">
+            <button 
+              className="bg-gray-400/30 hover:bg-gray-500/70 transition-colors w-5 h-10 flex items-center justify-center rounded-md shadow-md"
+              onClick={() => {
+                const tabsContainer = document.querySelector('.tabs-scroll-container');
+                if (tabsContainer) {
+                  tabsContainer.scrollBy({ left: -150, behavior: 'smooth' });
+                }
+              }}
+            >
+              <ChevronLeft className="h-4 w-4 text-white" />
+            </button>
+          </div>
+          
+          <div className="absolute right-0 top-[calc(50%_-_6px)] -translate-y-1/2 z-20 md:hidden">
+            <button 
+              className="bg-gray-400/30 hover:bg-gray-500/70 transition-colors w-5 h-10 flex items-center justify-center rounded-md shadow-md"
+              onClick={() => {
+                const tabsContainer = document.querySelector('.tabs-scroll-container');
+                if (tabsContainer) {
+                  tabsContainer.scrollBy({ left: 150, behavior: 'smooth' });
+                }
+              }}
+            >
+              <ChevronRight className="h-4 w-4 text-white" />
+            </button>
+          </div>
+          
+          <div className="overflow-x-auto tabs-scroll-container px-6 md:px-0">
+            <TabsList className="flex w-max min-w-full space-x-2">
             <TabsTrigger 
               value="schedule" 
               className="text-xs md:text-base py-2 whitespace-nowrap"
@@ -51,6 +84,7 @@ export default function CampGuidePage() {
               캠프 생활
             </TabsTrigger>
           </TabsList>
+          </div>
         </div>
 
         {/* 일정 안내 탭 */}
