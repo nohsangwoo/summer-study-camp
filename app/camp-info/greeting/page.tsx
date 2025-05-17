@@ -25,7 +25,7 @@ export default function GreetingPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="sm:px-6 py-6 space-y-8"
+      className="sm:px-6 py-6 space-y-8 "
     >
       {/* 페이지 타이틀 */}
       <motion.div 

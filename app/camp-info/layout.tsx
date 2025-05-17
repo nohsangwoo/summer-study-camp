@@ -58,7 +58,7 @@ export default function CampInfoLayout({ children }: CampInfoLayoutProps) {
         </div>
       </motion.div>
 
-      <div className="container flex flex-col md:flex-row py-4 sm:py-8 gap-4 sm:gap-8">
+      <div className="container flex flex-col md:flex-row py-4 sm:py-8 gap-4 sm:gap-8 px-0 sm:px-8">
         {/* 모바일 메뉴 - 드롭다운 형태 */}
         <div className="md:hidden w-full mb-4">
           <motion.div 
