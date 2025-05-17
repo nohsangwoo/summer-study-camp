@@ -1,8 +1,10 @@
 'use client'
 /* 커스텀 애니메이션 CSS 클래스 추가 */
 import './mentoring-section.css'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
 import {
   ChevronRight,
   Medal,
@@ -290,97 +292,90 @@ export const MentoringSection = () => {
             운영됩니다
           </p>
 
-          <div className="max-w-4xl mx-auto">
+          <motion.div 
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {/* 첫 번째 멘토 */}
-              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                <div className="relative w-full aspect-square">
-                  <Image
-                    src="/mentors/kimdongheon.webp"
-                    alt="김동현 멘토"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-3 text-center">
-                  <p className="text-gray-700 font-medium">
-                    부산대의대
-                    <br />
-                    김동현
-                  </p>
-                </div>
-              </div>
-
-              {/* 두 번째 멘토 */}
-              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                <div className="relative w-full aspect-square">
-                  <Image
-                    src="/mentors/jangserwon.webp"
-                    alt="장서원 멘토"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-3 text-center">
-                  <p className="text-gray-700 font-medium">
-                    부산대의대
-                    <br />
-                    장서원
-                  </p>
-                </div>
-              </div>
-
-              {/* 세 번째 멘토 */}
-              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                <div className="relative w-full aspect-square">
-                  <Image
-                    src="/mentors/yoontaehyun.webp"
-                    alt="윤태현 멘토"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-3 text-center">
-                  <p className="text-gray-700 font-medium">
-                    부산대의대
-                    <br />
-                    윤태현
-                  </p>
-                </div>
-              </div>
-
-              {/* 네 번째 멘토 */}
-              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
-                <div className="relative w-full aspect-square">
-                  <Image
-                    src="/mentors/yoontaehyun.webp"
-                    alt="이상민 멘토"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-3 text-center">
-                  <p className="text-gray-700 font-medium">
-                    부산대의대
-                    <br />
-                    이상민
-                  </p>
-                </div>
-              </div>
+              {/* Mentor Cards with animation */}
+              {[
+                { name: "김동현", school: "부산대의대", image: "/mentors/kimdongheon.webp" },
+                { name: "장서원", school: "부산대의대", image: "/mentors/jangserwon.webp" },
+                { name: "윤태현", school: "부산대의대", image: "/mentors/yoontaehyun.webp" },
+                { name: "이상민", school: "부산대의대", image: "/mentors/yoontaehyun.webp" }
+              ].map((mentor, index) => (
+                <motion.div 
+                  key={index}
+                  className="bg-gray-200 rounded-lg overflow-hidden shadow-md transition-all"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  whileHover={{ 
+                    y: -5,
+                    scale: 1.03, 
+                    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                  }}
+                  viewport={{ once: true, margin: "-100px" }}
+                >
+                  <div className="relative w-full" style={{ paddingTop: "120%" }}>
+                    <Image
+                      src={mentor.image}
+                      alt={`${mentor.name} 멘토`}
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: "center 15%" }}
+                    />
+                  </div>
+                  <motion.div 
+                    className="p-3 text-center"
+                  >
+                    <p className="text-gray-700 font-medium">
+                      {mentor.school}
+                      <br />
+                      {mentor.name}
+                    </p>
+                  </motion.div>
+                </motion.div>
+              ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
 
-        <div className="text-center">
-          <Link href="/metoda/lineup">
-            <Button
-              variant="outline"
-              className="bg-white hover:bg-gray-100 hover:scale-105 transition-transform duration-300"
-            >
-              멘토진 더 알아보기
-              <ChevronRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
+          <motion.div 
+            className="text-center mt-10" 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: "easeOut" 
+            }}
+            viewport={{ once: true }}
+          >
+            <Link href="/metoda/lineup">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Button
+                  variant="outline"
+                  className="bg-white hover:bg-gray-100 transition-all duration-300"
+                >
+                  멘토진 더 알아보기
+                  <motion.div
+                    initial={{ x: 0 }}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </motion.div>
+                </Button>
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </div>
