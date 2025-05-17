@@ -216,22 +216,14 @@ export const MentoringSection = () => {
             전교1등공부습관캠프 1:1 멘토진
           </motion.h3>
           <motion.div 
-            className="max-w-4xl mx-auto text-gray-700 mb-8 bg-white py-3 md:p-6 rounded-lg shadow-lg border-2 border-blue-100 md:mx-auto border"
+            className="max-w-4xl mx-auto text-gray-700 mb-8 bg-white md:p-6 rounded-lg shadow-lg border-2 border-blue-100 md:mx-auto border"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
             whileHover={{ boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
           >
-            <motion.h2 
-              className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center text-blue-800 border-b-2 border-blue-200 pb-3"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              전교1등 공부방법 연구소 전일공 캠프에 오신 것을 환영합니다.
-            </motion.h2>
+          
             <div className="space-y-4 md:space-y-6 text-left">
               <motion.div 
                 className="flex flex-wrap items-center justify-center mb-3 md:mb-4"
