@@ -296,7 +296,7 @@ export const MentoringSection = () => {
               <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
                 <div className="relative w-full aspect-square">
                   <Image
-                    src="/placeholder.svg"
+                    src="/mentors/kimdongheon.webp"
                     alt="김동현 멘토"
                     fill
                     className="object-cover"
@@ -315,7 +315,7 @@ export const MentoringSection = () => {
               <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
                 <div className="relative w-full aspect-square">
                   <Image
-                    src="/placeholder.svg"
+                    src="/mentors/jangserwon.webp"
                     alt="장서원 멘토"
                     fill
                     className="object-cover"
@@ -334,7 +334,7 @@ export const MentoringSection = () => {
               <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
                 <div className="relative w-full aspect-square">
                   <Image
-                    src="/placeholder.svg"
+                    src="/mentors/yoontaehyun.webp"
                     alt="윤태현 멘토"
                     fill
                     className="object-cover"
@@ -353,7 +353,7 @@ export const MentoringSection = () => {
               <div className="bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
                 <div className="relative w-full aspect-square">
                   <Image
-                    src="/placeholder.svg"
+                    src="/mentors/yoontaehyun.webp"
                     alt="이상민 멘토"
                     fill
                     className="object-cover"
